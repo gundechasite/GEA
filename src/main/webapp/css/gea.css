@@ -1,0 +1,233 @@
+    .redStar {
+     	color: red; 
+    	font: normal 16px;
+	}
+	.geaMessage {
+		font-size:  20px;
+		font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;
+		padding-left:100px;		
+		padding-top:100px;
+	}
+	.geaErrorMessage {
+		color: red;		
+		font-size:  15px;
+    	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;
+	}
+
+    .geaFormlabel {
+    	font-size:  16px;
+    	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;
+			
+	}
+	.geaFormSmallText {
+    	font-size:  13px;
+    	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;
+			
+	}
+
+    .geaFormSubHeading {
+    	padding-top: 30px;
+    	padding-left: 25px;
+    	font-size: 19px;
+    	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;
+		font-weight: bold;	
+	}
+
+    .geaFormHeading {
+    	padding-top: 40px;
+    	padding-left: 25px;
+    	font-size: 24px;
+    	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;
+		font-weight: bold;	
+	}
+
+	.geaInput{
+		width:200px;
+	}
+
+	.geaSelect{
+		width:200px;
+	}
+
+	table#geaContentTable tr td{
+		padding-right: 5px;
+	  	padding-left: 5px;
+	  	padding-bottom: 20px !important;
+	}
+	
+	table#geaContentTable{
+		/* to center the table */
+	  	margin: auto;
+	}
+	
+	.geaSubmitButton {
+	-moz-box-shadow: 3px 4px 0px 0px #899599;
+	-webkit-box-shadow: 3px 4px 0px 0px #899599;
+	box-shadow: 3px 4px 0px 0px #899599;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+	background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+	background-color:#ededed;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#080c0d;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+.geaSubmitButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
+	background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
+	background-color:#bab1ba;
+}
+.geaSubmitButton:active {
+	position:relative;
+	top:1px;
+}
+	
+  table.alternateColor, table.alternateColor td , table.alternateColor tr td, table.alternateColor th{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  table.alternateColor tr:nth-child(even) {
+    background-color: #DAE9BC;
+  }
+  table.alternateColor tr:nth-child(odd) {
+    background-color: #fff;
+  }  
+ 	table.alternateColor th {
+ 		background-color: #BCCE98;
+ 	} 
+ 	
+
+  .lightGreenTable {
+    background-color: #DAE9BC;
+    border-collapse: collapse;
+    padding-bottom:0px;
+    align:center;
+  } 	
+ 
+ 	
+ 			/* Layout */
+		body {
+			min-width: 630px;
+		}
+
+		#container {
+			height:100%;
+			padding-left: 200px;
+			padding-right: 190px;
+		}
+		
+		#container .column {
+			position: relative;
+			float: left;
+		}
+		
+		#center {
+			padding: 10px 20px;
+			width: 100%;
+		}
+		
+		#left {
+			width: 180px;
+			padding: 0 10px;
+			right: 240px;
+			margin-left: -100%;
+		}
+		
+		#right {
+			width: 130px;
+			padding: 0 10px;
+			margin-right: -100%;
+		}
+		
+		#footer {
+			clear: both;
+		}
+		
+		/* IE hack */
+		* html #left {
+			left: 150px;
+		}
+
+		/* Make the columns the same height as each other */
+		#container {
+			overflow: hidden;
+		}
+
+		#container .column {
+			padding-bottom: 1001em;
+			margin-bottom: -1000em;
+		}
+
+		/* Fix for the footer */
+		* html body {
+			overflow: hidden;
+		}
+		
+		* html #footer-wrapper {
+			float: left;
+			position: relative;
+			width: 100%;
+			padding-bottom: 10010px;
+			margin-bottom: -10000px;
+			background: #fff;
+		}
+
+		/* Aesthetics */
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;
+			line-height: 1.5em;
+		}
+		
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		nav ul a {
+			color: darkgreen;
+			text-decoration: none;
+		}
+
+		#header, #footer {
+			font-size: large;
+			padding: 0.3em;
+			background: #BCCE98;
+		}
+
+		#left {
+			background: #DAE9BC;
+		}
+		
+		#right {
+			background: #F7FDEB;
+		}
+
+		#center {
+			background: #fff;
+		}
+
+		#container .column {
+			padding-top: 1em;
+		}

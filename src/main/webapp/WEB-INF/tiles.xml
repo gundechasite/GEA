@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>  
+  
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+  
+<tiles-definitions>  
+ 
+  
+  <definition name="GEAHomePageTileDefinition" template="/jsp/GEA.jsp">  
+  	<put-attribute name="content" value="/html/blank.html"></put-attribute>  
+  </definition>   
+ 
+ 
+<!-- Footer links -->
+	  <definition name="AboutMeTileDefinition" template="/jsp/GEA.jsp">  
+	  		<put-attribute name="content" value="/html/AboutMe.html"></put-attribute>  
+	  </definition>
+	  <definition name="AboutThisWebsiteTileDefinition" template="/jsp/GEA.jsp">  
+	  		<put-attribute name="content" value="/html/AboutThisWebsite.html"></put-attribute>  
+	  </definition>
+	  <definition name="ContactMeTileDefinition" template="/jsp/GEA.jsp">  
+		  	<put-attribute name="content" value="/jsp/ContactMe.jsp"></put-attribute>  
+	  </definition>
+	  <definition name="SiteFeedbackTileDefinition" template="/jsp/GEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/SiteFeedback.jsp"></put-attribute>  
+	  </definition>
+ 
+<!-- Header links -->
+	  <definition name="SignupTilesDefinition" template="/jsp/GEA.jsp">  
+		  	<put-attribute name="content" value="/jsp/Signup.jsp"    />  
+	  </definition>
+	  <definition name="LoginTilesDefinition" template="/jsp/GEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/Login.jsp"></put-attribute>  
+	  </definition>
+  
+<!-- Buy/Sell Textbooks links --> 
+	  <definition name="SellTextbookTileDefinition" template="/jsp/GEA.jsp">  
+		  	<put-attribute name="content" value="/jsp/SellTextbooks.jsp"></put-attribute>  
+	  </definition>
+	  <definition name="SellMultipleTextbookTileDefinition" template="/jsp/GEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/SellMultipleTextbooks.jsp"></put-attribute>  
+	  </definition>
+	  <definition name="BuyTextbookTileDefinition" template="/jsp/GEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/BuyTextbook.jsp"></put-attribute>  
+	  </definition>
+	  <definition name="BuyMultipleTextbookTileDefinition" template="/jsp/GEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/BuyMultipleTextbooks.jsp"></put-attribute>  
+	  </definition>
+
+<!-- Buy/Sell Uniform links -->
+	  <definition name="SellUniformTileDefinition" template="/jsp/GEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/SellUniform.jsp"></put-attribute>  
+	  </definition>
+	  <definition name="BuyUniformTileDefinition" template="/jsp/GEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/BuyUniform.jsp"></put-attribute>  
+	  </definition>
+	  <definition name="SellMultipleUniformTileDefinition" template="/jsp/GEA.jsp">  
+		  	<put-attribute name="content" value="/jsp/SellMultipleUniform.jsp"></put-attribute>  
+	  </definition>
+	  <definition name="BuyMultipleUniformTileDefinition" template="/jsp/GEA.jsp">  
+		  	<put-attribute name="content" value="/jsp/BuyMultipleUniform.jsp"></put-attribute>  
+	  </definition>
+
+<!-- For Admin -->
+	  <definition name="adminLoginTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
+		  	<put-attribute name="content" value="/jsp/admin/adminLogin.jsp"></put-attribute>  
+	  </definition>
+	  
+	  <definition name="adminMessageScreenTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/MessageScreen.jsp"></put-attribute>  
+	  </definition>
+	  
+	  <definition name="registeredUsersTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/admin/registeredUsers.jsp"></put-attribute>  
+	  </definition>
+	
+	  <definition name="adminUniformAdsTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/admin/UniformAds.jsp"></put-attribute>  
+	  </definition>
+	
+	  <definition name="adminTextbooksAdsTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/admin/TextbooksAds.jsp"></put-attribute>  
+	  </definition>
+	  
+	  <definition name="adminContactMeTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/admin/ContactMe.jsp"></put-attribute>  
+	  </definition>
+	
+	  <definition name="adminSiteFeedBackTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/admin/SiteFeedBack.jsp"></put-attribute>  
+	  </definition>
+
+
+<!-- View My Ads -->		
+	  <definition name="ViewBTAdsTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="content" value="/jsp/ViewBT_Ads.jsp"></put-attribute>  
+      </definition>
+	  <definition name="ViewSTAdsTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="content" value="/jsp/ViewST_Ads.jsp"></put-attribute>  
+      </definition>
+      <definition name="ViewBUAdsTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="content" value="/jsp/ViewBU_Ads.jsp"></put-attribute>  
+      </definition>
+      <definition name="ViewSUAdsTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="content" value="/jsp/ViewSU_Ads.jsp"></put-attribute>  
+      </definition>		
+  	  <definition name="SearchResultsTilesDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="content" value="/jsp/SearchResults.jsp"></put-attribute>  
+  	  </definition>
+ 
+<!-- Common -->   		    		
+ 	 <definition name="MessageScreenTilesDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="content" value="/jsp/MessageScreen.jsp"></put-attribute>  
+  	 </definition>
+    		    		        
+</tiles-definitions>  
