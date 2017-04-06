@@ -18,6 +18,11 @@ public class DBUtility {
 	 * Password: VdJw83hvELlCvp7n 
 	 * Database Name: sampledb 
 	 * Connection URL: mysql://mysql:3306/
+	 
+	 * Applied Parameter Values
+	These parameters often include things like passwords. 
+	If you will need to reference these values later, copy them to a safe location. 
+	Parameters MYSQL_USER, MYSQL_PASSWORD, MYSQL_ROOT_PASSWORD were generated automatically.
 	 * ******************************************/
 	
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
