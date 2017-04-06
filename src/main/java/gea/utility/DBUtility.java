@@ -156,7 +156,7 @@ public class DBUtility {
 	
 	public static ArrayList<ContactMeBean> getContactMeMessages()  throws SQLException, ClassNotFoundException {
 		  String sql = "select c.submissionDate, c.message, CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent " +
-		  		" from ContactMe c, registeredUsers r where c.loginId=r.loginId order by c.submissionDate desc";
+		  		" from ContactMe c, RegisteredUsers r where c.loginId=r.loginId order by c.submissionDate desc";
 		  ArrayList<ContactMeBean> contactMeMessages = new ArrayList<ContactMeBean>();
 		  Connection conn = getDatabaseConnection();
 		  System.out.println("getContactMeMessages :: "+ sql);
@@ -175,7 +175,7 @@ public class DBUtility {
 
 	public static ArrayList<SiteFeedbackBean> getSiteFeedbackList()  throws SQLException, ClassNotFoundException {
 		  String sql = " select s.submissionDate, s.siteUsefullness, s.pricesOk, s.howToImprove, s.whichOtherItems, s.whichOtherSites,s.exchange, " +
-		  		" CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent from SiteFeedBack s, registeredUsers r " +
+		  		" CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent from SiteFeedBack s, RegisteredUsers r " +
 		  		" where s.loginId=r.loginId order by s.submissionDate desc";
 		  ArrayList<SiteFeedbackBean> siteFeedbackList = new ArrayList<SiteFeedbackBean>();
 		  Connection conn = getDatabaseConnection();
