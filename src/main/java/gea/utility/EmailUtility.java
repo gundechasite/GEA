@@ -71,7 +71,10 @@ public class EmailUtility {
 	     //send message  
 	     Transport.send(mimeMessage);    
 	     System.out.println("message sent successfully");    
-	    } catch (MessagingException e) {throw new RuntimeException(e);}    
+	    } catch (MessagingException e) {
+	    	System.out.println("######### ERROR ######### EmailUtility : "+GeaUtility.showErrorDetails(e));
+	    	throw new RuntimeException(e);
+	    }    
 		
 	}
 }

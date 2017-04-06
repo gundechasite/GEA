@@ -33,6 +33,7 @@ public class ContactMeAction extends ActionSupport  implements SessionAware {
 			  return "success";  
 		  
 			} catch (Exception e) {
+				System.out.println("######### ERROR ######### ContactMe : "+GeaUtility.showErrorDetails(e));
 				System.out.println("Error while saving ContactMe message: "+ message);
 				addActionError("Some error Occurred while saving your message. Try again later or email the message to gundecha.site@gmail.com.");
 				return "error";

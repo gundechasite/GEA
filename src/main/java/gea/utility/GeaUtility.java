@@ -60,4 +60,17 @@ public class GeaUtility {
 		sessionMap.put("LoggedUser", null);
 	}
 	
+	public static String showErrorDetails(Exception e) {
+		String message = e.getMessage();
+        Throwable inner = null;
+        Throwable root = e;
+        while ((inner = root.getCause()) != null)
+        {
+            message += " " + inner.getMessage();
+            root = inner;
+        }
+        return message;
+	}
+	
+	
 }

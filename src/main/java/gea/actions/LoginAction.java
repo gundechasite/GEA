@@ -37,6 +37,7 @@ public class LoginAction extends ActionSupport implements SessionAware {
 				 }
 			}
 		 } catch (Exception e) {
+			 System.out.println("######### ERROR ######### LoginAction : "+GeaUtility.showErrorDetails(e));
 			System.out.println("Error while logging user loginId="+loginId+" " +e);
 			addActionError("Some error Occurred during your login, please try again later or Contact Me");
 			return "error";

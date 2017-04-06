@@ -39,6 +39,7 @@ public class SiteFeedbackAction extends ActionSupport  implements SessionAware {
 			  return "success";  
 		  
 			} catch (Exception e) {
+				System.out.println("######### ERROR ######### Site Feedback : "+GeaUtility.showErrorDetails(e));
 				System.out.println("Error while saving Feedback ");
 				addActionError("Some error Occurred while saving your Feedback. Try again later or email your feedback to gundecha.site@gmail.com.");
 				return "error";

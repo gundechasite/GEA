@@ -53,10 +53,8 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 			populateSearchResults(screenCode); 	/* Search results for Ad */
 			informSearchResultsOfYourNewAd(screenCode);
 			return screenCode;  /* Ad(s) and Search results will be displayed on screen */
-		} catch (SQLException e) {
-			addActionError("Some error Occurred while inserting SellTextbook Ad, try later. You may Contact Me with screenshot of your textbook details.");
-			return  "error";
-		} catch (ClassNotFoundException e) {
+		} catch (Exception e) {
+			System.out.println("######### ERROR #########  : "+GeaUtility.showErrorDetails(e));
 			addActionError("Some error Occurred while inserting SellTextbook Ad, try later. You may Contact Me with screenshot of your textbook details.");
 			return  "error";
 		}
