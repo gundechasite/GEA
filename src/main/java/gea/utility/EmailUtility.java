@@ -57,7 +57,9 @@ public class EmailUtility {
 	    //get Session   
 	    Session session = Session.getDefaultInstance(props,    
 	     new javax.mail.Authenticator() {    
-	     protected PasswordAuthentication getPasswordAuthentication() {    
+	     protected PasswordAuthentication getPasswordAuthentication() { 
+	     System.out.println(System.getenv("GEA_EMAIL"));
+	     System.out.println(System.getenv("GEA_EMAIL_PSWD"));
 	     return new PasswordAuthentication("gundecha.parents.portal@gmail.com","Abcxyz123");  
 	     }    
 	    });    
