@@ -32,7 +32,7 @@ public class DBUtility {
 	static final String USER = "userFNL";
 	static final String PASS = "VdJw83hvELlCvp7n";
 	   
-	   
+	
 	public static Connection getDatabaseConnection() throws SQLException, ClassNotFoundException  {
 
 		  Connection connection = null;
@@ -41,6 +41,12 @@ public class DBUtility {
 		  Class.forName("com.mysql.jdbc.Driver");
 		
 		  /* Open a connection */
+		  System.out.println("*******************************************");
+		  System.out.println(System.getenv("MYSQL_USER"));
+		  System.out.println(System.getenv("MYSQL_PASSWORD"));
+		  System.out.println(System.getenv("HOSTNAME"));
+		  System.out.println(System.getenv("MYSQL_DATABASE"));
+		  System.out.println("*******************************************");
 		  connection = DriverManager.getConnection(DB_URL, USER, PASS);
 		  return connection;
 		   
