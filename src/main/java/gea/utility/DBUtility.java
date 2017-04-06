@@ -12,12 +12,20 @@ import java.util.ArrayList;
 
 public class DBUtility {
 	
+	/*******************************************
+	 * The following service(s) have been created in your project: mysql. 
+	 * Username: userFNL 
+	 * Password: VdJw83hvELlCvp7n 
+	 * Database Name: sampledb 
+	 * Connection URL: mysql://mysql:3306/
+	 * ******************************************/
+	
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-	static final String DB_URL = "jdbc:mysql://localhost/mysql";
+	static final String DB_URL = "jdbc:mysql://mysql:3306/";
 
 	//  Database credentials
-	static final String USER = "gea";
-	static final String PASS = "gundecha";
+	static final String USER = "userFNL";
+	static final String PASS = "VdJw83hvELlCvp7n";
 	   
 	   
 	public static Connection getDatabaseConnection() throws SQLException, ClassNotFoundException  {
