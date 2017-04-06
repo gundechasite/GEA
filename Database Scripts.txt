@@ -1,4 +1,4 @@
-oc login --token=Xp9PGssb-nEIIwLEhp9NFE9HslTaLhXA-hyWaKTKXzQ
+oc login --token=XXXX
 oc login 
 oc get pods
 oc rsh <pod>
