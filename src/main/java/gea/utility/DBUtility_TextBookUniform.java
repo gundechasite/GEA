@@ -181,7 +181,8 @@ public class DBUtility_TextBookUniform {
 	/* get All Uniform ads for admin */
 	public static ArrayList<UniformAd> getUniformAdsListForAdmin()  throws SQLException, ClassNotFoundException {
 		  String sql = " select u.veda, u.size, u.partOfUniform, u.price, u.comments, u.uniformCondition, u.loginId, " +
-		  		" u.sellerOrBuyer, u.hideContactDetails, u.submissionDate,  CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent  " +
+		  		" u.sellerOrBuyer, u.hideContactDetails, u.submissionDate,  CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent,  " +
+		  		" r.parentName,r.parentPhone,r.parentEmail " +
 		  		" from UniformAds u, RegisteredUsers r  " +
 		  		" where u.loginId=r.loginId order by u.submissionDate desc " ;
 		  return getUniformAdsList(sql, true, true);
@@ -190,7 +191,8 @@ public class DBUtility_TextBookUniform {
 	/* get All Textbook ads for admin */
 	public static ArrayList<TextbookAd> getTextbookAdsListForAdmin()  throws SQLException, ClassNotFoundException {
 		  String sql = " select t.childsClass, t.booksType, t.loginId, t.price, t.comments, t.textbookCondition, t.sellerOrBuyer, t.hideContactDetails, t.submissionDate, " +
-		  		" CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent " +
+		  		" CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent, " +
+		  		" r.parentName,r.parentPhone,r.parentEmail " +
 		  		" from TextbooksAds t, RegisteredUsers r where t.loginId=r.loginId order by t.submissionDate desc " ;
 		  return getTextbookAdsList(sql, true, true);
 	}
