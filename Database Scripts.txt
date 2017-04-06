@@ -1,0 +1,76 @@
+oc login --token=Xp9PGssb-nEIIwLEhp9NFE9HslTaLhXA-hyWaKTKXzQ
+oc login 
+oc get pods
+oc rsh <pod>
+mysql -u $MYSQL_USER -p$MYSQL_PASSWORD -h $HOSTNAME $MYSQL_DATABASE
+mysql>
+----------------------------------------------------------
+
+DROP TABLE registeredUsers;
+
+CREATE TABLE registeredUsers 
+(loginId VARCHAR(15), 
+password VARCHAR(20),
+parentName VARCHAR(20),
+parentPhone VARCHAR(20), 
+parentEmail VARCHAR(20), 
+creationDate DATE);
+
+
+
+DROP TABLE TextbooksAds;
+
+CREATE TABLE TextbooksAds 
+(childsClass VARCHAR(2), 
+booksType VARCHAR(2),
+price VARCHAR(3),
+comments VARCHAR(100), 
+textbookCondition VARCHAR(2), 
+loginId VARCHAR(15),
+sellerOrBuyer VARCHAR(1),
+hideContactDetails VARCHAR(1),
+submissionDate DATE);
+
+alter table TextbooksAds add unique (childsClass, booksType, loginId);
+
+
+
+DROP TABLE UniformAds;
+
+CREATE TABLE UniformAds 
+(veda VARCHAR(1),
+size VARCHAR(3), 
+partOfUniform VARCHAR(2), 
+price VARCHAR(3),
+comments VARCHAR(100), 
+uniformCondition VARCHAR(2),
+loginId VARCHAR(15),
+sellerOrBuyer VARCHAR(1),
+hideContactDetails VARCHAR(1),
+submissionDate DATE);
+
+alter table UniformAds add unique (veda, partOfUniform, size, loginId);
+
+
+
+DROP TABLE ContactMe;
+
+CREATE TABLE ContactMe 
+(loginId VARCHAR(15),
+message VARCHAR(200),
+submissionDate DATE);
+
+
+
+DROP TABLE SiteFeedBack;
+
+CREATE TABLE SiteFeedBack 
+(loginId VARCHAR(15),
+siteUsefullness VARCHAR(3),
+pricesOk VARCHAR(200),
+howToImprove VARCHAR(200),
+whichOtherItems VARCHAR(200),
+whichOtherSites	 VARCHAR(200),
+exchange VARCHAR(200),
+submissionDate DATE);
+
