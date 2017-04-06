@@ -57,6 +57,15 @@ public class ViewMyAdsView  extends SearchResultsAction {
 				return screenCode;
 				
 			} catch (Exception e) {
+				String message = e.getMessage();
+		        Throwable inner = null;
+		        Throwable root = e;
+		        while ((inner = root.getCause()) != null)
+		        {
+		            message += " " + inner.getMessage();
+		            root = inner;
+		        }
+		        System.out.println("View My Ads Error : "+message);
 				System.out.println("Some error Occurred while View ads for " + GeaUtility.getLoggedUserLoginId(sessionMap));
 				addActionError("Some error Occurred while View ads for " + GeaUtility.getLoggedUserLoginId(sessionMap));
 				return "error";
