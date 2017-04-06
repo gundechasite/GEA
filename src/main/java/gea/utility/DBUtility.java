@@ -26,7 +26,7 @@ public class DBUtility {
 	 * ******************************************/
 	
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-	static final String DB_URL = "jdbc:mysql://mysql:3306/";
+	static final String DB_URL = "jdbc:mysql://mysql:3306/sampledb";
 
 	//  Database credentials
 	static final String USER = "userFNL";
