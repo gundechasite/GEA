@@ -17,7 +17,7 @@
 	<div id="header">
 		<table width=100%>
 		<tr>
-		<td><img src="images/logo.png" alt="Mountain View" style="width:50px;height:50px;"></td>
+		<td><img src="images/logo.png" alt="" style="width:50px;height:50px;"></td>
 		<td align=right  style="padding-right:40px">
 			<% if (session.getAttribute("LoggedUser")!=null) { %>
 			    Hi <%= ((gea.model.User)session.getAttribute("LoggedUser")).getName()%>! | <a href="/GEA/Logout">Logout </a>
@@ -63,7 +63,7 @@
 			<br>
 		</div>
 
-		<div id="right" ></div>
+		<!-- <div id="right"></div>  -->
 
 	</div>
 
