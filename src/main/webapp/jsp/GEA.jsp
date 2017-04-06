@@ -63,7 +63,7 @@
 			<br>
 		</div>
 
-		<div id="right" class="column"></div>
+		<div id="right" ></div>
 
 	</div>
 
