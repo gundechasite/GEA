@@ -6,9 +6,9 @@ mysql -u $MYSQL_USER -p$MYSQL_PASSWORD -h $HOSTNAME $MYSQL_DATABASE
 mysql>
 ----------------------------------------------------------
 
-DROP TABLE registeredUsers;
+DROP TABLE RegisteredUsers;
 
-CREATE TABLE registeredUsers 
+CREATE TABLE RegisteredUsers 
 (loginId VARCHAR(15), 
 password VARCHAR(20),
 parentName VARCHAR(20),

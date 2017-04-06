@@ -37,16 +37,16 @@ public class ViewMyAdsView  extends SearchResultsAction {
 		
 		 try {
 			 	if (screenCode.equals("BT")) {
-			 		sql = "select * from  textbooksAds " + whereClause;
+			 		sql = "select * from  TextbooksAds " + whereClause;
 					BT_Ads = DBUtility_TextBookUniform.getTextbookAdsList(sql, false, false);
 			 	} else if (screenCode.equals("BU")) {
-			 		sql = "select * from  uniformAds " + whereClause; 
+			 		sql = "select * from  UniformAds " + whereClause; 
 					BU_Ads = DBUtility_TextBookUniform.getUniformAdsList(sql, false, false);
 			 	} else if (screenCode.equals("ST")) {
-			 		sql = "select * from  textbooksAds " + whereClause;
+			 		sql = "select * from  TextbooksAds " + whereClause;
 					ST_Ads = DBUtility_TextBookUniform.getTextbookAdsList(sql, false, false);
 			 	} else if (screenCode.equals("SU")) {
-			 		sql = "select * from  uniformAds " + whereClause;
+			 		sql = "select * from  UniformAds " + whereClause;
 					SU_Ads = DBUtility_TextBookUniform.getUniformAdsList(sql, false, false);
 			 	}
 				

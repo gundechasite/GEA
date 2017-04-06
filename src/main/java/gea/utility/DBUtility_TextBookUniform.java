@@ -91,7 +91,7 @@ public class DBUtility_TextBookUniform {
 	  
 	  String hideContactDetails;
 	  String insertStmt = 
-			"INSERT IGNORE INTO textbooksAds (childsClass, booksType, price, comments, textbookCondition, loginId, sellerOrBuyer,hideContactDetails, submissionDate) " +
+			"INSERT IGNORE INTO TextbooksAds (childsClass, booksType, price, comments, textbookCondition, loginId, sellerOrBuyer,hideContactDetails, submissionDate) " +
 			"VALUES(?, ?, ?, ?, ?, ?, ?, ?, NOW())";
 
 	  Connection conn = DBUtility.getDatabaseConnection();
@@ -149,7 +149,7 @@ public class DBUtility_TextBookUniform {
 	public static void insertUniformAdDetails(ArrayList<UniformAd> inputUniformAdsList) throws SQLException, ClassNotFoundException {
 		  String hideContactDetails ;
 		  String insertStmt = 
-				" INSERT ignore INTO uniformAds " +
+				" INSERT ignore INTO UniformAds " +
 				" (veda,size,partOfUniform,price,comments,uniformCondition,loginId,sellerOrBuyer,hideContactDetails,submissionDate) " +
 				" VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
 
@@ -182,7 +182,7 @@ public class DBUtility_TextBookUniform {
 	public static ArrayList<UniformAd> getUniformAdsListForAdmin()  throws SQLException, ClassNotFoundException {
 		  String sql = " select u.veda, u.size, u.partOfUniform, u.price, u.comments, u.uniformCondition, u.loginId, " +
 		  		" u.sellerOrBuyer, u.hideContactDetails, u.submissionDate,  CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent  " +
-		  		" from UniformAds u, registeredUsers r  " +
+		  		" from UniformAds u, RegisteredUsers r  " +
 		  		" where u.loginId=r.loginId order by u.submissionDate desc " ;
 		  return getUniformAdsList(sql, true, true);
 	}
@@ -191,7 +191,7 @@ public class DBUtility_TextBookUniform {
 	public static ArrayList<TextbookAd> getTextbookAdsListForAdmin()  throws SQLException, ClassNotFoundException {
 		  String sql = " select t.childsClass, t.booksType, t.loginId, t.price, t.comments, t.textbookCondition, t.sellerOrBuyer, t.hideContactDetails, t.submissionDate, " +
 		  		" CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent " +
-		  		" from TextbooksAds t, registeredUsers r where t.loginId=r.loginId order by t.submissionDate desc " ;
+		  		" from TextbooksAds t, RegisteredUsers r where t.loginId=r.loginId order by t.submissionDate desc " ;
 		  return getTextbookAdsList(sql, true, true);
 	}
 
@@ -220,7 +220,7 @@ public class DBUtility_TextBookUniform {
 			sellerOrBuyerInWhereClause="S";
 			orderByClause = " order by loginId "; /* so multiple uniform parts can be bought from same seller if needed */
 		}
-		final String selectClause = " select t.*,r.parentName,r.parentPhone,r.parentEmail,CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent  from textbooksAds t, registeredUsers r  ";
+		final String selectClause = " select t.*,r.parentName,r.parentPhone,r.parentEmail,CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent  from TextbooksAds t, RegisteredUsers r  ";
 		final String basicWhereClause = " where t.loginId=r.loginId and t.sellerOrBuyer = '"+sellerOrBuyerInWhereClause+"'";		
 		
 		for (int i=0;i<inputTextbookAdsList.size();i++) {
@@ -266,7 +266,7 @@ public class DBUtility_TextBookUniform {
 		
 		final String selectClause = 
 				" select u.*,r.parentName,r.parentPhone,r.parentEmail,CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent  " +
-				" from uniformAds u, registeredUsers r  ";
+				" from UniformAds u, RegisteredUsers r  ";
 		final String basicWhereClause = " where u.loginId=r.loginId and u.sellerOrBuyer = '"+sellerOrBuyerInWhereClause+"'";
 		
 		for (int i=0;i<inputUniformAdsList.size();i++) {

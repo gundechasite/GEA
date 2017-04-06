@@ -49,7 +49,7 @@ public class DBUtility {
 	public static void signupUser (String name, String email, String phone, String password) throws SQLException, ClassNotFoundException {
 		
 		String insertStmt = 
-		  "INSERT INTO registeredUsers (loginId, password, parentName, parentPhone, parentEmail, creationDate) " +
+		  "INSERT INTO RegisteredUsers (loginId, password, parentName, parentPhone, parentEmail, creationDate) " +
 		  "VALUES(?, ?, ?, ?, ?, NOW())";
 
 		  Connection conn = getDatabaseConnection();
@@ -65,7 +65,7 @@ public class DBUtility {
 	
 	
 	public static User validateLogin(String loginId, String password)  throws SQLException, ClassNotFoundException {
-		  String sql = "select * from registeredUsers where loginId='"+loginId+"' and password='"+password+"'";
+		  String sql = "select * from RegisteredUsers where loginId='"+loginId+"' and password='"+password+"'";
 		  Connection conn = getDatabaseConnection();
 	      ResultSet rs = conn.createStatement().executeQuery(sql);
 	      if (rs.next()) {
@@ -84,7 +84,7 @@ public class DBUtility {
 	
 	
 	public static boolean isThisPhoneRegistered(String phone)  throws SQLException, ClassNotFoundException {
-			String sql = "select * from registeredUsers where loginId='"+phone+"'";
+			String sql = "select * from RegisteredUsers where loginId='"+phone+"'";
 			Connection conn = getDatabaseConnection();
 			ResultSet rs = conn.createStatement().executeQuery(sql);
 	      
@@ -136,7 +136,7 @@ public class DBUtility {
 	
 	
 	public static ArrayList<User> getResisteredUsers()  throws SQLException, ClassNotFoundException {
-		  String sql = "select loginId, parentName, parentPhone, parentEmail, creationDate from registeredUsers order by creationDate desc";
+		  String sql = "select loginId, parentName, parentPhone, parentEmail, creationDate from RegisteredUsers order by creationDate desc";
 		  ArrayList<User> resisteredUsers = new ArrayList<User>();
 		  Connection conn = getDatabaseConnection();
 	      ResultSet rs = conn.createStatement().executeQuery(sql);
