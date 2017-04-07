@@ -51,6 +51,9 @@ public class BuyUniformAction extends GeaBasicAdAction {
 			      if (GeaUtility.isFieldEmpty(uniformSize[i])) {
 			    	  addActionError("The size must be entered");
 			      }
+			      if (GeaUtility.isFieldNumeric(uniformSize[i])) {
+			    	  addActionError("The size entered should be a number");
+			      }
 			  }
 		 }
 

@@ -54,6 +54,13 @@ public class SignupAction extends ActionSupport  implements SessionAware {
 	      if (name == null || name.trim().equals("")) {
 		      addActionError("Please enter your name");
 		  }
+	      if (!GeaUtility.isFieldEmpty(email)) {
+	    	  if (!email.contains("@")) {
+	    		  addActionError("Please enter valid email or leave email empty");
+	    	  } else if (email.length()<6) {
+	    		  addActionError("Please enter valid email or leave email empty");
+	    	  }
+	      }
 	      
 	 }
 
