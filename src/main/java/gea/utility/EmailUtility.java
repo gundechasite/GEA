@@ -188,4 +188,21 @@ public class EmailUtility {
 		" </table> ";
 		return  ST_message;
 	}
+	
+	public static String getSubject(String screenCode, UniformAd newUniformAd) {
+		if (screenCode.equals("BU")) {
+			return newUniformAd.getVeda()+ " " + newUniformAd.getPartOfUniform() + " needed by a parent";
+		} else {
+			return newUniformAd.getVeda()+ " " + newUniformAd.getPartOfUniform() + " on sale";
+		}
+	}
+
+
+	public static String getSubject(String screenCode, TextbookAd newTextbookAd) {
+		if (screenCode.equals("BT")) {
+			return "Class "+newTextbookAd.getChildsClass()+" - "+newTextbookAd.getBookType()+" needed by a parent";
+		} else {
+			return "Class "+newTextbookAd.getChildsClass()+" - "+newTextbookAd.getBookType()+"  on sale";
+		}
+	}
 }

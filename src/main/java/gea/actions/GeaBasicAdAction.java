@@ -96,7 +96,8 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 						String toEmail = currentSearchResultAd.getAdOwnerEmail();
 						if (!GeaUtility.isFieldEmpty(toEmail)) {
 							String message = EmailUtility.getEmailMessage(screenCode, GeaUtility.getLoggedUser(sessionMap),currentNewUniformAd, currentSearchResultAd);
-							EmailUtility.sendEmail(toEmail, "Matching Ad Found", message);
+							String subject = EmailUtility.getSubject(screenCode, currentNewUniformAd);
+							EmailUtility.sendEmail(toEmail, subject, message);
 						}
 					}
 				}
@@ -116,7 +117,8 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 						if (!GeaUtility.isFieldEmpty(toEmail)) {
 							System.out.println("5");
 							String message = EmailUtility.getEmailMessage(screenCode, GeaUtility.getLoggedUser(sessionMap),currentNewTextbookAd, currentSearchResultAd);
-							EmailUtility.sendEmail(toEmail, "Matching Ads Found", message);
+							String subject = EmailUtility.getSubject(screenCode, currentNewTextbookAd);
+							EmailUtility.sendEmail(toEmail, subject, message);
 						}
 					}
 
