@@ -65,7 +65,7 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 		ArrayList<UniformAd> inputUniformAds=null;
 		ArrayList<TextbookAd> searchResultsForInputTextbookAds=null;
 		ArrayList<TextbookAd> inputTextbookAds=null;
-		System.out.println("1");
+		
 		if ("BT".equals(screenCode)) {
 			searchResultsForInputTextbookAds = searchResultsFor_BT_Ads;
 			inputTextbookAds=BT_Ads;
@@ -81,7 +81,7 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 		}
 		
 		if (screenCode.equals("BU") ||screenCode.equals("SU")) {
-			System.out.println("2");
+			
 			for (int i=0;i<searchResultsForInputUniformAds.size();i++) {
 				UniformAd currentSearchResultAd = searchResultsForInputUniformAds.get(i);
 				for (int j=0;j<inputUniformAds.size();j++) {
@@ -95,7 +95,7 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 						/* Match Found */
 						String toEmail = currentSearchResultAd.getAdOwnerEmail();
 						if (!GeaUtility.isFieldEmpty(toEmail)) {
-							String message = EmailUtility.getEmailMessage(GeaUtility.getLoggedUser(sessionMap),currentNewUniformAd, currentSearchResultAd);
+							String message = EmailUtility.getEmailMessage(screenCode, GeaUtility.getLoggedUser(sessionMap),currentNewUniformAd, currentSearchResultAd);
 							EmailUtility.sendEmail(toEmail, "Matching Ad Found", message);
 						}
 					}
@@ -115,7 +115,7 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 						String toEmail = currentSearchResultAd.getAdOwnerEmail();
 						if (!GeaUtility.isFieldEmpty(toEmail)) {
 							System.out.println("5");
-							String message = EmailUtility.getEmailMessage(GeaUtility.getLoggedUser(sessionMap),currentNewTextbookAd, currentSearchResultAd);
+							String message = EmailUtility.getEmailMessage(screenCode, GeaUtility.getLoggedUser(sessionMap),currentNewTextbookAd, currentSearchResultAd);
 							EmailUtility.sendEmail(toEmail, "Matching Ads Found", message);
 						}
 					}

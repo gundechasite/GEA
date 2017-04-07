@@ -10,34 +10,43 @@ import gea.model.User;
 
 public class EmailUtility {
 	
-	public static String getEmailMessage (User loggedUser, TextbookAd newTextbookAd, TextbookAd matchingOldTextbookAd) {
+	public static String getEmailMessage (String screenCode, User loggedUser, TextbookAd newTextbookAd, TextbookAd matchingOldTextbookAd) {
+		String message=null;
+		if (screenCode.equals("BT")) {
+			message = getHTML_BT_Message(newTextbookAd);
+		} else {
+			message = getHTML_ST_Message(newTextbookAd);
+		}
+		message = message + getHTMLParentDetails(loggedUser.getName(), loggedUser.getPhone(), loggedUser.getEmail());
 		
-		String message =  
-				"Hi " +matchingOldTextbookAd.getAdOwnerName() + ",\n"+
-				"Parent "+loggedUser.getName()+" ("+loggedUser.getPhone()+" "+loggedUser.getEmail()+") has added a new Ad today.\n" +
-		" ("+getSellOrBuy(newTextbookAd.getSellerOrBuyer())+" class "+newTextbookAd.getChildsClass()+" "+newTextbookAd.getBookType()+") ";
-		 
 		return message;
+
+//		String message =  
+//		"Hi " +matchingOldTextbookAd.getAdOwnerName() + ",\n"+
+//		"Parent "+loggedUser.getName()+" ("+loggedUser.getPhone()+" "+loggedUser.getEmail()+") has added a new Ad today.\n" +
+//" ("+getSellOrBuy(newTextbookAd.getSellerOrBuyer())+" class "+newTextbookAd.getChildsClass()+" "+newTextbookAd.getBookType()+") ";
+
 	}
 	
-	private static String getSellOrBuy(String sellerOrBuyer) {
-		String sellOrBuy = "";
-		if (sellerOrBuyer.equals("B")) {
-			sellOrBuy = "Buy";	
-		} else {
-			sellOrBuy = "Sell";
-		}
-		return sellOrBuy;
-	}
 
-	public static String getEmailMessage (User loggedUser,UniformAd newUniformAd, UniformAd matchingOldUniformAd) {
+	public static String getEmailMessage (String screenCode, User loggedUser,UniformAd newUniformAd, UniformAd matchingOldUniformAd) {
+		String message=null;
+		if (screenCode.equals("BU")) {
+			message = getHTML_BU_Message(newUniformAd);
+		} else {
+			message = getHTML_SU_Message(newUniformAd);
+		}
+		message = message + getHTMLParentDetails(loggedUser.getName(), loggedUser.getPhone(), loggedUser.getEmail());
 		
-		String message =  
-				"Hi " +matchingOldUniformAd.getAdOwnerName() + ",\n"+
-				"Parent "+loggedUser.getName()+" ("+loggedUser.getPhone()+" "+loggedUser.getEmail()+") has added a new Ad today.\n" +
-		" ("+getSellOrBuy(newUniformAd.getSellerOrBuyer())+" "+newUniformAd.getVeda()+" "+newUniformAd.getPartOfUniform()+ " of size "+newUniformAd.getSize()+") ";
-		 
 		return message;
+
+		
+		
+//		String message =  
+//				"Hi " +matchingOldUniformAd.getAdOwnerName() + ",\n"+
+//				"Parent "+loggedUser.getName()+" ("+loggedUser.getPhone()+" "+loggedUser.getEmail()+") has added a new Ad today.\n" +
+//		" ("+getSellOrBuy(newUniformAd.getSellerOrBuyer())+" "+newUniformAd.getVeda()+" "+newUniformAd.getPartOfUniform()+ " of size "+newUniformAd.getSize()+") ";
+
 	}
 	
 	public static void sendEmail (String toEmail, String subject,String message) {
@@ -69,7 +78,7 @@ public class EmailUtility {
 	     mimeMessage.setContent(message, "text/html");
 	     mimeMessage.addRecipient(Message.RecipientType.TO,new InternetAddress(toEmail));    
 	     mimeMessage.setSubject(subject);    
-	     mimeMessage.setText(message);    
+	     mimeMessage.setContent(message, "text/html; charset=utf-8");
 	     //send message  
 	     Transport.send(mimeMessage);    
 	     System.out.println("message sent successfully");    
@@ -79,7 +88,104 @@ public class EmailUtility {
 	    }    
 		
 	}
+	
+	private static String getHTMLParentDetails(String name, String phone, String email) {
+		String parentDetails = "<br> "+
+		" <div border=1 align=center style='background-color: #DAE9BC;padding: 5px;'><b><u>Parent Details</u></b> - Kindly leave a watsapp message/sms, call only if urgent.</div> "+
+		" <br> "+
+		" <table align=center border=1> "+
+		"   	<tr  style='background-color:#BCCE98;'> "+
+		" <th style='padding: 10px;'  align=center>Name</th> "+
+		" <th style='padding: 10px;' align=center >Phone</th> "+
+		" <th style='padding: 10px;'  align=center>Email</th> "+
+		" </tr> "+
+		" <tr  style='background-color: #DAE9BC;'> "+
+		" <td style='padding: 10px;'  align=center>"+name+"</td> "+
+		" <td style='padding: 10px;'  align=center>"+phone+"</td> "+
+		" <td style='padding: 10px;'  align=center>"+email+"</td> "+
+		" </tr> "+
+		" </table> ";
+		return parentDetails;
+	}
+
+	private static  String getHTML_SU_Message(UniformAd newUniformAd) {
+		String SU_message= 
+		" <div border=1 align=center style='background-color: #DAE9BC;padding: 5px;'><b><u>Uniform Items needed by you is being sold by a parent </u></b><br>(If you no longer need this item, Kindly delete your ad.)</div> "+
+		" <br> "+
+		" <table align=center border=1> "+
+		"  	<tr  style='background-color:#BCCE98;'> "+
+		" 	    <th style='padding: 10px;'  align=center>Item</th> "+
+		" 	    <th style='padding: 10px;'  align=center>Size</th> "+
+		" 	    <th style='padding: 10px;'  align=center>Condition</th> "+
+		" 	    <th style='padding: 10px;'  align=center>Price</th> "+
+		" 	    <th style='padding: 10px;'  align=center>Comments</th> "+
+		"  	</tr> "+
+		"  	 "+
+		" 	<tr style='background-color: #DAE9BC;'> "+
+		" 	    <td style='padding: 10px;'  align=center>"+newUniformAd.getVeda()+"  "+newUniformAd.getPartOfUniform()+"</td> "+
+		" 	    <td style='padding: 10px;'  align=center>"+newUniformAd.getSize()+"</td> "+
+		" 	    <td style='padding: 10px;'  align=center>"+newUniformAd.getUniformCondition()+"</td> "+
+		" 	    <td style='padding: 10px;'  align=center>"+newUniformAd.getPrice()+"</td> "+
+		" 	    <td style='padding: 10px;'  align=center>"+newUniformAd.getComments()+"</td> "+
+		" 	</tr> "+
+		" </table> ";
+		return SU_message;
+	}
+	
+	private static  String getHTML_BU_Message(UniformAd newUniformAd) {
+		String BU_message= 
+				" <div border=1 align=center style='background-color: #DAE9BC;padding: 5px;'><b><u>Uniform Items which you want to sell is needed by a parent  </u></b><br>(If you no longer need to sell this item, Kindly delete your ad.)</div> "+
+				" 		<br> "+
+				" 		<table align=center border=1> "+
+				" <tr style='background-color:#BCCE98;'> "+
+				" <th  style='padding: 10px;'  align=center>Item</th> "+
+				" <th style='padding: 10px;'  align=center>Size</th> "+
+				" </tr> "+
+				" 	<tr style='background-color: #DAE9BC;'> "+
+				" <td style='padding: 10px;'  align=center>Yajurveda  PE Pant</td> "+
+				" <td style='padding: 10px;'  align=center>22</td> "+
+				" </tr> "+
+				" </table>";
+		return  BU_message;
+	}
+	
+	private static  String getHTML_BT_Message(TextbookAd newTextbookAd) {
+		String BT_message= 
+		" <div border=1 align=center style='background-color: #DAE9BC;padding: 5px;'><b><u>Textbook which you want to sell is needed by a parent  </u></b><br>(If you no longer need to sell this item, Kindly delete your ad.)</div> "+
+		" <br> "+
+		" <table align=center border=1> "+
+		"    <tr style='background-color:#BCCE98;'> "+
+		" 	    <th style='padding: 10px;'  align=center>Class</th> "+
+		" 	    <th style='padding: 10px;'  align=center>Book</th> "+
+		"    </tr> "+
+		"    <tr style='background-color: #DAE9BC;'> "+
+		" 	    <td style='padding: 10px;'  align=center>"+newTextbookAd.getChildsClass()+"</td> "+
+		" 	    <td style='padding: 10px;'  align=center>"+newTextbookAd.getBookType()+"</td> "+
+		"    </tr> "+
+		" </table>	 ";
+		return  BT_message;
+	}
+	
+	private static String getHTML_ST_Message(TextbookAd newTextbookAd) {
+		String ST_message= 
+		" <div border=1 align=center style='background-color: #DAE9BC;padding: 5px;'><b><u>Textbook needed by you is being sold by a parent  </u></b><br>(If you no longer need this item, Kindly delete your ad.)</div> "+
+		" <br> "+
+		" <table align=center border=1> "+
+		" <tr style='background-color:#BCCE98;'> "+
+		" <th style='padding: 10px;'  align=center>Class</th> "+
+		" <th style='padding: 10px;'  align=center>Book</th> "+
+		" <th style='padding: 10px;'  align=center>Condition</th> "+
+		" <th style='padding: 10px;'  align=center>Price</th> "+
+		" <th style='padding: 10px;'  align=center>Comments</th> "+
+		" </tr> "+
+		" <tr style='background-color: #DAE9BC;'> "+
+		" <td style='padding: 10px;'  align=center>"+newTextbookAd.getChildsClass()+"</td> "+
+		" <td style='padding: 10px;'  align=center>"+newTextbookAd.getBookType()+"</td> "+
+		" <td style='padding: 10px;'  align=center>"+newTextbookAd.getCondition()+"</td> "+
+		" <td style='padding: 10px;'  align=center>"+newTextbookAd.getPrice()+"</td> "+
+		" <td style='padding: 10px;'  align=center>"+newTextbookAd.getComments()+"</td> "+
+		" </tr> "+
+		" </table> ";
+		return  ST_message;
+	}
 }
-
-
-
