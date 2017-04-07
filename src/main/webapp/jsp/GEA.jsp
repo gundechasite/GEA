@@ -19,6 +19,7 @@
 		<tr>
 		<td><img src="images/logo.png" alt="" style="width:50px;height:50px;"></td>
 		<td align=right  style="padding-right:40px">
+			<a href="/GEA/Vendor">Vendor</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<% if (session.getAttribute("LoggedUser")!=null) { %>
 			    Hi <%= ((gea.model.User)session.getAttribute("LoggedUser")).getName()%>! | <a href="/GEA/Logout">Logout </a>
 			<% } else { %>

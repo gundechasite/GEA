@@ -64,7 +64,9 @@
 		<result name="signup" type="tiles">SignupTilesDefinition</result>
 		<result  name="error" type="tiles">LoginTilesDefinition</result>                    
 	</action> 
-  
+    <action name="Vendor" class="gea.actions.DoNothingView">            
+		<result  name="success" type="tiles">VendorTilesDefinition</result>                     
+	</action>
   
 <!-- Buy/Sell Textbooks links --> 
 	<action name="BuyTextbook" class="gea.actions.TextbooksBuySellView">            

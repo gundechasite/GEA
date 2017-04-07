@@ -31,6 +31,11 @@
 	  <definition name="LoginTilesDefinition" template="/jsp/GEA.jsp">  
 	  		<put-attribute name="content" value="/jsp/Login.jsp"></put-attribute>  
 	  </definition>
+	  <definition name="VendorTilesDefinition" template="/jsp/GEA.jsp">  
+	  		<put-attribute name="content" value="/html/UniformVendor.html"></put-attribute>  
+	  </definition>
+	  
+	  
   
 <!-- Buy/Sell Textbooks links --> 
 	  <definition name="SellTextbookTileDefinition" template="/jsp/GEA.jsp">  
