@@ -11,9 +11,9 @@ DROP TABLE RegisteredUsers;
 CREATE TABLE RegisteredUsers 
 (loginId VARCHAR(15), 
 password VARCHAR(20),
-parentName VARCHAR(20),
+parentName VARCHAR(30),
 parentPhone VARCHAR(20), 
-parentEmail VARCHAR(20), 
+parentEmail VARCHAR(30), 
 creationDate DATE);
 
 
