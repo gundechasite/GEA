@@ -39,7 +39,10 @@ public class DBUtility {
 		  
 		  /* Register JDBC driver */
 		  Class.forName("com.mysql.jdbc.Driver");
-		
+		System.out.println("MYSQL_USER="+System.getenv("MYSQL_USER"));
+		System.out.println("MYSQL_PASSWORD="+System.getenv("MYSQL_PASSWORD"));
+	     System.out.println("GEA_EMAIL="+System.getenv("GEA_EMAIL"));
+	     System.out.println("GEA_EMAIL_PSWD"+System.getenv("GEA_EMAIL_PSWD"));
 		  /* Open a connection */
 
 		  connection = DriverManager.getConnection(DB_URL, USER, PASS);
