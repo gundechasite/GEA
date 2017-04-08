@@ -2,7 +2,7 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
  
 
-<s:form name="SiteFeedbackForm" action="/processSiteFeedback" method="post" validate="true">
+<s:form name="SiteFeedbackForm"  namespace="/" action="processSiteFeedback" method="post" validate="true">
 
 
 <table width=95%  id="geaContentTable">

@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
  
-<s:form name="ContactMeForm" action="/processContactMe" method="post" validate="true">
+<s:form name="ContactMeForm" namespace="/" action="processContactMe" method="post" validate="true">
 <table width=90% id=geaContentTable>
   
   <tr><td colspan=2><label class="geaFormHeading">Contact Me</label></td></tr>

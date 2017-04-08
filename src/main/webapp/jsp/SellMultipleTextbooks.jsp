@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
  
-<s:form name="SellTextbooksForm" action="/processSellMultipleTextbooks" method="post" validate="true">
+<s:form name="SellTextbooksForm"  namespace="/" action="processSellMultipleTextbooks" method="post" validate="true">
 
 <s:hidden name="hideContactDetails"  value="false"/>
 

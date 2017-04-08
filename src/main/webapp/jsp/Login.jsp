@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
-<s:form name="LoginForm" action="/processLogin" method="post" validate="true">
+<s:form name="LoginForm" namespace="/" action="processLogin" method="post" validate="true">
 <table width=90% id=geaContentTable>
   
   <tr><td colspan=2><label class="geaFormHeading">Login</label></td></tr>
