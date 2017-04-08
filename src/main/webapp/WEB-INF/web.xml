@@ -31,4 +31,9 @@
 	 <param-value>/WEB-INF/tiles.xml</param-value>  
   </context-param>  
       
+    <error-page>
+        <error-code>503</error-code>
+        <location>/jsp/ErrorPage.jsp</location>
+    </error-page>
+      
 </web-app> 

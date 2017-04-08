@@ -196,6 +196,9 @@
         <result name="error" type="tiles">MessageScreenTilesDefinition</result>
 	</action>
 
+	<action name="ErrorPage" class="gea.actions.DoNothingView">            
+		<result name="success" type="tiles">ErrorPageTileDefinition</result>                     
+	</action> 
 	
 	</package>       
 </struts>   

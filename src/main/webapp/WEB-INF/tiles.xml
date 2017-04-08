@@ -116,5 +116,8 @@
  	 <definition name="MessageScreenTilesDefinition" template="/jsp/GEA.jsp">  
   			<put-attribute name="content" value="/jsp/MessageScreen.jsp"></put-attribute>  
   	 </definition>
-    		    		        
+  	 
+ 	 <definition name="ErrorPageTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="content" value="/jsp/ErrorPage.jsp"></put-attribute>  
+  	 </definition>    		    		        
 </tiles-definitions>  
