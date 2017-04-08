@@ -24,12 +24,12 @@
 
   <tr>
   		<td width=20%><label class="geaFormlabel">LoginId </label><label class="redStar">*</label></td>
-   		<td><s:textfield  cssClass="geaInput" name="loginId" scope="request" theme="simple"/></td>
+   		<td><s:textfield  cssClass="geaInput" name="loginId" scope="request" theme="simple" maxlength="15"/></td>
   </tr>
 
   <tr>
     <td><label class="geaFormlabel">  Password</label><label class="redStar">*</label></td>
-    <td><s:password  cssClass="geaInput"  name="password"  theme="simple"/></td>
+    <td><s:password  cssClass="geaInput"  name="password"  theme="simple"  maxlength="15"/></td>
   </tr>
   
   <tr>

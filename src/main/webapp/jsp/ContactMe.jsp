@@ -23,7 +23,7 @@
   
   <tr>
 	   <td width=20%><label class="geaFormlabel">Your comments: </label><label class="redStar">*</label></td>
-	   <td><s:textarea  name="message" scope="request" cols="60" rows="7" theme="simple"/></td>
+	   <td><s:textarea  name="message" scope="request" cols="60" rows="7" theme="simple"  maxlength="600"/></td>
   </tr>
 
   <tr>

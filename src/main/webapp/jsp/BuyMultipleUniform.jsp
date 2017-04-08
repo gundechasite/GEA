@@ -27,7 +27,7 @@
 		<tr align=center>
 			<td><s:select label="Veda (For PE only)" list="vedaList" listKey="code" listValue="value" name="veda" theme="simple" /></td> 
 			<td><s:select label="Part of Uniform" list="partOfUniformList" listKey="code" listValue="value" name="partOfUniform"  theme="simple"/> </td> 
-			<td><s:textfield name="uniformSize" style="width:40px" label="size" scope="request" theme="simple"/></td> 
+			<td><s:textfield name="uniformSize" style="width:40px" label="size" scope="request" theme="simple" maxlength="3"/></td> 
 			<td><input type="button" id="delPOIbutton" value="Delete" onclick="deleteRow(this)" /></td>
 		</tr>
 		</table>

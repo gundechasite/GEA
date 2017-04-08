@@ -24,7 +24,7 @@
    
   <tr><s:select cssClass="geaSelect" label="Part of Uniform" list="partOfUniformList" listKey="code" listValue="value" name="partOfUniform" /></tr>
   
-  <tr><td colspan=2><s:textfield name="uniformSize" cssClass="geaInput" label="size" scope="request" /></td></tr>
+  <tr><td colspan=2><s:textfield name="uniformSize" cssClass="geaInput" label="size" scope="request"  maxlength="3"/></td></tr>
  
   <tr><td></td><td><s:submit value="Submit" cssClass="geaSubmitButton" theme="simple" /></td></tr>
 </table>

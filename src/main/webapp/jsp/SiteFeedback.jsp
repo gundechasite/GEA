@@ -44,22 +44,22 @@
    
    <tr>
 	  <td width=20%><label class="geaFormlabel">How can this website be improved? </label></td>
-	  <td><s:textarea  name="howToImprove" scope="request" cols="60" rows="1" theme="simple"/></td>
+	  <td><s:textarea  name="howToImprove" scope="request" cols="60" rows="1" theme="simple"   maxlength="400"/></td>
    </tr>
   
    <tr>
 	  <td width=20%><label class="geaFormlabel">Which other items should parents sell/buy on this website? </label></td>
-	  <td><s:textarea  name="whichOtherItems" scope="request" cols="60" rows="1" theme="simple"/></td>
+	  <td><s:textarea  name="whichOtherItems" scope="request" cols="60" rows="1" theme="simple"  maxlength="400"/></td>
    </tr>
   
    <tr>
    	  <td width=20%><label class="geaFormlabel">Which website should be developed which will help Gundecha parents or school? </label></td>
-   	  <td><s:textarea  name="whichOtherSites" scope="request" cols="60" rows="1" theme="simple"/></td>
+   	  <td><s:textarea  name="whichOtherSites" scope="request" cols="60" rows="1" theme="simple"  maxlength="400"/></td>
    </tr>
 
    <tr>
 	  <td width=20%><label class="geaFormlabel">Should this site start an option where parents can exchange story books for few days? </label></td>
-	  <td><s:textarea  name="exchange" scope="request" cols="60" rows="1" theme="simple"/></td>
+	  <td><s:textarea  name="exchange" scope="request" cols="60" rows="1" theme="simple"  maxlength="400"/></td>
    </tr>
  
   <tr>
