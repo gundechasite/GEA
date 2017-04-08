@@ -74,3 +74,8 @@ whichOtherSites	 VARCHAR(200),
 exchange VARCHAR(200),
 submissionDate DATE);
 
+delete from ContactMe;
+delete from SiteFeedBack;
+delete from UniformAds;
+delete from TextbooksAds;
+delete from RegisteredUsers;

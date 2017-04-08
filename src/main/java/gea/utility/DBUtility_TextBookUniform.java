@@ -17,7 +17,11 @@ public class DBUtility_TextBookUniform {
 				String sql, boolean getScreenValues, boolean parentNameIsInQuery)  
 				throws SQLException, ClassNotFoundException {
 		
-		  System.out.println("getUniformAdsList "+ sql);
+		  
+		  System.out.println("*******************************************");
+		  System.out.println("getUniformAdsList Query:  "+sql);
+		  System.out.println("*******************************************");
+
 		  ArrayList<UniformAd> uniformAdList = new ArrayList<UniformAd>();
 		  Connection conn = DBUtility.getDatabaseConnection();
 	      ResultSet rs = conn.createStatement().executeQuery(sql);
@@ -55,7 +59,10 @@ public class DBUtility_TextBookUniform {
 			String sql, boolean getScreenValues, boolean parentNameInQuery)  
 			throws SQLException, ClassNotFoundException {
 		  
-		  System.out.println("getTextbookAdsList : "+sql);
+		  System.out.println("*******************************************");
+		  System.out.println("getTextbookAdsList Query:  "+sql);
+		  System.out.println("*******************************************");
+
 		  ArrayList<TextbookAd> textbookAdList = new ArrayList<TextbookAd>();
 		  Connection conn = DBUtility.getDatabaseConnection();
 	      ResultSet rs = conn.createStatement().executeQuery(sql);
@@ -112,7 +119,12 @@ public class DBUtility_TextBookUniform {
 				hideContactDetails = "N";
 	      }
 	      preparedStmt.setString(8, hideContactDetails);
-	      System.out.println("insertTextbookAdDetails ::"+preparedStmt.toString());
+	      
+	      System.out.println("*******************************************");
+		  System.out.println("insertTextbookAdDetails Query:  "+preparedStmt);
+		  System.out.println("*******************************************");
+
+	      
 	      preparedStmt.execute();
       }
       conn.close();
@@ -129,7 +141,9 @@ public class DBUtility_TextBookUniform {
 	      preparedStmt.setString(2, veda);
 	      preparedStmt.setString(3, size);
 	      preparedStmt.setString(4, partOfUniform);
-	      System.out.println("Delete Query :: " +preparedStmt);
+	      System.out.println("*******************************************");
+		  System.out.println("Delete Query:  "+preparedStmt);
+		  System.out.println("*******************************************");
 	      preparedStmt.execute();
 		  conn.close();	
 	}
@@ -141,7 +155,10 @@ public class DBUtility_TextBookUniform {
 	      preparedStmt.setString(1, loginId);
 	      preparedStmt.setString(2, childsClass);
 	      preparedStmt.setString(3, bookType);
-	      System.out.println("Delete Query :: " +preparedStmt);
+	      System.out.println("*******************************************");
+		  System.out.println("Delete Query:  "+preparedStmt);
+		  System.out.println("*******************************************");
+	      
 	      preparedStmt.execute();
 		  conn.close();	
 	}
@@ -173,7 +190,10 @@ public class DBUtility_TextBookUniform {
 		      preparedStmt.setString(9, hideContactDetails);
 		      preparedStmt.addBatch();
 		  }
-	      System.out.println("Insert uniformAds Statement: "+preparedStmt);
+	      System.out.println("*******************************************");
+		  System.out.println("insertUniformAdDetails Query:  "+preparedStmt);
+		  System.out.println("*******************************************");
+	      
 	      preparedStmt.executeBatch();
 	      conn.close();	
 	}

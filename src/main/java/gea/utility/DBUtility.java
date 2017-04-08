@@ -41,12 +41,7 @@ public class DBUtility {
 		  Class.forName("com.mysql.jdbc.Driver");
 		
 		  /* Open a connection */
-		  System.out.println("*******************************************");
-		  System.out.println(System.getenv("MYSQL_USER"));
-		  System.out.println(System.getenv("MYSQL_PASSWORD"));
-		  System.out.println(System.getenv("HOSTNAME"));
-		  System.out.println(System.getenv("MYSQL_DATABASE"));
-		  System.out.println("*******************************************");
+
 		  connection = DriverManager.getConnection(DB_URL, USER, PASS);
 		  return connection;
 		   
@@ -65,6 +60,9 @@ public class DBUtility {
 	      preparedStmt.setString(3, name);
 	      preparedStmt.setString(4, phone);
 	      preparedStmt.setString(5, email);
+		  System.out.println("*******************************************");
+		  System.out.println("signupUser Query:  "+preparedStmt);
+		  System.out.println("*******************************************");
 	      preparedStmt.execute();
 	      conn.close();
 	}
@@ -73,7 +71,11 @@ public class DBUtility {
 	public static User validateLogin(String loginId, String password)  throws SQLException, ClassNotFoundException {
 		  String sql = "select * from RegisteredUsers where loginId='"+loginId+"' and password='"+password+"'";
 		  Connection conn = getDatabaseConnection();
-	      ResultSet rs = conn.createStatement().executeQuery(sql);
+		  System.out.println("*******************************************");
+		  System.out.println("validateLogin Query:  "+sql);
+		  System.out.println("*******************************************");
+
+		  ResultSet rs = conn.createStatement().executeQuery(sql);
 	      if (rs.next()) {
 		    	User loggedUser = new User();
 				loggedUser.setEmail(rs.getString("parentEmail"));
@@ -92,6 +94,10 @@ public class DBUtility {
 	public static boolean isThisPhoneRegistered(String phone)  throws SQLException, ClassNotFoundException {
 			String sql = "select * from RegisteredUsers where loginId='"+phone+"'";
 			Connection conn = getDatabaseConnection();
+			  System.out.println("*******************************************");
+			  System.out.println("isThisPhoneRegistered Query:  "+sql);
+			  System.out.println("*******************************************");
+
 			ResultSet rs = conn.createStatement().executeQuery(sql);
 	      
 			if (rs.next()) {
@@ -108,7 +114,11 @@ public class DBUtility {
 	      PreparedStatement preparedStmt = conn.prepareStatement(insertStmt);
 	      preparedStmt.setString(1, loginId);
 	      preparedStmt.setString(2, message);
-	      System.out.println(preparedStmt);
+	      
+		  System.out.println("*******************************************");
+		  System.out.println("saveContactMeMessage Query:  "+preparedStmt);
+		  System.out.println("*******************************************");
+
 	      preparedStmt.execute();
 	      conn.close();
 	}
@@ -135,7 +145,12 @@ public class DBUtility {
 	      preparedStmt.setString(5, whichOtherItems);
 	      preparedStmt.setString(6, whichOtherSites);
 	      preparedStmt.setString(7, exchange);
-	      System.out.println(preparedStmt);
+	      
+		  System.out.println("*******************************************");
+		  System.out.println("saveSiteFeedback Query:  "+preparedStmt);
+		  System.out.println("*******************************************");
+
+	      
 	      preparedStmt.execute();
 	      conn.close();
 	}
@@ -145,6 +160,10 @@ public class DBUtility {
 		  String sql = "select loginId, parentName, parentPhone, parentEmail, creationDate from RegisteredUsers order by creationDate desc";
 		  ArrayList<User> resisteredUsers = new ArrayList<User>();
 		  Connection conn = getDatabaseConnection();
+		  System.out.println("*******************************************");
+		  System.out.println("getResisteredUsers Query:  "+sql);
+		  System.out.println("*******************************************");
+
 	      ResultSet rs = conn.createStatement().executeQuery(sql);
 	      while (rs.next()) {
 		    	User loggedUser = new User();
@@ -165,8 +184,12 @@ public class DBUtility {
 		  		" from ContactMe c, RegisteredUsers r where c.loginId=r.loginId order by c.submissionDate desc";
 		  ArrayList<ContactMeBean> contactMeMessages = new ArrayList<ContactMeBean>();
 		  Connection conn = getDatabaseConnection();
-		  System.out.println("getContactMeMessages :: "+ sql);
-	      ResultSet rs = conn.createStatement().executeQuery(sql);
+		  
+		  System.out.println("*******************************************");
+		  System.out.println("getContactMeMessages Query:  "+sql);
+		  System.out.println("*******************************************");
+
+		  ResultSet rs = conn.createStatement().executeQuery(sql);
 	      while (rs.next()) {
 	    	  ContactMeBean contactMeBean = new ContactMeBean();
 	    	  contactMeBean.setMessage(rs.getString("message"));
@@ -185,8 +208,12 @@ public class DBUtility {
 		  		" where s.loginId=r.loginId order by s.submissionDate desc";
 		  ArrayList<SiteFeedbackBean> siteFeedbackList = new ArrayList<SiteFeedbackBean>();
 		  Connection conn = getDatabaseConnection();
-		  System.out.println("getSiteFeedbackList :: "+ sql);
-	      ResultSet rs = conn.createStatement().executeQuery(sql);
+		  
+		  System.out.println("*******************************************");
+		  System.out.println("getSiteFeedbackList Query:  "+sql);
+		  System.out.println("*******************************************");
+
+		  ResultSet rs = conn.createStatement().executeQuery(sql);
 	      while (rs.next()) {
 	    	  SiteFeedbackBean siteFeedback = new SiteFeedbackBean();
 	    	  siteFeedback.setHowToImprove(rs.getString("howToImprove"));
