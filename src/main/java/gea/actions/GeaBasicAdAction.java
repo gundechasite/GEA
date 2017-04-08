@@ -84,9 +84,17 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 			System.out.println("Outside For Loop");
 			for (int i=0;i<searchResultsForInputUniformAds.size();i++) {
 				UniformAd currentSearchResultAd = searchResultsForInputUniformAds.get(i);
+				System.out.println("i"+i);
 				for (int j=0;j<inputUniformAds.size();j++) {
+					System.out.println("j"+j);
 					UniformAd currentNewUniformAd = inputUniformAds.get(j);
-					
+					System.out.println(currentSearchResultAd.getVedaDBCode());
+					System.out.println(currentNewUniformAd.getVedaDBCode());
+					System.out.println(currentSearchResultAd.getPartOfUniformDBCode());
+					System.out.println(currentNewUniformAd.getPartOfUniformDBCode());
+					System.out.println(currentSearchResultAd.getSize());
+					System.out.println(currentNewUniformAd.getSize());
+					System.out.println("-------------------------------");
 					if (currentSearchResultAd.getVedaDBCode().equals(currentNewUniformAd.getVedaDBCode()) 
 							&&
 							currentSearchResultAd.getPartOfUniformDBCode().equals(currentNewUniformAd.getPartOfUniformDBCode())
