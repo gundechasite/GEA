@@ -35,7 +35,7 @@
 	   <td colspan=2>
 		  <label class="geaFormSmallText">
 		  Feel free to give me all your suggestions to improve this website. Let me know any question you may have.
-		  If you have forgotten your password, please let me know and I will send you your password.<br>
+		  
 		  </label>
 	   </td>
   </tr>
