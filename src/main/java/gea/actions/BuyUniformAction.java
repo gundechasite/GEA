@@ -36,22 +36,16 @@ public class BuyUniformAction extends GeaBasicAdAction {
 			return super.execute();
 		 }
 	 
-	
-		/* 
-		 * Validate
-		 * Buy Uniform and Sell Uniform will have same validations,
-		 * only 1 difference - price will be optional in Buy uniform 
-		 */
+		/* Validate */
 		public void validate() {
-	
-			  for (int i=0;i<uniformSize.length;i++) {
+	 		  for (int i=0;i<uniformSize.length;i++) {
 			      if (GeaUtility.isFieldEmpty(partOfUniform[i])) {
 			    	  addActionError("The Part of Uniform must be selected");
 			      }
 			      if (GeaUtility.isFieldEmpty(uniformSize[i])) {
 			    	  addActionError("The size must be entered");
 			      }
-			      if (GeaUtility.isFieldNumeric(uniformSize[i])) {
+			      if (!GeaUtility.isFieldNumeric(uniformSize[i])) {
 			    	  addActionError("The size entered should be a number");
 			      }
 			  }

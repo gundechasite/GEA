@@ -57,7 +57,7 @@ DROP TABLE ContactMe;
 
 CREATE TABLE ContactMe 
 (loginId VARCHAR(15),
-message VARCHAR(400),
+message VARCHAR(600),
 submissionDate DATE);
 
 

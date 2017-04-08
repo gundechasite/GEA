@@ -19,8 +19,8 @@ public class GeaUtility {
 	}
 	
 	
-	public static boolean isFieldNumeric(String loginId) {
-		return StringUtils.isNumeric(loginId);
+	public static boolean isFieldNumeric(String field) {
+		return StringUtils.isNumeric(field);
 	}
 	
 	
