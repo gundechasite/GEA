@@ -81,7 +81,7 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 		}
 		
 		if (screenCode.equals("BU") ||screenCode.equals("SU")) {
-			
+			System.out.println("Outside For Loop");
 			for (int i=0;i<searchResultsForInputUniformAds.size();i++) {
 				UniformAd currentSearchResultAd = searchResultsForInputUniformAds.get(i);
 				for (int j=0;j<inputUniformAds.size();j++) {
@@ -94,9 +94,11 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 							currentSearchResultAd.getSize().equals(currentNewUniformAd.getSize())) {
 						/* Match Found */
 						String toEmail = currentSearchResultAd.getAdOwnerEmail();
+						System.out.println("Matching Ad Found" + toEmail);
 						if (!GeaUtility.isFieldEmpty(toEmail)) {
 							String message = EmailUtility.getEmailMessage(screenCode, GeaUtility.getLoggedUser(sessionMap),currentNewUniformAd, currentSearchResultAd);
 							String subject = EmailUtility.getSubject(screenCode, currentNewUniformAd);
+							System.out.println("Subject"+subject);
 							EmailUtility.sendEmail(toEmail, subject, message);
 						}
 					}
