@@ -13,7 +13,7 @@ CREATE TABLE RegisteredUsers
 password VARCHAR(20),
 parentName VARCHAR(30),
 parentPhone VARCHAR(20), 
-parentEmail VARCHAR(30), 
+parentEmail VARCHAR(50), 
 creationDate DATE);
 
 
@@ -24,7 +24,7 @@ CREATE TABLE TextbooksAds
 (childsClass VARCHAR(2), 
 booksType VARCHAR(2),
 price VARCHAR(3),
-comments VARCHAR(100), 
+comments VARCHAR(400), 
 textbookCondition VARCHAR(2), 
 loginId VARCHAR(15),
 sellerOrBuyer VARCHAR(1),
@@ -42,7 +42,7 @@ CREATE TABLE UniformAds
 size VARCHAR(3), 
 partOfUniform VARCHAR(2), 
 price VARCHAR(3),
-comments VARCHAR(100), 
+comments VARCHAR(400), 
 uniformCondition VARCHAR(2),
 loginId VARCHAR(15),
 sellerOrBuyer VARCHAR(1),
@@ -57,7 +57,7 @@ DROP TABLE ContactMe;
 
 CREATE TABLE ContactMe 
 (loginId VARCHAR(15),
-message VARCHAR(200),
+message VARCHAR(400),
 submissionDate DATE);
 
 
@@ -67,11 +67,11 @@ DROP TABLE SiteFeedBack;
 CREATE TABLE SiteFeedBack 
 (loginId VARCHAR(15),
 siteUsefullness VARCHAR(3),
-pricesOk VARCHAR(200),
-howToImprove VARCHAR(200),
-whichOtherItems VARCHAR(200),
-whichOtherSites	 VARCHAR(200),
-exchange VARCHAR(200),
+pricesOk VARCHAR(400),
+howToImprove VARCHAR(400),
+whichOtherItems VARCHAR(400),
+whichOtherSites	 VARCHAR(400),
+exchange VARCHAR(400),
 submissionDate DATE);
 
 delete from ContactMe;
