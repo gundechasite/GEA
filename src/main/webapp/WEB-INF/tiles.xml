@@ -17,6 +17,9 @@
 	  <definition name="AboutThisWebsiteTileDefinition" template="/jsp/GEA.jsp">  
 	  		<put-attribute name="content" value="/html/AboutThisWebsite.html"></put-attribute>  
 	  </definition>
+	  <definition name="HowToUseSiteTileDefinition" template="/jsp/GEA.jsp">  
+	  		<put-attribute name="content" value="/html/HowToUseSite.html"></put-attribute>  
+	  </definition>
 	  <definition name="ContactMeTileDefinition" template="/jsp/GEA.jsp">  
 		  	<put-attribute name="content" value="/jsp/ContactMe.jsp"></put-attribute>  
 	  </definition>

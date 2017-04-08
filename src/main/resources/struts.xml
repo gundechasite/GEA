@@ -21,6 +21,9 @@
 	<action name="AboutThisWebsite" class="gea.actions.DoNothingView">            
 		<result name="success" type="tiles">AboutThisWebsiteTileDefinition</result>                     
 	</action>
+	<action name="HowToUseSite" class="gea.actions.DoNothingView">            
+		<result name="success" type="tiles">HowToUseSiteTileDefinition</result>                     
+	</action>
 	<action name="ContactMe" class="gea.actions.GeaForceLoginView">   
 		<result name="login" type="tiles">LoginTilesDefinition</result>         
 		<result name="success" type="tiles">ContactMeTileDefinition</result>                     
