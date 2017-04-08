@@ -21,11 +21,6 @@ public class EmailUtility {
 		
 		return message;
 
-//		String message =  
-//		"Hi " +matchingOldTextbookAd.getAdOwnerName() + ",\n"+
-//		"Parent "+loggedUser.getName()+" ("+loggedUser.getPhone()+" "+loggedUser.getEmail()+") has added a new Ad today.\n" +
-//" ("+getSellOrBuy(newTextbookAd.getSellerOrBuyer())+" class "+newTextbookAd.getChildsClass()+" "+newTextbookAd.getBookType()+") ";
-
 	}
 	
 
@@ -40,13 +35,6 @@ public class EmailUtility {
 		
 		return message;
 
-		
-		
-//		String message =  
-//				"Hi " +matchingOldUniformAd.getAdOwnerName() + ",\n"+
-//				"Parent "+loggedUser.getName()+" ("+loggedUser.getPhone()+" "+loggedUser.getEmail()+") has added a new Ad today.\n" +
-//		" ("+getSellOrBuy(newUniformAd.getSellerOrBuyer())+" "+newUniformAd.getVeda()+" "+newUniformAd.getPartOfUniform()+ " of size "+newUniformAd.getSize()+") ";
-
 	}
 	
 	public static void sendEmail (String toEmail, String subject,String message) {
@@ -55,7 +43,6 @@ public class EmailUtility {
 		System.out.println("message :"+message);
 		System.out.println("##############################");
 		
-	    //Get properties object    
 	    Properties props = new Properties();    
 	    props.put("mail.smtp.host", "smtp.gmail.com");    
 	    props.put("mail.smtp.socketFactory.port", "465");    
@@ -67,9 +54,7 @@ public class EmailUtility {
 	    Session session = Session.getDefaultInstance(props,    
 	     new javax.mail.Authenticator() {    
 	     protected PasswordAuthentication getPasswordAuthentication() { 
-	     System.out.println("GEA_EMAIL="+System.getenv("GEA_EMAIL"));
-	     System.out.println("GEA_EMAIL_PSWD"+System.getenv("GEA_EMAIL_PSWD"));
-	     return new PasswordAuthentication("gundecha.parents.portal@gmail.com","Abcxyz123");  
+	     return new PasswordAuthentication(System.getenv("GEA_EMAIL"), System.getenv("GEA_EMAIL_PSWD"));  
 	     }    
 	    });    
 	    //compose message    

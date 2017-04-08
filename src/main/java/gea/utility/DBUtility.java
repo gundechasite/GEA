@@ -12,42 +12,14 @@ import java.util.ArrayList;
 
 public class DBUtility {
 	
-	/*******************************************
-	 * The following service(s) have been created in your project: mysql. 
-	 * Username: userFNL 
-	 * Password: VdJw83hvELlCvp7n 
-	 * Database Name: sampledb 
-	 * Connection URL: mysql://mysql:3306/
-	 
-	 * Applied Parameter Values
-	These parameters often include things like passwords. 
-	If you will need to reference these values later, copy them to a safe location. 
-	Parameters MYSQL_USER, MYSQL_PASSWORD, MYSQL_ROOT_PASSWORD were generated automatically.
-	 * ******************************************/
-	
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
 	static final String DB_URL = "jdbc:mysql://mysql:3306/sampledb";
-
-	//  Database credentials
-	static final String USER = "userFNL";
-	static final String PASS = "VdJw83hvELlCvp7n";
-	   
 	
 	public static Connection getDatabaseConnection() throws SQLException, ClassNotFoundException  {
-
 		  Connection connection = null;
-		  
-		  /* Register JDBC driver */
-		  Class.forName("com.mysql.jdbc.Driver");
-		System.out.println("MYSQL_USER="+System.getenv("MYSQL_USER"));
-		System.out.println("MYSQL_PASSWORD="+System.getenv("MYSQL_PASSWORD"));
-	     System.out.println("GEA_EMAIL="+System.getenv("GEA_EMAIL"));
-	     System.out.println("GEA_EMAIL_PSWD"+System.getenv("GEA_EMAIL_PSWD"));
-		  /* Open a connection */
-
-		  connection = DriverManager.getConnection(DB_URL, USER, PASS);
+		  Class.forName(JDBC_DRIVER);
+		  connection = DriverManager.getConnection(DB_URL, System.getenv("MYSQL_USER"), System.getenv("MYSQL_PASSWORD"));
 		  return connection;
-		   
 	}
 		
 	public static void signupUser (String name, String email, String phone, String password) throws SQLException, ClassNotFoundException {
