@@ -34,11 +34,13 @@
 			<input type="radio" name="siteUsefullness"  value="CHG"/><label> Will be helpful after changes</label>
 	  </td>
   </tr>
-
+	<s:hidden  name="pricesOk" scope="request" value="" />
+   <!-- 
    <tr>
 	  <td><label class="geaFormlabel">Are prices of textbooks, uniforms ok? </label></td>
-	  <td><s:textarea  name="pricesOk" scope="request" cols="60" rows="1" theme="simple"/></td>
-   </tr>
+	  <td><s:hidden  name="pricesOk" scope="request" cols="60" rows="1" theme="simple"/></td>
+   </tr> 
+   -->
    
    <tr>
 	  <td width=20%><label class="geaFormlabel">How can this website be improved? </label></td>

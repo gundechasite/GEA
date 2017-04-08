@@ -72,8 +72,6 @@
 		 	<a href="/GEA/AboutThisWebsite">About this Website</a> 
 		 	| 
 		 	<a href="/GEA/SiteFeedback">Feedback on this Website</a> 
-		 	|
-		 	<a href="/GEA/AboutMe">About Me</a> 
 		 	| 
 		 	<a href="/GEA/ContactMe">Contact Me </a>
 	</div>
