@@ -91,7 +91,7 @@ public class EmailUtility {
 	
 	private static String getHTMLParentDetails(String name, String phone, String email) {
 		String parentDetails = "<br> "+
-		" <div border=1 align=center style='background-color: #DAE9BC;padding: 5px;'><b><u>Parent Details</u></b> - Kindly leave a watsapp message/sms, call only if urgent.</div> "+
+		" <div border=1 align=center style='background-color: #DAE9BC;padding: 5px;'><b><u>Parent Details</u></b> - Kindly leave a watsapp message/sms, <span style='color:red;'>call only if it is urgent</span>.</div> "+
 		" <br> "+
 		" <table align=center border=1> "+
 		"   	<tr  style='background-color:#BCCE98;'> "+
