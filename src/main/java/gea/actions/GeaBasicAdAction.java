@@ -89,13 +89,13 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 					System.out.println("j"+j);
 					UniformAd currentNewUniformAd = inputUniformAds.get(j);
 					System.out.println(currentSearchResultAd.getVedaDBCode());
-					System.out.println(currentNewUniformAd.getVedaDBCode());
+					System.out.println(currentNewUniformAd.getVeda());
 					System.out.println(currentSearchResultAd.getPartOfUniformDBCode());
 					System.out.println(currentNewUniformAd.getPartOfUniformDBCode());
 					System.out.println(currentSearchResultAd.getSize());
 					System.out.println(currentNewUniformAd.getSize());
 					System.out.println("-------------------------------");
-					if (currentSearchResultAd.getVedaDBCode().equals(currentNewUniformAd.getVedaDBCode()) 
+					if (currentSearchResultAd.getVedaDBCode().equals(currentNewUniformAd.getVeda()) 
 							&&
 							currentSearchResultAd.getPartOfUniformDBCode().equals(currentNewUniformAd.getPartOfUniformDBCode())
 							&&
@@ -117,11 +117,14 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 			for (int i=0;i<searchResultsForInputTextbookAds.size();i++) {
 				TextbookAd currentSearchResultAd = searchResultsForInputTextbookAds.get(i);
 				for (int j=0;j<inputTextbookAds.size();j++) {
+
 					TextbookAd currentNewTextbookAd = inputTextbookAds.get(j);
-					
+					System.out.println(currentSearchResultAd.getBookTypeDBCode());
+					System.out.println(currentNewTextbookAd.getBookTypeDBCode());
+					System.out.println(currentNewTextbookAd.getBookType());
 					if (currentSearchResultAd.getChildsClass().equals(currentNewTextbookAd.getChildsClass()) 
 							&&
-							currentSearchResultAd.getBookTypeDBCode().equals(currentNewTextbookAd.getBookTypeDBCode())) {
+							currentSearchResultAd.getBookTypeDBCode().equals(currentNewTextbookAd.getBookType())) {
 						/* Match Found */System.out.println("4");
 						String toEmail = currentSearchResultAd.getAdOwnerEmail();
 						if (!GeaUtility.isFieldEmpty(toEmail)) {
