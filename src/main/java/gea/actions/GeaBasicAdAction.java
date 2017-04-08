@@ -125,7 +125,7 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 					System.out.println(currentNewTextbookAd.getBookType());
 					if (currentSearchResultAd.getChildsClass().equals(currentNewTextbookAd.getChildsClass()) 
 							&&
-							currentSearchResultAd.getBookTypeDBCode().equals(currentNewTextbookAd.getBookType())) {
+							currentSearchResultAd.getBookTypeDBCode().equals(currentNewTextbookAd.getBookTypeDBCode())) {
 						/* Match Found */System.out.println("4");
 						String toEmail = currentSearchResultAd.getAdOwnerEmail();
 						if (!GeaUtility.isFieldEmpty(toEmail)) {
