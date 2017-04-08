@@ -45,6 +45,22 @@ public class UniformAd {
 		this.sellerOrBuyer = sellerOrBuyer;
 	}
 	
+	public UniformAd(
+			String veda,String vedaDBCode, String size, String partOfUniform,
+			String uniformCondition, String price, String comments, String loginId,
+			String hideContactDetails, String sellerOrBuyer) {
+		
+		this.veda = veda;
+		this.vedaDBCode = vedaDBCode;
+		this.size = size;
+		this.partOfUniform = partOfUniform;
+		this.uniformCondition = uniformCondition;
+		this.price = price;
+		this.comments = comments;
+		this.loginId = loginId;
+		this.hideContactDetails = hideContactDetails;
+		this.sellerOrBuyer = sellerOrBuyer;
+	}
 	
 	/* Getters and Setters */
 	public String getAdOwnerNamePhoneEmail() {

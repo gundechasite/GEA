@@ -90,12 +90,13 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 					UniformAd currentNewUniformAd = inputUniformAds.get(j);
 					System.out.println(currentSearchResultAd.getVedaDBCode());
 					System.out.println(currentNewUniformAd.getVeda());
+					System.out.println(currentNewUniformAd.getVedaDBCode());
 					System.out.println(currentSearchResultAd.getPartOfUniformDBCode());
 					System.out.println(currentNewUniformAd.getPartOfUniformDBCode());
 					System.out.println(currentSearchResultAd.getSize());
 					System.out.println(currentNewUniformAd.getSize());
 					System.out.println("-------------------------------");
-					if (currentSearchResultAd.getVedaDBCode().equals(currentNewUniformAd.getVeda()) 
+					if (currentSearchResultAd.getVedaDBCode().equals(currentNewUniformAd.getVedaDBCode()) 
 							&&
 							currentSearchResultAd.getPartOfUniformDBCode().equals(currentNewUniformAd.getPartOfUniformDBCode())
 							&&
