@@ -43,9 +43,7 @@
 
 		<div id="center" class="column"><tiles:insertAttribute name="content" /></div>
 
-		<div id="left" class="column">
-
-		</div>
+	
 
 		<!-- <div id="right"></div>  -->
 
