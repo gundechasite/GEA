@@ -45,27 +45,21 @@
 
 		<div id="center" class="column"><tiles:insertAttribute name="content" /></div>
 
-			<div id="left" class="column">
+		<div id="left" class="column">
 			<br>
-			<h3>Sell Uniforms</h3>
+			<h3>GEA Uniforms</h3>
 			<ul>
-				<li><a href="/GEA/SellUniform">only 1</a></li>
-				<li><a href="/GEA/SellMultipleUniform">more than 1</a></li>
+				<li><a href="/GEA/SellUniform">Sell Uniform</a></li>
+				<li><a href="/GEA/SellMultipleUniform">Sell Uniforms</a></li>
+				<li><a href="/GEA/BuyUniform">Buy Uniform</a></li>
+				<li><a href="/GEA/BuyMultipleUniform">Buy Uniforms</a></li>
 			</ul>
-			<h3>Buy Uniforms</h3>
+			<h3>GEA Textbooks</h3>
 			<ul>
-				<li><a href="/GEA/BuyUniform">only 1</a></li>
-				<li><a href="/GEA/BuyMultipleUniform">more than 1</a></li>
-			</ul>
-			<h3>Sell Textbooks</h3>
-			<ul>
-				<li><a href="/GEA/SellTextbook">only 1</a></li>
-				<li><a href="/GEA/SellMultipleTextbook">more than 1</a></li>
-			</ul>
-			<h3>Buy Textbooks</h3>
-			<ul>
-				<li><a href="/GEA/BuyTextbook">only 1</a></li>
-				<li><a href="/GEA/BuyMultipleTextbook">more than 1</a></li>
+				<li><a href="/GEA/SellTextbook">Sell Textbook</a></li>
+				<li><a href="/GEA/SellMultipleTextbook">Sell Textbooks</a></li>
+				<li><a href="/GEA/BuyTextbook">Buy Textbook</a></li>
+				<li><a href="/GEA/BuyMultipleTextbook">Buy Textbooks</a></li>
 			</ul>
 			<h3>Your Ads</h3>
 			<ul>
@@ -76,7 +70,7 @@
 			</ul>
 			<br>
 		</div>
-
+		
 		<!-- <div id="right"></div>  -->
 
 	</div>
