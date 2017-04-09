@@ -45,7 +45,11 @@
 		<div id="center" class="column"><tiles:insertAttribute name="content" /></div>
 
 	<div id="footer" align="center">
-
+		 	<a href="/GEA/AboutThisWebsite">About this Website</a> 
+		 	|
+		 	<a href="/GEA/SiteFeedback">Feedback on this Website</a> 
+		 	|
+		 	<a href="/GEA/ContactMe">Contact Me </a>
 	</div>
 </body>
 </html>
