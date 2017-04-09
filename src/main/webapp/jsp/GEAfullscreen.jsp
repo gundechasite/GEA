@@ -23,8 +23,7 @@
 			<a href="/GEA/Vendor">Vendor</a>
 		 	|
 		 	<a href="/GEA/HowToUseSite">How to use this Website</a>
-		 	|
-			<a href="/GEA/AboutThisWebsite">About this Website</a> 
+		 	 
 		</td>
 		<td align=right  style="padding-right:40px">
 			
