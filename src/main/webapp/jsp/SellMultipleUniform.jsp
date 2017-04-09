@@ -37,7 +37,7 @@
 	</td>
 	</tr>
 
-    <tr><td colspan=2> <input type="button" id="Sell More Books" value="Sell More Clothes" onclick="insRow()"/></td></tr>
+    <tr><td colspan=2> <input type="button" id="Sell More Books" value="Sell More Items" onclick="insRow()"/></td></tr>
   	
   	<tr><td></td><td><s:submit value="Submit"  cssClass="geaSubmitButton"  theme="simple" /></td></tr>
   	 

@@ -28,9 +28,8 @@
    <tr>
    <td colspan=2>
    		<label class="geaFormSmallText"> 
-		Recommended price for Olympiad books is free or Rs. 20 each. 
-		Recommended price for School Textbooks is free, Rs. 100 or Rs. 200 for all. 
-		Contact Me to let me know your suggestions how I should better this price options.
+		Recommended price for external exam books is free or Rs. 20 each. 
+		Contact Me to let me know your suggestions how I should better price options.
 	    </label>
    </td>
    </tr>
@@ -39,7 +38,7 @@
    
    <tr><s:select cssClass="geaSelect" label="Condition" list="textbookConditionList" listKey="code" listValue="value" name="textbookCondition" /></tr> 
 
-   <tr><s:textfield label="Comments" name="comments" cssClass="geaInput" maxlength="400"/></tr>  	
+   <tr><s:textfield label="Comments" name="comments" cssClass="geaInput" maxlength="400" tooltip="You can describe book condition or at what time, buyer can contact you or leave this empty."/></tr>  	
   
    <tr><td></td><td><s:submit value="Submit" cssClass="geaSubmitButton" theme="simple" /></td></tr>
   	
