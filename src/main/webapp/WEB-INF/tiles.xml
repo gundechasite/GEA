@@ -14,10 +14,10 @@
 	  <definition name="AboutMeTileDefinition" template="/jsp/GEA.jsp">  
 	  		<put-attribute name="content" value="/html/AboutMe.html"></put-attribute>  
 	  </definition>
-	  <definition name="AboutThisWebsiteTileDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="AboutThisWebsiteTileDefinition" template="/jsp/GEAfullscreen.jsp">  
 	  		<put-attribute name="content" value="/html/AboutThisWebsite.html"></put-attribute>  
 	  </definition>
-	  <definition name="HowToUseSiteTileDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="HowToUseSiteTileDefinition" template="/jsp/GEAfullscreen.jsp">  
 	  		<put-attribute name="content" value="/html/HowToUseSite.html"></put-attribute>  
 	  </definition>
 	  <definition name="ContactMeTileDefinition" template="/jsp/GEA.jsp">  

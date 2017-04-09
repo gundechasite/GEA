@@ -42,18 +42,9 @@
 		</table>
 	</div>
 
-	<div id="container">
-
 		<div id="center" class="column"><tiles:insertAttribute name="content" /></div>
 
-	
-
-		<!-- <div id="right"></div>  -->
-
-	</div>
-
 	<div id="footer" align="center">
- 
 
 	</div>
 </body>
