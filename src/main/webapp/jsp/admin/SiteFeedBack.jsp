@@ -10,10 +10,10 @@
 	    <th>Submission Date</th>
 	    <th>Parent</th>
 	    <th>Site Usefullness</th>
-	    <th>Are Prices Ok?</th>
 	    <th>How To Improve?</th>
 	    <th>Which Other Items to Sell/Buy?</th>
 	    <th>Which Other Sites?</th>
+	    <th>Are Prices Ok?</th>
 	    <th>Exchange Books?</th>
     </tr>
   
@@ -24,10 +24,10 @@
 	    <td><s:property value="submissionDate"/></td>
 	    <td><s:property value="parent" /></td>
 	    <td><s:property value="siteUsefullness"/></td>
-	    <td><s:property value="pricesOk"/></td>
 	    <td><s:property value="howToImprove"/></td>
 	    <td><s:property value="whichOtherItems"/></td>
 	    <td><s:property value="whichOtherSites"/></td>
+	    <td><s:property value="practicePapers"/></td>
 	    <td><s:property value="exchange"/></td>
 	</tr>
 	</s:iterator>

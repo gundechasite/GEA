@@ -8,6 +8,7 @@ public class SiteFeedbackBean {
 	private String whichOtherItems;
 	private String whichOtherSites;
 	private String parent;
+	private String practicePapers;
 	private String exchange;
 	
 	
@@ -58,5 +59,11 @@ public class SiteFeedbackBean {
 	}
 	public void setParent(String parent) {
 		this.parent = parent;
-	}	
+	}
+	public String getPracticePapers() {
+		return practicePapers;
+	}
+	public void setPracticePapers(String practicePapers) {
+		this.practicePapers = practicePapers;
+	}
 }

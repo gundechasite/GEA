@@ -72,6 +72,7 @@ howToImprove VARCHAR(400),
 whichOtherItems VARCHAR(400),
 whichOtherSites	 VARCHAR(400),
 exchange VARCHAR(400),
+practicePapers VARCHAR(400),
 submissionDate DATE);
 
 delete from ContactMe;

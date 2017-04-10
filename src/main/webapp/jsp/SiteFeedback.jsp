@@ -58,6 +58,11 @@
    </tr>
 
    <tr>
+	  <td width=20%><label class="geaFormlabel">Should this site have practice papers e.g. maths olympiad tests or maths school test? </label></td>
+	  <td><s:textarea  name="practicePapers" scope="request" cols="60" rows="1" theme="simple"   maxlength="400"/></td>
+   </tr>
+
+   <tr>
 	  <td width=20%><label class="geaFormlabel">Should this site start an option where parents can exchange story books for few days? </label></td>
 	  <td><s:textarea  name="exchange" scope="request" cols="60" rows="1" theme="simple"  maxlength="400"/></td>
    </tr>

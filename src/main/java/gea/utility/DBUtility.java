@@ -105,11 +105,12 @@ public class DBUtility {
 			String howToImprove,
 			String whichOtherItems, 
 			String whichOtherSites, 
+			String practicePapers,
 			String exchange)  throws SQLException, ClassNotFoundException {
 		
 		  String insertStmt = 
 				  " INSERT INTO SiteFeedBack (loginId, siteUsefullness, pricesOk, howToImprove, whichOtherItems, " +
-				  " whichOtherSites, exchange, submissionDate) VALUES(?, ?, ?, ?, ?, ?, ?, NOW())";
+				  " whichOtherSites, practicePapers, exchange, submissionDate) VALUES(?, ?, ?, ?, ?, ?, ?, ?, NOW())";
 
 		  Connection conn = getDatabaseConnection();
 	      PreparedStatement preparedStmt = conn.prepareStatement(insertStmt);
@@ -119,7 +120,8 @@ public class DBUtility {
 	      preparedStmt.setString(4, howToImprove);
 	      preparedStmt.setString(5, whichOtherItems);
 	      preparedStmt.setString(6, whichOtherSites);
-	      preparedStmt.setString(7, exchange);
+	      preparedStmt.setString(7, practicePapers);
+	      preparedStmt.setString(8, exchange);
 	      
 		  System.out.println("*******************************************");
 		  System.out.println("saveSiteFeedback Query:  "+preparedStmt);
@@ -178,7 +180,7 @@ public class DBUtility {
 	
 
 	public static ArrayList<SiteFeedbackBean> getSiteFeedbackList()  throws SQLException, ClassNotFoundException {
-		  String sql = " select s.submissionDate, s.siteUsefullness, s.pricesOk, s.howToImprove, s.whichOtherItems, s.whichOtherSites,s.exchange, " +
+		  String sql = " select s.submissionDate, s.siteUsefullness, s.pricesOk, s.howToImprove, s.whichOtherItems, s.whichOtherSites, s.practicePapers, s.exchange, " +
 		  		" CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent from SiteFeedBack s, RegisteredUsers r " +
 		  		" where s.loginId=r.loginId order by s.submissionDate desc";
 		  ArrayList<SiteFeedbackBean> siteFeedbackList = new ArrayList<SiteFeedbackBean>();
@@ -198,6 +200,7 @@ public class DBUtility {
 	    	  siteFeedback.setSubmissionDate(rs.getString("submissionDate"));
 	    	  siteFeedback.setWhichOtherItems(rs.getString("whichOtherItems"));
 	    	  siteFeedback.setWhichOtherSites(rs.getString("whichOtherSites"));
+	    	  siteFeedback.setPracticePapers(rs.getString("practicePapers"));
 	    	  siteFeedback.setExchange(rs.getString("exchange"));
 	    	  siteFeedbackList.add(siteFeedback);
 	      } 

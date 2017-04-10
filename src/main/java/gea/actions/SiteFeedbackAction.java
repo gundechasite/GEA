@@ -17,6 +17,7 @@ public class SiteFeedbackAction extends ActionSupport  implements SessionAware {
 	private String howToImprove;
 	private String whichOtherItems;
 	private String whichOtherSites;
+	private String practicePapers;
 	private String exchange;
 	
 	
@@ -34,7 +35,7 @@ public class SiteFeedbackAction extends ActionSupport  implements SessionAware {
 		 } 
 		
 		try {
-			  DBUtility.saveSiteFeedback(GeaUtility.getLoggedUserLoginId(sessionMap) , siteUsefullness, pricesOk, howToImprove, whichOtherItems, whichOtherSites, exchange);
+			  DBUtility.saveSiteFeedback(GeaUtility.getLoggedUserLoginId(sessionMap) , siteUsefullness, pricesOk, howToImprove, whichOtherItems, whichOtherSites, practicePapers, exchange);
 			  addActionMessage("Thank you for your feedback. ");
 			  return "success";  
 		  
@@ -83,7 +84,12 @@ public class SiteFeedbackAction extends ActionSupport  implements SessionAware {
 	public void setExchange(String exchange) {
 		this.exchange = exchange;
 	}
-
+	public String getPracticePapers() {
+		return practicePapers;
+	}
+	public void setPracticePapers(String practicePapers) {
+		this.practicePapers = practicePapers;
+	}
 
 	/* Required for implements SessionAware */
 	private Map<String, Object> sessionMap;
