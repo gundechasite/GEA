@@ -54,7 +54,7 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 			informSearchResultsOfYourNewAd(screenCode);
 			return screenCode;  /* Ad(s) and Search results will be displayed on screen */
 		} catch (Exception e) {
-			System.out.println("######### ERROR #########  : "+GeaUtility.showErrorDetails(e));
+			System.out.println("# ERROR #  : "+GeaUtility.showErrorDetails(e));
 			addActionError("Some error Occurred while inserting SellTextbook Ad, try later. You may Contact Me with screenshot of your textbook details.");
 			return  "error";
 		}
@@ -81,21 +81,10 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 		}
 		
 		if (screenCode.equals("BU") ||screenCode.equals("SU")) {
-			System.out.println("Outside For Loop");
 			for (int i=0;i<searchResultsForInputUniformAds.size();i++) {
 				UniformAd currentSearchResultAd = searchResultsForInputUniformAds.get(i);
-				System.out.println("i"+i);
 				for (int j=0;j<inputUniformAds.size();j++) {
-					System.out.println("j"+j);
 					UniformAd currentNewUniformAd = inputUniformAds.get(j);
-					System.out.println(currentSearchResultAd.getVedaDBCode());
-					System.out.println(currentNewUniformAd.getVeda());
-					System.out.println(currentNewUniformAd.getVedaDBCode());
-					System.out.println(currentSearchResultAd.getPartOfUniformDBCode());
-					System.out.println(currentNewUniformAd.getPartOfUniformDBCode());
-					System.out.println(currentSearchResultAd.getSize());
-					System.out.println(currentNewUniformAd.getSize());
-					System.out.println("-------------------------------");
 					if (currentSearchResultAd.getVedaDBCode().equals(currentNewUniformAd.getVedaDBCode()) 
 							&&
 							currentSearchResultAd.getPartOfUniformDBCode().equals(currentNewUniformAd.getPartOfUniformDBCode())
@@ -103,33 +92,26 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 							currentSearchResultAd.getSize().equals(currentNewUniformAd.getSize())) {
 						/* Match Found */
 						String toEmail = currentSearchResultAd.getAdOwnerEmail();
-						System.out.println("Matching Ad Found" + toEmail);
 						if (!GeaUtility.isFieldEmpty(toEmail)) {
 							String message = EmailUtility.getEmailMessage(screenCode, GeaUtility.getLoggedUser(sessionMap),currentNewUniformAd, currentSearchResultAd);
 							String subject = EmailUtility.getSubject(screenCode, currentNewUniformAd);
-							System.out.println("Subject"+subject);
 							EmailUtility.sendEmail(toEmail, subject, message);
 						}
 					}
 				}
 			}
 		} else {
-			System.out.println("3");
 			for (int i=0;i<searchResultsForInputTextbookAds.size();i++) {
 				TextbookAd currentSearchResultAd = searchResultsForInputTextbookAds.get(i);
 				for (int j=0;j<inputTextbookAds.size();j++) {
 
 					TextbookAd currentNewTextbookAd = inputTextbookAds.get(j);
-					System.out.println(currentSearchResultAd.getBookTypeDBCode());
-					System.out.println(currentNewTextbookAd.getBookTypeDBCode());
-					System.out.println(currentNewTextbookAd.getBookType());
 					if (currentSearchResultAd.getChildsClass().equals(currentNewTextbookAd.getChildsClass()) 
 							&&
 							currentSearchResultAd.getBookTypeDBCode().equals(currentNewTextbookAd.getBookTypeDBCode())) {
-						/* Match Found */System.out.println("4");
+						/* Match Found */
 						String toEmail = currentSearchResultAd.getAdOwnerEmail();
 						if (!GeaUtility.isFieldEmpty(toEmail)) {
-							System.out.println("5");
 							String message = EmailUtility.getEmailMessage(screenCode, GeaUtility.getLoggedUser(sessionMap),currentNewTextbookAd, currentSearchResultAd);
 							String subject = EmailUtility.getSubject(screenCode, currentNewTextbookAd);
 							EmailUtility.sendEmail(toEmail, subject, message);

@@ -35,9 +35,9 @@ public class DBUtility {
 	      preparedStmt.setString(3, name);
 	      preparedStmt.setString(4, phone);
 	      preparedStmt.setString(5, email);
-		  System.out.println("*******************************************");
-		  System.out.println("signupUser Query:  "+preparedStmt);
-		  System.out.println("*******************************************");
+		  
+		  //System.out.println("signupUser Query:  "+preparedStmt);
+		  
 	      preparedStmt.execute();
 	      conn.close();
 	}
@@ -46,9 +46,9 @@ public class DBUtility {
 	public static User validateLogin(String loginId, String password)  throws SQLException, ClassNotFoundException {
 		  String sql = "select * from RegisteredUsers where loginId='"+loginId+"' and password='"+password+"'";
 		  Connection conn = getDatabaseConnection();
-		  System.out.println("*******************************************");
-		  System.out.println("validateLogin Query:  "+sql);
-		  System.out.println("*******************************************");
+		  
+		  //System.out.println("validateLogin Query:  "+sql);
+		  
 
 		  ResultSet rs = conn.createStatement().executeQuery(sql);
 	      if (rs.next()) {
@@ -69,9 +69,9 @@ public class DBUtility {
 	public static boolean isThisPhoneRegistered(String phone)  throws SQLException, ClassNotFoundException {
 			String sql = "select * from RegisteredUsers where loginId='"+phone+"'";
 			Connection conn = getDatabaseConnection();
-			  System.out.println("*******************************************");
-			  System.out.println("isThisPhoneRegistered Query:  "+sql);
-			  System.out.println("*******************************************");
+			  
+			  //System.out.println("isThisPhoneRegistered Query:  "+sql);
+			  
 
 			ResultSet rs = conn.createStatement().executeQuery(sql);
 	      
@@ -90,9 +90,9 @@ public class DBUtility {
 	      preparedStmt.setString(1, loginId);
 	      preparedStmt.setString(2, message);
 	      
-		  System.out.println("*******************************************");
-		  System.out.println("saveContactMeMessage Query:  "+preparedStmt);
-		  System.out.println("*******************************************");
+		  
+		  //System.out.println("saveContactMeMessage Query:  "+preparedStmt);
+		  
 
 	      preparedStmt.execute();
 	      conn.close();
@@ -123,9 +123,9 @@ public class DBUtility {
 	      preparedStmt.setString(7, practicePapers);
 	      preparedStmt.setString(8, exchange);
 	      
-		  System.out.println("*******************************************");
-		  System.out.println("saveSiteFeedback Query:  "+preparedStmt);
-		  System.out.println("*******************************************");
+		  
+		  //System.out.println("saveSiteFeedback Query:  "+preparedStmt);
+		  
 
 	      
 	      preparedStmt.execute();
@@ -137,9 +137,9 @@ public class DBUtility {
 		  String sql = "select loginId, parentName, parentPhone, parentEmail, creationDate from RegisteredUsers order by creationDate desc";
 		  ArrayList<User> resisteredUsers = new ArrayList<User>();
 		  Connection conn = getDatabaseConnection();
-		  System.out.println("*******************************************");
-		  System.out.println("getResisteredUsers Query:  "+sql);
-		  System.out.println("*******************************************");
+		  
+		  //System.out.println("getResisteredUsers Query:  "+sql);
+		  
 
 	      ResultSet rs = conn.createStatement().executeQuery(sql);
 	      while (rs.next()) {
@@ -162,9 +162,9 @@ public class DBUtility {
 		  ArrayList<ContactMeBean> contactMeMessages = new ArrayList<ContactMeBean>();
 		  Connection conn = getDatabaseConnection();
 		  
-		  System.out.println("*******************************************");
-		  System.out.println("getContactMeMessages Query:  "+sql);
-		  System.out.println("*******************************************");
+		  
+		  //System.out.println("getContactMeMessages Query:  "+sql);
+		  
 
 		  ResultSet rs = conn.createStatement().executeQuery(sql);
 	      while (rs.next()) {
@@ -186,9 +186,9 @@ public class DBUtility {
 		  ArrayList<SiteFeedbackBean> siteFeedbackList = new ArrayList<SiteFeedbackBean>();
 		  Connection conn = getDatabaseConnection();
 		  
-		  System.out.println("*******************************************");
-		  System.out.println("getSiteFeedbackList Query:  "+sql);
-		  System.out.println("*******************************************");
+		  
+		  //System.out.println("getSiteFeedbackList Query:  "+sql);
+		  
 
 		  ResultSet rs = conn.createStatement().executeQuery(sql);
 	      while (rs.next()) {

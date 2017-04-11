@@ -38,10 +38,6 @@ public class EmailUtility {
 	}
 	
 	public static void sendEmail (String toEmail, String subject,String message) {
-		System.out.println("##############################");
-		System.out.println("toEmail :"+toEmail);
-		System.out.println("message :"+message);
-		System.out.println("##############################");
 		
 	    Properties props = new Properties();    
 	    props.put("mail.smtp.host", "smtp.gmail.com");    
@@ -68,8 +64,8 @@ public class EmailUtility {
 	     Transport.send(mimeMessage);    
 	     System.out.println("message sent successfully");    
 	    } catch (MessagingException e) {
-	    	System.out.println("######### ERROR ######### EmailUtility : "+GeaUtility.showErrorDetails(e));
-	    	throw new RuntimeException(e);
+	    	System.out.println("# ERROR # EmailUtility : "+GeaUtility.showErrorDetails(e));
+	    	//throw new RuntimeException(e); Commented on 11 Apr, 2017 as email not sent is fine.
 	    }    
 		
 	}

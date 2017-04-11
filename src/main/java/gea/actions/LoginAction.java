@@ -25,20 +25,16 @@ public class LoginAction extends ActionSupport implements SessionAware {
 				 addActionMessage("Hi "+loggedUser.getName()+", You have Successfully logged in!");
 				 return "success";	
 			 } else {
-				 System.out.println("1");
 				 if (DBUtility.isThisPhoneRegistered(loginId)) {
-					 System.out.println("2");
 					 addActionError("You may be entering wrong password, If you have forgotten password, click Contact Me below and ask for the password.");
 					 return "login";
 				 } else {
-					 System.out.println("3");
 					 addActionError("You are not a registered user, Please signup first!");
 					 return "signup";
 				 }
 			}
 		 } catch (Exception e) {
-			 System.out.println("######### ERROR ######### LoginAction : "+GeaUtility.showErrorDetails(e));
-			System.out.println("Error while logging user loginId="+loginId+" " +e);
+			System.out.println("# ERROR # LoginAction : "+GeaUtility.showErrorDetails(e));
 			addActionError("Some error Occurred during your login, please try again later or Contact Me");
 			return "error";
 		}

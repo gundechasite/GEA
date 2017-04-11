@@ -29,7 +29,6 @@ public class SellTextbooksAction extends GeaBasicAdAction {
 				currentComments = null;
 			} else {
 				currentComments = comments[i];
-				System.out.println("textbookCondition[i]"+textbookCondition[i]);
 			}
 			ST_Ads.add(new TextbookAd(childsClass, booksType[i], price[i], textbookCondition[i], currentComments , GeaUtility.getLoggedUserLoginId(sessionMap), getHideContactDetails(), sellerOrBuyer));
 			

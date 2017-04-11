@@ -52,8 +52,7 @@ public class DeleteAdAction  extends ActionSupport implements SessionAware {
 			}
 		
 		} catch (Exception e) {
-			System.out.println("######### ERROR ######### Delete Action : "+GeaUtility.showErrorDetails(e));
-			System.out.println("Error while deleting your "+buyOrSell+" ad "+e);
+			System.out.println("# ERROR # Delete Action : "+GeaUtility.showErrorDetails(e));
 			addActionError("Error while deleting your "+buyOrSell+" ad");
 			return "error";
 		}
