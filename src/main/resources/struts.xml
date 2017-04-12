@@ -217,7 +217,8 @@
 		<result  name="error" type="tiles">AddBookTileDefinition</result> 
 	</action>
 	<action name="GeaParentsLibrary" class="gea.actions.library.GeaParentsLibraryView">            
-		<result name="success" type="tiles">GeaParentsLibraryTileDefinition</result>                     
+		<result name="success" type="tiles">GeaParentsLibraryTileDefinition</result>
+		<result name="error" type="tiles">GeaParentsLibraryTileDefinition</result>                     
 	</action>
 </package>       
 </struts>   

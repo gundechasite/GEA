@@ -1,7 +1,16 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
-<table width=90% id=geaContentTable><tr><td colspan=2><label class="geaFormSubHeading">Gea Parents Library</label></td></tr></table>
+<table width=90% id=geaContentTable><tr><td colspan=2><label class="geaFormSubHeading">Gea Parents Library</label></td></tr>
+  <tr>
+	   <s:if test="hasActionErrors()">
+			<div style="color:red;" class="geaErrorMessage">
+				<s:actionerror/>
+			</div>
+	   </s:if>
+	   </td>
+  </tr>
+</table>
 
 <style>
 div.tab button {

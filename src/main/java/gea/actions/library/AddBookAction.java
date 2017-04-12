@@ -64,7 +64,7 @@ public class AddBookAction extends ActionSupport  implements SessionAware {
 		  
 			} catch (Exception e) {
 				System.out.println("# ERROR # AddBook : "+GeaUtility.showErrorDetails(e));
-				addActionError("Some error Occurred while Adding your books. Try again later or email the message to gundecha.site@gmail.com.");
+				addActionError("Some error Occurred while Adding your books: Try again later or email the message to gundecha.site@gmail.com.");
 				return "error";
 			}
 	}
