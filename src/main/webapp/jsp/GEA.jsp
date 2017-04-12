@@ -25,9 +25,11 @@
 		 	<a href="/GEA/HowToUseSite">How to use this Website</a>
 		 	|
 		 	<a href="/GEA/AboutThisWebsite">About this Website</a> 
-		 	<a href="/GEA/AddBook">Add Book</a>
+		 	|
 		 	<a href="/GEA/GeaParentsLibrary?screenCode=Library">Library</a>
-		 	<a href="/GEA/GeaParentsLibrary?screenCode=MyBooks">My Books</a>
+		 	<li><a href="/GEA/BuyMultipleTextbook">Buy Textbooks</a></li>
+		 	<li><a href="/GEA/BuyMultipleUniform">Buy Uniforms</a></li>
+		 	
 		</td>
 		<td align=right  style="padding-right:40px">
 			
@@ -50,29 +52,7 @@
 		<div id="center" class="column"><tiles:insertAttribute name="content" /></div>
 
 		<div id="left" class="column">
-			<br>
-			<h3>GEA Uniforms</h3>
-			<ul>
-				<li><a href="/GEA/SellUniform">Sell Uniform</a></li>
-				<li><a href="/GEA/SellMultipleUniform">Sell Uniforms</a></li>
-				<li><a href="/GEA/BuyUniform">Buy Uniform</a></li>
-				<li><a href="/GEA/BuyMultipleUniform">Buy Uniforms</a></li>
-			</ul>
-			<h3>GEA Textbooks</h3>
-			<ul>
-				<li><a href="/GEA/SellTextbook">Sell Textbook</a></li>
-				<li><a href="/GEA/SellMultipleTextbook">Sell Textbooks</a></li>
-				<li><a href="/GEA/BuyTextbook">Buy Textbook</a></li>
-				<li><a href="/GEA/BuyMultipleTextbook">Buy Textbooks</a></li>
-			</ul>
-			<h3>Your Ads</h3>
-			<ul>
-			<li><a href="/GEA/ViewMyAds?screenCode=ST">Sell Textbooks</a></li>
-			<li><a href="/GEA/ViewMyAds?screenCode=SU">Sell Uniform</a></li>
-			<li><a href="/GEA/ViewMyAds?screenCode=BT">Buy Textbooks</a></li>
-			<li><a href="/GEA/ViewMyAds?screenCode=BU">Buy Uniform</a></li>
-			</ul>
-			<br>
+			<tiles:insertAttribute name="leftNav"  ignore="true"/></div>
 		</div>
 		
 		<!-- <div id="right"></div>  -->
