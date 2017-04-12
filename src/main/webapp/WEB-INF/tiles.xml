@@ -147,5 +147,8 @@
  	  		<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/library/GeaLibrary.jsp"></put-attribute>  
   	 </definition>
-  	 
+  	 <definition name="SearchBookTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
+  			<put-attribute name="content" value="/jsp/library/SearchBook.jsp"></put-attribute>  
+  	 </definition>  	 
 </tiles-definitions>  

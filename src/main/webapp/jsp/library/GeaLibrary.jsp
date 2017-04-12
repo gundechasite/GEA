@@ -1,15 +1,30 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
-<table width=90% id=geaContentTable><tr><td colspan=2><label class="geaFormSubHeading">Gea Parents Library</label></td></tr>
+<table width=90% id=geaContentTable>
   <tr>
-	   <s:if test="hasActionErrors()">
+	  <td colspan=2>
+	  <label class="geaFormSubHeading">Gea Parents Library - 
+	  <s:if test="%{(screenCode.equals('MyBooks'))}">Books I added to Library</s:if>
+	  <s:else>
+    Books added by other parents to Library
+</s:else>
+	  </label>
+	  </td>
+  </tr>
+     <tr>
+   <td colspan=2><div style="border-top:1px solid gray;clear:both;">
+   	   <s:if test="hasActionErrors()">
 			<div style="color:red;" class="geaErrorMessage">
 				<s:actionerror/>
 			</div>
 	   </s:if>
-	   </td>
-  </tr>
+   		<label class="geaFormSmallText"> 
+		Either you may meet the parent to exchange your books, or if your kids are big and if they can meet in school, they may exchange books in school. This website is not responsible for damaged books. 
+	    </label>
+   </td>
+   </tr>
+
 </table>
 
 <style>

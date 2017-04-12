@@ -18,7 +18,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class GeaParentsLibraryView extends ActionSupport  implements SessionAware {
-	String screenCode; /* Library/MyBooks */
+	String screenCode; /* screenCode=Library/MyBooks */
 	ArrayList<BookBean> booksListPreschool;
 	ArrayList<BookBean> booksList1_4;
 	ArrayList<BookBean> booksList5_9;

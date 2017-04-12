@@ -210,6 +210,10 @@
 	<action name="AddBook" class="gea.actions.DoNothingView">            
 		<result name="success" type="tiles">AddBookTileDefinition</result>                     
 	</action> 
+	<action name="SearchBook" class="gea.actions.DoNothingView">            
+		<result name="success" type="tiles">SearchBookTileDefinition</result>                     
+	</action> 
+	
 	<action name="processAddBook" class="gea.actions.library.AddBookAction">   
 	    <result name="login" type="tiles">LoginTilesDefinition</result> 
 	    <result name="input" type="tiles">AddBookTileDefinition</result>    

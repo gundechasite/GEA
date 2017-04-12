@@ -34,8 +34,8 @@
   <tr>
 	   <td colspan=2>
 		  <label class="geaFormSmallText">
-		  Feel free to give me all your suggestions to improve this website. Let me know any question you may have.
-		  
+		  Feel free to give me all your suggestions to improve this website. Let me know any question you may have. 
+		  Let me know, which other features may be developed on this site (or any other site) that may help parents or school.
 		  </label>
 	   </td>
   </tr>

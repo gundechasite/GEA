@@ -20,15 +20,15 @@
 		<td><img src="images/logo.png" alt="" style="width:50px;height:50px;"></td>
 		<td>
 		
-			<a href="/GEA/Vendor">Vendor</a>
+			<a href="/GEA/GeaParentsLibrary?screenCode=Library">Gea Parents Library</a>
 		 	|
 		 	<a href="/GEA/HowToUseSite">How to use this Website</a>
 		 	|
 		 	<a href="/GEA/AboutThisWebsite">About this Website</a> 
 		 	|
-		 	<a href="/GEA/GeaParentsLibrary?screenCode=Library">Library</a>
-		 	<li><a href="/GEA/BuyMultipleTextbook">Buy Textbooks</a></li>
-		 	<li><a href="/GEA/BuyMultipleUniform">Buy Uniforms</a></li>
+		 	
+		 	<a href="/GEA/BuyMultipleTextbook">Buy Textbooks</a>
+		 	<a href="/GEA/BuyMultipleUniform">Buy Uniforms</a>
 		 	
 		</td>
 		<td align=right  style="padding-right:40px">
@@ -60,10 +60,7 @@
 	</div>
 
 	<div id="footer" align="center">
-  			
-		 	<a href="/GEA/SiteFeedback">Feedback on this Website</a> 
-		 	|
-		 	<a href="/GEA/ContactMe">Contact Me </a>
+	 	<a href="/GEA/ContactMe">Contact Me </a>
 	</div>
 </body>
 </html>
