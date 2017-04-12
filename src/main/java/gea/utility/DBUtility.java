@@ -13,12 +13,15 @@ import java.util.ArrayList;
 public class DBUtility {
 	
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-	static final String DB_URL = "jdbc:mysql://mysql:3306/sampledb";
 	
 	public static Connection getDatabaseConnection() throws SQLException, ClassNotFoundException  {
 		  Connection connection = null;
 		  Class.forName(JDBC_DRIVER);
-		  connection = DriverManager.getConnection(DB_URL, System.getenv("MYSQL_USER"), System.getenv("MYSQL_PASSWORD"));
+		  System.out.println(System.getenv("MYSQL_USER"));
+		  System.out.println(System.getenv("MYSQL_PASSWORD"));
+		  System.out.println(System.getenv("MYSQL_DB_URL"));
+		  System.out.println(System.getenv("GEA_EMAIL"));
+		  connection = DriverManager.getConnection(System.getenv("MYSQL_DB_URL"), System.getenv("MYSQL_USER"), System.getenv("MYSQL_PASSWORD"));
 		  return connection;
 	}
 		

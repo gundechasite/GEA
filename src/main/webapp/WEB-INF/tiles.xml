@@ -122,5 +122,14 @@
   	 
  	 <definition name="ErrorPageTileDefinition" template="/jsp/GEA.jsp">  
   			<put-attribute name="content" value="/jsp/ErrorPage.jsp"></put-attribute>  
-  	 </definition>    		    		        
+  	 </definition> 
+  	 
+<!-- For Library -->
+ 	 <definition name="AddBookTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="content" value="/jsp/library/AddBook.jsp"></put-attribute>  
+  	 </definition>
+ 	 <definition name="GeaParentsLibraryTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="content" value="/jsp/library/GeaLibrary.jsp"></put-attribute>  
+  	 </definition>
+  	 
 </tiles-definitions>  

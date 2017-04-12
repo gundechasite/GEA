@@ -205,6 +205,19 @@
 	<action name="ErrorPage" class="gea.actions.DoNothingView">            
 		<result name="success" type="tiles">ErrorPageTileDefinition</result>                     
 	</action> 
-	
-	</package>       
+
+<!-- For Library -->
+	<action name="AddBook" class="gea.actions.DoNothingView">            
+		<result name="success" type="tiles">AddBookTileDefinition</result>                     
+	</action> 
+	<action name="processAddBook" class="gea.actions.library.AddBookAction">   
+	    <result name="login" type="tiles">LoginTilesDefinition</result> 
+	    <result name="input" type="tiles">AddBookTileDefinition</result>    
+	    <result  name="success" type="tiles">MessageScreenTilesDefinition</result>  
+		<result  name="error" type="tiles">AddBookTileDefinition</result> 
+	</action>
+	<action name="GeaParentsLibrary" class="gea.actions.library.GeaParentsLibraryView">            
+		<result name="success" type="tiles">GeaParentsLibraryTileDefinition</result>                     
+	</action>
+</package>       
 </struts>   

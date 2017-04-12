@@ -25,7 +25,8 @@
 		 	<a href="/GEA/HowToUseSite">How to use this Website</a>
 		 	|
 		 	<a href="/GEA/AboutThisWebsite">About this Website</a> 
-		 	
+		 	<a href="/GEA/AddBook">Add Book</a>
+		 	<a href="/GEA/GeaParentsLibrary">Library</a>
 		</td>
 		<td align=right  style="padding-right:40px">
 			

@@ -75,6 +75,32 @@ exchange VARCHAR(400),
 practicePapers VARCHAR(400),
 submissionDate DATE);
 
+
+DROP TABLE test;
+
+CREATE TABLE test 
+(class VARCHAR(1),
+subject VARCHAR(1),
+question VARCHAR(100),
+optionA VARCHAR(100),
+optionB VARCHAR(100),
+optionC VARCHAR(100),
+optionD VARCHAR(100),
+correctOption VARCHAR(1),
+correctOptionDesc VARCHAR(100));
+
+DROP TABLE GeaParentsLibrary;
+
+CREATE TABLE GeaParentsLibrary 
+(loginId VARCHAR(15),
+bookTitle VARCHAR(100),
+bookISBN VARCHAR(15),
+bookAuthor VARCHAR(60),
+bookTotalPages TINYINT,
+bookCategory VARCHAR(3),
+submissionDate DATE
+)
+
 delete from ContactMe;
 delete from SiteFeedBack;
 delete from UniformAds;
