@@ -20,7 +20,7 @@
 		<td><img src="images/logo.png" alt="" style="width:50px;height:50px;"></td>
 		<td>
 		
-			<a href="/GEA/GeaParentsLibrary?screenCode=Library">Gea Parents Library</a>
+			<a href="/GEA/LibraryReadme">Gea Parents Library</a>
 		 	|
 		 	<a href="/GEA/HowToUseSite">How to use this Website</a>
 		 	|

@@ -60,8 +60,45 @@ public class DBUtilityLibrary {
 		  } 
 	      conn.close();
 	      return booksList;
+	}
+	
+	
+	
+	public static ArrayList<BookBean> searchBook(
+			String bookTitle, String bookISBN, String bookAuthor, String loggedUserLoginId) 
+					throws SQLException, ClassNotFoundException {
 
-	}	
-	//select * from GeaParentsLibrary where bookCategory='' and loginId!='loggeduser' order by loginId, submissionDate desc
-	//	
+		String sql = 
+				  "select l.*,CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parentDetails from GeaParentsLibrary l, RegisteredUsers r "
+		  		+ "where l.loginId!='"+loggedUserLoginId+"' and l.loginId=r.loginId and "
+		  				+ "(";
+				if (!GeaUtility.isFieldEmpty(bookTitle)) {
+					sql = sql + " bookTitle like '%"+bookTitle+"%' or";
+				}
+		  				
+				if (!GeaUtility.isFieldEmpty(bookISBN)) {
+					sql = sql + " bookISBN like '%"+bookISBN+"%' or";
+				}
+		  		if (!GeaUtility.isFieldEmpty(bookISBN)) {
+					sql = sql + " bookAuthor like '%"+bookAuthor+"%'";
+		  		}
+		  		if (sql.endsWith("or")) {
+		  			sql = sql.substring(0, sql.length()-2); //remove or if it is at end
+		  		}
+		  		sql = sql + ") ";
+		  		sql = sql + "order by submissionDate desc" ;
+		  		
+		  ArrayList<BookBean> booksList = new ArrayList<BookBean>();
+		  Connection conn = DBUtility.getDatabaseConnection();
+		  
+		  System.out.println("getBooksList Query:  "+sql);
+		  
+	      ResultSet rs = conn.createStatement().executeQuery(sql);
+	      while (rs.next()) {
+				booksList.add(
+						new BookBean(rs.getString("bookTitle"), rs.getString("bookISBN"), rs.getString("bookAuthor"), rs.getString("bookCategory"), rs.getString("bookTotalPages"), rs.getString("loginId"), rs.getString("parentDetails")));
+		  } 
+	      conn.close();
+	      return booksList;
+	}
 }

@@ -126,8 +126,6 @@
   	  <definition name="SearchResultsTilesDefinition" template="/jsp/GEA.jsp">  
   			<put-attribute name="content" value="/jsp/SearchResults.jsp"></put-attribute>  
   	  </definition>
-  	  
-  	  
  
 <!-- Common -->   		    		
  	 <definition name="MessageScreenTilesDefinition" template="/jsp/GEA.jsp">  
@@ -139,6 +137,10 @@
   	 </definition> 
   	 
 <!-- For Library -->
+ 	 <definition name="LibraryReadmeTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
+  			<put-attribute name="content" value="/jsp/library/LibraryReadme.html"></put-attribute>  
+  	 </definition>
  	 <definition name="AddBookTileDefinition" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/library/AddBook.jsp"></put-attribute>  
@@ -150,5 +152,9 @@
   	 <definition name="SearchBookTileDefinition" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/library/SearchBook.jsp"></put-attribute>  
-  	 </definition>  	 
+  	 </definition> 
+  	 <definition name="SearchBookResultsTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
+  			<put-attribute name="content" value="/jsp/library/SearchBookResults.jsp"></put-attribute>  
+  	 </definition> 
 </tiles-definitions>  

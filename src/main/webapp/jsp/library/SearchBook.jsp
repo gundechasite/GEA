@@ -17,14 +17,27 @@
 	   </s:if>
 	   </td>
    </tr>
+    <tr> 
+	   <td colspan=2>
+	   <label class="geaFormSmallText"> 
+	    Enter below whatever you know about the book you want to search. 
+	   </label>
+	   </td>
+    </tr>
+	<tr>
+  		<td width=20%><label class="geaFormlabel">Book Title </label></td>
+   		<td><s:textfield name="bookTitle" theme="simple"  maxlength="100" cssClass="geaInput" /></td>
+  	</tr>
+	<tr>
+  		<td width=20%><label class="geaFormlabel">Book ISBN</label></td>
+   		<td><s:textfield name="bookISBN" theme="simple"  maxlength="15"  cssClass="geaInput" /></td>
+  	</tr>
+	<tr>
+  		<td width=20%><label class="geaFormlabel">Author </label></td>
+   		<td><s:textfield name="bookAuthor" theme="simple"  maxlength="60"  cssClass="geaInput" /></td>
+  	</tr>
 
-   <tr><s:textfield name="bookTitle" theme="simple" style="width:200px;" maxlength="100" /></tr>
-   
-   <tr><s:textfield name="bookISBN" theme="simple"  maxlength="15" style="width:60px;" /></tr>
-
-   <tr><s:textfield name="bookAuthor" theme="simple"  maxlength="60" /></tr>
-
-   <tr><td></td><td><s:submit value="Submit"  cssClass="geaSubmitButton"  theme="simple" /></td></tr>
+    <tr><td></td><td><s:submit value="Submit"  cssClass="geaSubmitButton"  theme="simple" /></td></tr>
 
 </table>
 </s:form>
