@@ -240,13 +240,18 @@
 	</action>
 	
 <!-- For Library -->
-	<action name="SelectTest" class="gea.actions.Tests.SelectTestView">            
+	<action name="SelectTest" class="gea.actions.Tests.SelectTestView">  
 		<result name="success" type="tiles">SelectTestTileDefinition</result>                     
 	</action>
 	<action name="processSelectTest" class="gea.actions.Tests.SelectTestAction">            
-		<result name="success" type="tiles">SelectChapterTileDefinition</result>                     
+		<result name="success" type="tiles">SelectChapterTileDefinition</result>   
 	</action>
-
-	
+	<action name="Test" class="gea.actions.Tests.TestView">            
+		<result name="qn" type="tiles">TestQnTileDefinition</result>  
+		                   
+		<result name="lastAns" type="tiles">TestLastAnsTileDefinition</result>
+		<result name="ans" type="tiles">TestAnsTileDefinition</result>
+		<result name="NoQns" type="tiles">TestQnTileDefinition</result>
+	</action>
 </package>       
 </struts>   

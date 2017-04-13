@@ -94,11 +94,7 @@ subject VARCHAR(50),
 );
 
 
-
 insert into TestClassSubject (class, subject) values ('2','Maths');
-insert into TestClassSubject (class, subject) values ('2','Science');
-insert into TestClassSubject (class, subject) values ('2','English');
-insert into TestClassSubject (class, subject) values ('2','Computer Science');
 
 DROP TABLE TestClassSubjectChapter;
 
@@ -108,6 +104,9 @@ ClassSubject_id MEDIUMINT NOT NULL REFERENCES TestClassSubject(ClassSubject_id),
 chapter VARCHAR(100),
  PRIMARY KEY (Chapter_id)
 );
+
+insert into  TestClassSubjectChapter (ClassSubject_id, chapter) values ('1', 'Addition');
+insert into  TestClassSubjectChapter (ClassSubject_id, chapter) values ('1', 'Subtraction');
 
 DROP TABLE geaTest;
 	
@@ -123,9 +122,19 @@ correctOption VARCHAR(1),
 correctOptionDesc VARCHAR(100));	
 
 
-insert into geaTest (id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
 values ('1', '6+2=?', '6','8','10','12','B','6+2=8');
-insert into geaTest (id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('1', '2+3=?', '5','8','10','12','A','2+3=5');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('1', '3+4=?', '6','7','10','12','B','3+4=7');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('1', '4+5=?', '6','8','9','12','C','4+5=9');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('1', '1+9=?', '6','8','10','12','C','1+9=10');
+
+
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
 values ('2', '6-2=?', '6','8','10','4','D','6-2=4');
 
 DROP TABLE GeaParentsLibrary;

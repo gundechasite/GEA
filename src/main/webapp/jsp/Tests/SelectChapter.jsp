@@ -2,11 +2,11 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
  
-<s:form name="SelectChapterForm"  namespace="/" action="processSelectChapter" method="post" validate="true">
-
+<s:form name="SelectChapterForm"  namespace="/" action="Test" method="post" validate="true">
+<s:hidden name="actionCode" value="StartTest"/>
 <table width=90% id=geaContentTable>
 
-   <tr><td colspan=2><label class="geaFormHeading">Select which test would your child like to take: </label></td></tr>
+   <tr><td colspan=2><label class="geaFormHeading">Select Chapter of: </label></td></tr>
    
    <tr>
 	   <td colspan=2><div style="border-top:1px solid gray;clear:both;">
@@ -17,19 +17,13 @@
 	   </s:if>
 	   </td>
    </tr>
-    <tr> 
-	   <td colspan=2>
-	   <label class="geaFormSmallText"> 
-	    Note:  
-	   </label>
-	   </td>
-    </tr>
+
   <tr>
 	<td colspan=2> 
 		<table class="lightGreenTable" id="POITable"  width=100% align=center>
 		<tr>
-			<td align=center  style="padding-top:20px;padding-bottom:20px;"><s:select list="chapterList" listKey="code" listValue="value" name="chapter" theme="simple"  /></td>
-			<td   style="padding-top:20px;padding-bottom:20px;"><s:submit value="Submit"  cssClass="geaSubmitButton"  theme="simple" /></td> 
+			<td align=center  style="padding-top:20px;padding-bottom:20px;">Select Chapter for   <s:select list="chapterList" listKey="code" listValue="value" name="Chapter_id" theme="simple"  /></td>
+			<td   style="padding-top:20px;padding-bottom:20px;"><s:submit value="Start Test"  cssClass="geaSubmitButton"  theme="simple" /></td> 
 		</tr>
 		</table>
 	</td>

@@ -168,7 +168,26 @@
   	 </definition> 
   	 
 <!-- For Library -->
+
  	 <definition name="SelectTestTileDefinition" template="/jsp/GEA.jsp">  
+ 	 		<put-attribute name="leftNav" value="/html/blank.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/Tests/SelectTest.jsp"></put-attribute>  
   	 </definition> 
+ 	 <definition name="SelectChapterTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="leftNav" value="/html/blank.html"></put-attribute>
+  			<put-attribute name="content" value="/jsp/Tests/SelectChapter.jsp"></put-attribute>  
+  	 </definition> 
+  	 <definition name="TestQnTileDefinition" template="/jsp/Tests/GEAtest.jsp">  
+  			<put-attribute name="leftNav" value="/html/blank.html"></put-attribute>
+  			<put-attribute name="content" value="/jsp/Tests/TestQn.jsp"></put-attribute>  
+  	 </definition>
+  	 <definition name="TestAnsTileDefinition" template="/jsp/Tests/GEAtest.jsp">  
+  			<put-attribute name="leftNav" value="/html/blank.html"></put-attribute>
+  			<put-attribute name="content" value="/jsp/Tests/TestAns.jsp"></put-attribute>  
+  	 </definition>
+  	 <definition name="TestLastAnsTileDefinition" template="/jsp/Tests/GEAtest.jsp">  
+  			<put-attribute name="leftNav" value="/html/blank.html"></put-attribute>
+  			<put-attribute name="content" value="/jsp/Tests/TestAns.jsp?Last=TRUE"></put-attribute>  
+  	 </definition>
+  	 
 </tiles-definitions>  

@@ -17,12 +17,18 @@ import java.util.Map;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.Preparable;
 
-public class SelectTestAction  extends ActionSupport implements Preparable {
+public class SelectTestAction  extends ActionSupport  {
 
 	private String classSubject;
 	private ArrayList<GeaCodeValueBean> chapterList = new ArrayList<GeaCodeValueBean>();
 	
 	public String execute(){ 
+		try {
+			chapterList = DBUtilityTests.getChapterList(classSubject);
+		} catch (Exception e) {
+			System.out.println("# ERROR #  : "+GeaUtility.showErrorDetails(e));
+			addActionError("Some error Occurred "+GeaUtility.showErrorDetails(e));
+		}
 		return "success";
 	}
 	
@@ -31,16 +37,7 @@ public class SelectTestAction  extends ActionSupport implements Preparable {
     public void setSession(Map<String, Object> sessionMap) {
         this.sessionMap = sessionMap;
     }
-	//@Override
-	public void prepare() throws Exception {
-		try {
-			chapterList = DBUtilityTests.getChapterList(classSubject);
-		} catch (Exception e) {
-			System.out.println("# ERROR #  : "+GeaUtility.showErrorDetails(e));
-			addActionError("Some error Occurred ");
-		}
-	}
-	
+    
 	public String getClassSubject() {
 		return classSubject;
 	}
