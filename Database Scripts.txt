@@ -1,3 +1,12 @@
+CREATE TABLE shirt (
+    id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    style ENUM('t-shirt', 'polo', 'dress') NOT NULL,
+    color ENUM('red', 'blue', 'orange', 'white', 'black') NOT NULL,
+    owner SMALLINT UNSIGNED NOT NULL REFERENCES person(id),
+    PRIMARY KEY (id)
+);
+use Enum
+
 oc login --token=XXXX
 oc login 
 oc get pods
@@ -75,19 +84,49 @@ exchange VARCHAR(400),
 practicePapers VARCHAR(400),
 submissionDate DATE);
 
+DROP TABLE TestClassSubject;
 
-DROP TABLE test;
+CREATE TABLE TestClassSubject (
+ClassSubject_id MEDIUMINT NOT NULL AUTO_INCREMENT,
+class VARCHAR(2),
+subject VARCHAR(50),
+ PRIMARY KEY (ClassSubject_id)
+);
 
-CREATE TABLE test 
-(class VARCHAR(1),
-subject VARCHAR(1),
+
+
+insert into TestClassSubject (class, subject) values ('2','Maths');
+insert into TestClassSubject (class, subject) values ('2','Science');
+insert into TestClassSubject (class, subject) values ('2','English');
+insert into TestClassSubject (class, subject) values ('2','Computer Science');
+
+DROP TABLE TestClassSubjectChapter;
+
+CREATE TABLE TestClassSubjectChapter (
+Chapter_id MEDIUMINT NOT NULL AUTO_INCREMENT,
+ClassSubject_id MEDIUMINT NOT NULL REFERENCES TestClassSubject(ClassSubject_id),
+chapter VARCHAR(100),
+ PRIMARY KEY (Chapter_id)
+);
+
+DROP TABLE geaTest;
+	
+CREATE TABLE geaTest 
+( 
+Chapter_id MEDIUMINT NOT NULL REFERENCES TestClassSubjectChapter(Chapter_id),
 question VARCHAR(100),
 optionA VARCHAR(100),
 optionB VARCHAR(100),
 optionC VARCHAR(100),
 optionD VARCHAR(100),
 correctOption VARCHAR(1),
-correctOptionDesc VARCHAR(100));
+correctOptionDesc VARCHAR(100));	
+
+
+insert into geaTest (id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('1', '6+2=?', '6','8','10','12','B','6+2=8');
+insert into geaTest (id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('2', '6-2=?', '6','8','10','4','D','6-2=4');
 
 DROP TABLE GeaParentsLibrary;
 

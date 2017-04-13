@@ -238,5 +238,15 @@
 		<result name="success" type="tiles">GeaParentsLibraryTileDefinition</result>
 		<result name="error" type="tiles">GeaParentsLibraryTileDefinition</result>                     
 	</action>
+	
+<!-- For Library -->
+	<action name="SelectTest" class="gea.actions.Tests.SelectTestView">            
+		<result name="success" type="tiles">SelectTestTileDefinition</result>                     
+	</action>
+	<action name="processSelectTest" class="gea.actions.Tests.SelectTestAction">            
+		<result name="success" type="tiles">SelectChapterTileDefinition</result>                     
+	</action>
+
+	
 </package>       
 </struts>   

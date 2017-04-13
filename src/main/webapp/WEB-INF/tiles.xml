@@ -166,4 +166,9 @@
   			<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/library/SearchBookResults.jsp"></put-attribute>  
   	 </definition> 
+  	 
+<!-- For Library -->
+ 	 <definition name="SelectTestTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="content" value="/jsp/Tests/SelectTest.jsp"></put-attribute>  
+  	 </definition> 
 </tiles-definitions>  
