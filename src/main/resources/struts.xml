@@ -75,6 +75,9 @@
 	</action>
   
 <!-- Buy/Sell Textbooks links --> 
+	<action name="BuySellTextbookReadme" class="gea.actions.DoNothingView">            
+		<result name="success" type="tiles">BuySellTextbookTileDefinition</result>                     
+	</action>
 	<action name="BuyTextbook" class="gea.actions.TextbooksBuySellView">            
 		<result name="success" type="tiles">BuyTextbookTileDefinition</result>  
 		<result name="login" type="tiles">LoginTilesDefinition</result>                    
@@ -117,6 +120,10 @@
 	</action> 
 
 <!-- Buy/Sell Uniform links --> 
+
+	<action name="BuySellUniformReadme" class="gea.actions.DoNothingView">            
+		<result name="success" type="tiles">BuySellUniformReadmeTileDefinition</result>                     
+	</action>
 	<action name="SellUniform" class="gea.actions.UniformsBuySellView">            
 		<result name="success" type="tiles">SellUniformTileDefinition</result>     
 		<result name="login" type="tiles">LoginTilesDefinition</result>                 

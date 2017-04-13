@@ -22,13 +22,9 @@
 		
 			<a href="/GEA/LibraryReadme">Gea Parents Library</a>
 		 	|
-		 	<a href="/GEA/HowToUseSite">How to use this Website</a>
+		 	<a href="/GEA/BuySellTextbookReadme">Textbooks</a>
 		 	|
-		 	<a href="/GEA/AboutThisWebsite">About this Website</a> 
-		 	|
-		 	
-		 	<a href="/GEA/BuyMultipleTextbook">Buy Textbooks</a>
-		 	<a href="/GEA/BuyMultipleUniform">Buy Uniforms</a>
+		 	<a href="/GEA/BuySellUniformReadme">Uniforms</a>
 		 	
 		</td>
 		<td align=right  style="padding-right:40px">

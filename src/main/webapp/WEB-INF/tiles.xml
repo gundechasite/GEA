@@ -41,6 +41,11 @@
 	  
   
 <!-- Buy/Sell Textbooks links --> 
+ 	 <definition name="BuySellTextbookTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="leftNav" value="/html/BuySellTextbookLeftNav.html"></put-attribute>
+  			<put-attribute name="content" value="/html/BuySellTextBookReadme.html"></put-attribute>  
+  	 </definition>
+
 	  <definition name="SellTextbookTileDefinition" template="/jsp/GEA.jsp">  
 		  	<put-attribute name="leftNav" value="/html/BuySellTextbookLeftNav.html"></put-attribute>
 		  	<put-attribute name="content" value="/jsp/SellTextbooks.jsp"></put-attribute>  
@@ -59,6 +64,10 @@
 	  </definition>
 
 <!-- Buy/Sell Uniform links -->
+ 	 <definition name="BuySellUniformReadmeTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="leftNav" value="/html/BuySellUniformLeftNav.html"></put-attribute>
+  			<put-attribute name="content" value="/html/BuySellUniformReadme.html"></put-attribute>  
+  	 </definition>
 	  <definition name="SellUniformTileDefinition" template="/jsp/GEA.jsp"> 
 	  		<put-attribute name="leftNav" value="/html/BuySellUniformLeftNav.html"></put-attribute> 
 	  		<put-attribute name="content" value="/jsp/SellUniform.jsp"></put-attribute>  
@@ -139,7 +148,7 @@
 <!-- For Library -->
  	 <definition name="LibraryReadmeTileDefinition" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
-  			<put-attribute name="content" value="/jsp/library/LibraryReadme.html"></put-attribute>  
+  			<put-attribute name="content" value="/html/LibraryReadme.html"></put-attribute>  
   	 </definition>
  	 <definition name="AddBookTileDefinition" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
