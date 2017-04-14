@@ -2,7 +2,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
  
-
 <table  width=90% align=center border=1>
   	<tr>
 	    <th colspan="2" style="padding-top:20px;padding-bottom:20px;"><label class="geaFormHeading"><s:property value="qn.question" /></label> </th>

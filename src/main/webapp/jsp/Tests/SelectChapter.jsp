@@ -6,7 +6,7 @@
 <s:hidden name="actionCode" value="StartTest"/>
 <table width=90% id=geaContentTable>
 
-   <tr><td colspan=2><label class="geaFormHeading">Select Chapter of: </label></td></tr>
+   <tr><td colspan=2><label class="geaFormHeading">Select Chapter of <s:property value="ClassSubject" />: </label></td></tr>
    
    <tr>
 	   <td colspan=2><div style="border-top:1px solid gray;clear:both;">
@@ -22,7 +22,7 @@
 	<td colspan=2> 
 		<table class="lightGreenTable" id="POITable"  width=100% align=center>
 		<tr>
-			<td align=center  style="padding-top:20px;padding-bottom:20px;">Select Chapter for   <s:select list="chapterList" listKey="code" listValue="value" name="Chapter_id" theme="simple"  /></td>
+			<td align=center  style="padding-top:20px;padding-bottom:20px;" width="50%"><s:select style="padding-top:5px;padding-bottom:5px;" cssClass="geaSelect" list="chapterList" listKey="code" listValue="value" name="Chapter_id" theme="simple"  /></td>
 			<td   style="padding-top:20px;padding-bottom:20px;"><s:submit value="Start Test"  cssClass="geaSubmitButton"  theme="simple" /></td> 
 		</tr>
 		</table>

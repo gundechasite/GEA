@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.Preparable;
 public class SelectClassSubjectAction  extends ActionSupport implements SessionAware {
 
 	private String ClassSubject_id;
+	private String ClassSubject;
 	private ArrayList<GeaCodeValueBean> chapterList = new ArrayList<GeaCodeValueBean>();
 	
 	public String execute(){ 
@@ -33,6 +34,8 @@ public class SelectClassSubjectAction  extends ActionSupport implements SessionA
 		
 		try {
 			chapterList = DBUtilityTests.getChapterList(ClassSubject_id);
+			ClassSubject = DBUtilityTests.getClassSubject(ClassSubject_id);
+			sessionMap.put("GEA_TEST_ClassSubject", ClassSubject); /* For Report */
 		} catch (Exception e) {
 			System.out.println("# ERROR #  : "+GeaUtility.showErrorDetails(e));
 			addActionError("Some error Occurred "+GeaUtility.showErrorDetails(e));
@@ -47,8 +50,12 @@ public class SelectClassSubjectAction  extends ActionSupport implements SessionA
 	public void setClassSubject_id(String classSubject_id) {
 		ClassSubject_id = classSubject_id;
 	}
-
-
+	public String getClassSubject() {
+		return ClassSubject;
+	}
+	public void setClassSubject(String classSubject) {
+		ClassSubject = classSubject;
+	}
 	public ArrayList<GeaCodeValueBean> getChapterList() {
 		return chapterList;
 	}

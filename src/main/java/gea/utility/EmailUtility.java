@@ -191,7 +191,9 @@ public class EmailUtility {
 	}
 	
 	
-	public static String getTestReportHTMLMessage(ArrayList<QuestionBean> answeredQuestionList) {
+	
+	
+	public static String getTestReportHTMLMessage(ArrayList<QuestionBean> answeredQuestionList, String selectedChapter, String selectedClassSubject) {
 		String testReportHTMLMessage = null;
 		String QuestionDetails = "";
 		int correctlyAnswered = 0;
@@ -200,54 +202,62 @@ public class EmailUtility {
 			if (currentQuestionDetails.isCorrectlyAnswered()) {
 				correctlyAnswered = correctlyAnswered +1;
 			}
+			
+			/* if optioncolor== null make it "" , else whole style becomes null */
+			String optionAcolor = currentQuestionDetails.getOptionA();
+			if (optionAcolor == null) {
+				optionAcolor = "";
+			}
+			String optionBcolor =currentQuestionDetails.getOptionB();
+			if (optionBcolor == null) {
+				optionBcolor = "";
+			}
+			String optionCcolor =currentQuestionDetails.getOptionC();
+			if (optionCcolor == null) {
+				optionCcolor = "";
+			}
+			String optionDcolor =currentQuestionDetails.getOptionD();
+			if (optionDcolor == null) {
+				optionDcolor = "";
+			}
 			QuestionDetails = QuestionDetails +
 		"<table  width=90% align=center border=1 cellpadding='0' cellspacing='0' >"
-		+"  	<tr>"
-		+"	    <th colspan='2' align=left  style='padding-top:5px;padding-bottom:5px;padding-left:5px;'><label class='geaFormLabel'>Question "+(i+1)+": "+currentQuestionDetails.getQuestion()+"</label> </th>"
-		+"  	</tr>"
-		+"  "
-		+"  <tr>"
+		+"<tr><th colspan='2' align=left  style='padding-top:5px;padding-bottom:5px;padding-left:5px;'><label class='geaFormLabel'>Question "+(i+1)+": "+currentQuestionDetails.getQuestion()+"</label> </th></tr>"
+		+"<tr>"
 		+"	<td width='50%' style='padding-top:5px;padding-bottom:5px;padding-left:5px;"+currentQuestionDetails.getOptionAcolor()+"'>"  
 		+"		    <div style='height:100%;width:100%;'>"
-		+"		      <label class='geaFormLabel'>"
-		+"				A. "+currentQuestionDetails.getOptionA()
-		+"				</label>"
+		+"		      <label class='geaFormLabel'>A. "+currentQuestionDetails.getOptionA()+"</label>"
 		+"		    </div>  	"
 		+" 	</td>"
 		+"	<td  style='padding-top:5px;padding-bottom:5px;padding-left:5px;background-color:#DAE9BC;"+currentQuestionDetails.getOptionBcolor()+"'>"  
 		+"		    <div style='height:100%;width:100%'>"
-		+"		      B. <label class='geaFormLabel'>"+currentQuestionDetails.getOptionB()+"</label>"
+		+"		      <label class='geaFormLabel'>B. "+currentQuestionDetails.getOptionB()+"</label>"
 		+"		    </div>"
 		+" 	</td>"
-		+"	</tr>"
-		+"	"
-		+"	<tr>"
+		+"</tr>"
+		+"<tr>"
 		+"	<td  width='50%'  style='padding-top:5px;padding-bottom:5px;padding-left:5px;"+currentQuestionDetails.getOptionCcolor()+"'>"  
 		+"		   <div style='height:100%;width:100%'>"
-		+"		     <label class='geaFormLabel'>"
-		+"		     C. "+currentQuestionDetails.getOptionC()
-		+"		     </label>"
+		+"		     <label class='geaFormLabel'>C. "+currentQuestionDetails.getOptionC()+"</label>"
 		+"		   </div>"
 		+"	</td>"
 		+"	<td  style='padding-top:5px;padding-bottom:5px;padding-left:5px;"+currentQuestionDetails.getOptionDcolor()+"'>"  
 		+"		    <div style='height:100%;width:100%'>"
-		+"		      D. <label class='geaFormLabel'>"
-		+"		      "+currentQuestionDetails.getOptionD()
-		+"		      </label>"
+		+"		      <label class='geaFormLabel'>D. "+currentQuestionDetails.getOptionD()+"</label>"
 		+"		    </div>"
 		+"	  	"
 		+" 	</td>"
-		+"	</tr>"
-		+"	<tr>"
+		+"</tr>"
+		+"<tr>"
 		+"	    <td colspan='2' style='padding-top:5px;padding-bottom:5px;padding-left:5px;'>Exlanation: <label class='geaFormLabel'>"+currentQuestionDetails.getCorrectOptionDesc()+"</label> </td>"
-		+" 	</tr>"
+		+"</tr>"
 		+"</table>" 
 		+"  	<br><br>";
 		}
 
 		
 		testReportHTMLMessage = "<table width=90% id=geaContentTable>"
-		+"  <tr><td colspan=2><label class='geaFormHeading'>Test Report </label></td></tr>"
+		+"  <tr><td colspan=2><label class='geaFormHeading'>Test Report : "+selectedClassSubject+" "+selectedChapter+"</label></td></tr>"
 		+"  <tr>"
 		+"	   <td colspan=2><div style='border-top:1px solid gray;clear:both;'>"
 		+"	    Total Questions: "+answeredQuestionList.size()

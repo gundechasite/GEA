@@ -27,6 +27,21 @@ public class DBUtilityTests {
 	      return classSubjecList;
 	}
 
+	/* Get name of code */
+	public static String getClassSubject(String ClassSubject_id) throws SQLException, ClassNotFoundException {
+		  String sql = "select CONCAT('Class ', class, ' ', subject) ClassSubject from TestClassSubject where ClassSubject_id='"+ClassSubject_id+"'";
+		  Connection conn = DBUtility.getDatabaseConnection();
+		  
+		  //System.out.println("validateLogin Query:  "+sql);
+
+		  ResultSet rs = conn.createStatement().executeQuery(sql);
+	      if (rs.next()) {
+				return rs.getString("ClassSubject");
+	      } else {
+	    	  	return null;
+	      }
+	}
+		
 	public static ArrayList<GeaCodeValueBean> getChapterList(String ClassSubject_id) throws SQLException, ClassNotFoundException {
 		  String sql =  "select Chapter_id, chapter from TestClassSubjectChapter where ClassSubject_id = '"+ClassSubject_id+"' order by Chapter_id" ;
 		  ArrayList<GeaCodeValueBean> chapterList = new ArrayList<GeaCodeValueBean>();
@@ -52,6 +67,18 @@ public class DBUtilityTests {
 	      conn.close();
 	      return questionList;
 	}
-	
-	
+
+	public static String getChapter(String chapter_id) throws SQLException, ClassNotFoundException {
+		  String sql = "select chapter from TestClassSubjectChapter where Chapter_id='"+chapter_id+"'";
+		  Connection conn = DBUtility.getDatabaseConnection();
+		  
+		  //System.out.println("validateLogin Query:  "+sql);
+
+		  ResultSet rs = conn.createStatement().executeQuery(sql);
+	      if (rs.next()) {
+				return rs.getString("chapter");
+	      } else {
+	    	  	return null;
+	      }
+	}
 }

@@ -250,7 +250,8 @@
 	</action>
 	<action name="Test" class="gea.actions.Tests.TestView">            
 		<result name="login" type="tiles">LoginTilesDefinition</result> 
-		<result name="qn" type="tiles">TestQnTileDefinition</result>  
+		<result name="startTest" type="tiles">TestQnTileDefinition</result>
+		<result name="nextQuestion" type="tiles">TestQnTileDefinition</result>  
 		<result name="ans" type="tiles">TestAnsTileDefinition</result>
 		<result name="NoQns" type="tiles">TestQnTileDefinition</result>
 		<result name="testReport" type="tiles">TestReportTileDefinition</result>
