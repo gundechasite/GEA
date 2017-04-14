@@ -17,6 +17,5 @@
 	<div id="container">
 		<div id="center" class="column"><tiles:insertAttribute name="content" /></div>
 	</div>
-
 </body>
 </html>

@@ -10,7 +10,7 @@
   
   <tr>
 	<td width="50%" style="padding-top:20px;padding-bottom:20px;">  
-		<a href="/GEA/Test?actionCode=ShowAns" style="text-decoration:none;">
+		<a href="/GEA/Test?actionCode=ShowAns&selectedAnswer=A" style="text-decoration:none;">
 		    <div style="height:100%;width:100%;">
 		      <label class="geaFormHeading">
 				<s:property value="qn.optionA" />
@@ -19,7 +19,7 @@
 	  	</a>
   	</td>
 	<td>  
-		<a href="/GEA/Test?actionCode=ShowAns" style="text-decoration:none;">
+		<a href="/GEA/Test?actionCode=ShowAns&selectedAnswer=B" style="text-decoration:none;">
 		    <div style="height:100%;width:100%">
 		      <label class="geaFormHeading"><s:property value="qn.optionB" /></label>
 		    </div>
@@ -29,7 +29,7 @@
 	
 	<tr>
 	<td  width="50%" style="padding-top:20px;padding-bottom:20px;">  
-	   <a href="/GEA/Test?actionCode=ShowAns" style="text-decoration:none;">
+	   <a href="/GEA/Test?actionCode=ShowAns&selectedAnswer=C" style="text-decoration:none;">
 		   <div style="height:100%;width:100%">
 		     <label class="geaFormHeading">
 		     <s:property value="qn.optionC" />
@@ -38,7 +38,7 @@
 		</a>
 	</td>
 	<td>  
-		<a href="/GEA/Test?actionCode=ShowAns" style="text-decoration:none;">
+		<a href="/GEA/Test?actionCode=ShowAns&selectedAnswer=D" style="text-decoration:none;">
 		    <div style="height:100%;width:100%">
 		      <label class="geaFormHeading">
 		      <s:property value="qn.optionD" />

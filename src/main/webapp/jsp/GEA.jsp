@@ -26,7 +26,7 @@
 		 	|
 		 	<a href="/GEA/BuySellUniformReadme">Uniforms</a>
 		 	|
-		 	<a href="/GEA/SelectTest">Tests</a>
+		 	<a href="/GEA/selectClassSubject">Tests</a>
 		 	
 		</td>
 		<td align=right  style="padding-right:40px">

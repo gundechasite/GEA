@@ -240,18 +240,20 @@
 	</action>
 	
 <!-- For Library -->
-	<action name="SelectTest" class="gea.actions.Tests.SelectTestView">  
+	<action name="selectClassSubject" class="gea.actions.Tests.SelectClassSubjectView">  
+		<result name="login" type="tiles">LoginTilesDefinition</result> 
 		<result name="success" type="tiles">SelectTestTileDefinition</result>                     
 	</action>
-	<action name="processSelectTest" class="gea.actions.Tests.SelectTestAction">            
+	<action name="selectChapter" class="gea.actions.Tests.SelectClassSubjectAction">            
+		<result name="login" type="tiles">LoginTilesDefinition</result> 
 		<result name="success" type="tiles">SelectChapterTileDefinition</result>   
 	</action>
 	<action name="Test" class="gea.actions.Tests.TestView">            
+		<result name="login" type="tiles">LoginTilesDefinition</result> 
 		<result name="qn" type="tiles">TestQnTileDefinition</result>  
-		                   
-		<result name="lastAns" type="tiles">TestLastAnsTileDefinition</result>
 		<result name="ans" type="tiles">TestAnsTileDefinition</result>
 		<result name="NoQns" type="tiles">TestQnTileDefinition</result>
+		<result name="testReport" type="tiles">TestReportTileDefinition</result>
 	</action>
 </package>       
 </struts>   

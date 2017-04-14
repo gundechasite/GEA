@@ -2,7 +2,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
  
-<s:form name="SelectChapterForm"  namespace="/" action="Test" method="post" validate="true">
+<s:form namespace="/" action="Test" method="post" validate="true">
 <s:hidden name="actionCode" value="StartTest"/>
 <table width=90% id=geaContentTable>
 

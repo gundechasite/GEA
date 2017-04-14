@@ -17,10 +17,10 @@ public class DBUtility {
 	public static Connection getDatabaseConnection() throws SQLException, ClassNotFoundException  {
 		  Connection connection = null;
 		  Class.forName(JDBC_DRIVER);
-		  System.out.println(System.getenv("MYSQL_USER"));
-		  System.out.println(System.getenv("MYSQL_PASSWORD"));
-		  System.out.println(System.getenv("MYSQL_DB_URL"));
-		  System.out.println(System.getenv("GEA_EMAIL"));
+		 // System.out.println(System.getenv("MYSQL_USER"));
+		  //System.out.println(System.getenv("MYSQL_PASSWORD"));
+		  //System.out.println(System.getenv("MYSQL_DB_URL"));
+		  //System.out.println(System.getenv("GEA_EMAIL"));
 		  connection = DriverManager.getConnection(System.getenv("MYSQL_DB_URL"), System.getenv("MYSQL_USER"), System.getenv("MYSQL_PASSWORD"));
 		  return connection;
 	}

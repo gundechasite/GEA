@@ -1,7 +1,10 @@
 package gea.utility;
+import java.util.ArrayList;
 import java.util.Properties;    
 import javax.mail.*;    
 import javax.mail.internet.*;
+
+import gea.bean.QuestionBean;
 import gea.model.TextbookAd;
 import gea.model.UniformAd;
 import gea.model.User;
@@ -185,5 +188,74 @@ public class EmailUtility {
 		} else {
 			return "Class "+newTextbookAd.getChildsClass()+" - "+newTextbookAd.getBookType()+"  on sale";
 		}
+	}
+	
+	
+	public static String getTestReportHTMLMessage(ArrayList<QuestionBean> answeredQuestionList) {
+		String testReportHTMLMessage = null;
+		String QuestionDetails = "";
+		int correctlyAnswered = 0;
+		for (int i=0;i<answeredQuestionList.size();i++) {
+			QuestionBean currentQuestionDetails = answeredQuestionList.get(i);
+			if (currentQuestionDetails.isCorrectlyAnswered()) {
+				correctlyAnswered = correctlyAnswered +1;
+			}
+			QuestionDetails = QuestionDetails +
+		"<table  width=90% align=center border=1 cellpadding='0' cellspacing='0' >"
+		+"  	<tr>"
+		+"	    <th colspan='2' align=left  style='padding-top:5px;padding-bottom:5px;padding-left:5px;'><label class='geaFormLabel'>Question "+(i+1)+": "+currentQuestionDetails.getQuestion()+"</label> </th>"
+		+"  	</tr>"
+		+"  "
+		+"  <tr>"
+		+"	<td width='50%' style='padding-top:5px;padding-bottom:5px;padding-left:5px;"+currentQuestionDetails.getOptionAcolor()+"'>"  
+		+"		    <div style='height:100%;width:100%;'>"
+		+"		      <label class='geaFormLabel'>"
+		+"				A. "+currentQuestionDetails.getOptionA()
+		+"				</label>"
+		+"		    </div>  	"
+		+" 	</td>"
+		+"	<td  style='padding-top:5px;padding-bottom:5px;padding-left:5px;background-color:#DAE9BC;"+currentQuestionDetails.getOptionBcolor()+"'>"  
+		+"		    <div style='height:100%;width:100%'>"
+		+"		      B. <label class='geaFormLabel'>"+currentQuestionDetails.getOptionB()+"</label>"
+		+"		    </div>"
+		+" 	</td>"
+		+"	</tr>"
+		+"	"
+		+"	<tr>"
+		+"	<td  width='50%'  style='padding-top:5px;padding-bottom:5px;padding-left:5px;"+currentQuestionDetails.getOptionCcolor()+"'>"  
+		+"		   <div style='height:100%;width:100%'>"
+		+"		     <label class='geaFormLabel'>"
+		+"		     C. "+currentQuestionDetails.getOptionC()
+		+"		     </label>"
+		+"		   </div>"
+		+"	</td>"
+		+"	<td  style='padding-top:5px;padding-bottom:5px;padding-left:5px;"+currentQuestionDetails.getOptionDcolor()+"'>"  
+		+"		    <div style='height:100%;width:100%'>"
+		+"		      D. <label class='geaFormLabel'>"
+		+"		      "+currentQuestionDetails.getOptionD()
+		+"		      </label>"
+		+"		    </div>"
+		+"	  	"
+		+" 	</td>"
+		+"	</tr>"
+		+"	<tr>"
+		+"	    <td colspan='2' style='padding-top:5px;padding-bottom:5px;padding-left:5px;'>Exlanation: <label class='geaFormLabel'>"+currentQuestionDetails.getCorrectOptionDesc()+"</label> </td>"
+		+" 	</tr>"
+		+"</table>" 
+		+"  	<br><br>";
+		}
+
+		
+		testReportHTMLMessage = "<table width=90% id=geaContentTable>"
+		+"  <tr><td colspan=2><label class='geaFormHeading'>Test Report </label></td></tr>"
+		+"  <tr>"
+		+"	   <td colspan=2><div style='border-top:1px solid gray;clear:both;'>"
+		+"	    Total Questions: "+answeredQuestionList.size()
+		+"		<br>Correctly answered: "+correctlyAnswered+"</td>"
+		+"  </tr>"
+		+"</table>";
+
+		testReportHTMLMessage = testReportHTMLMessage +QuestionDetails;
+				return testReportHTMLMessage;
 	}
 }

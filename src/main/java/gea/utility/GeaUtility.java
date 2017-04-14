@@ -25,6 +25,7 @@ public class GeaUtility {
 	
 	
 	public static boolean hasUserNotLoggedIn (Map<String, Object> sessionMap) {
+		
 		if (sessionMap.get("LoggedUser")==null) {
 			return true;
 		} else {
@@ -40,6 +41,14 @@ public class GeaUtility {
 			return null;
 		}
 	}	
+	
+	public static String getLoggedUserEmailId (Map<String, Object> sessionMap) {
+		if (sessionMap.get("LoggedUser") != null) {
+			return ((User)sessionMap.get("LoggedUser")).getEmail();
+		} else {
+			return null;
+		}
+	}
 	
 	public static User getLoggedUser(Map<String, Object> sessionMap) {
 			return ((User)sessionMap.get("LoggedUser"));

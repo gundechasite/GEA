@@ -19,6 +19,12 @@ public class QuestionBean {
 	private String correctOption;
 	private String correctOptionDesc;
 	
+	private String optionAcolor;
+	private String optionBcolor;
+	private String optionCcolor;
+	private String optionDcolor;
+	private boolean correctlyAnswered;
+	
 	
 	public QuestionBean(String chapter_id, String question, String optionA, String optionB, String optionC,
 			String optionD, String correctOption, String correctOptionDesc) {
@@ -79,7 +85,35 @@ public class QuestionBean {
 	public void setCorrectOptionDesc(String correctOptionDesc) {
 		this.correctOptionDesc = correctOptionDesc;
 	}
-	
-	
+	public String getOptionAcolor() {
+		return optionAcolor;
+	}
+	public void setOptionAcolor(String optionAcolor) {
+		this.optionAcolor = optionAcolor;
+	}
+	public String getOptionBcolor() {
+		return optionBcolor;
+	}
+	public void setOptionBcolor(String optionBcolor) {
+		this.optionBcolor = optionBcolor;
+	}
+	public String getOptionCcolor() {
+		return optionCcolor;
+	}
+	public void setOptionCcolor(String optionCcolor) {
+		this.optionCcolor = optionCcolor;
+	}
+	public String getOptionDcolor() {
+		return optionDcolor;
+	}
+	public void setOptionDcolor(String optionDcolor) {
+		this.optionDcolor = optionDcolor;
+	}
+	public boolean isCorrectlyAnswered() {
+		return correctlyAnswered;
+	}
+	public void setCorrectlyAnswered(boolean correctlyAnswered) {
+		this.correctlyAnswered = correctlyAnswered;
+	}
 	
 }

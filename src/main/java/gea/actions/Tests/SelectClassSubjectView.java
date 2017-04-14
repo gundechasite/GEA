@@ -14,22 +14,39 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
 
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.Preparable;
 
-public class SelectTestAction  extends ActionSupport  {
+public class SelectClassSubjectView  extends ActionSupport implements Preparable, SessionAware {
 
-	private String classSubject;
-	private ArrayList<GeaCodeValueBean> chapterList = new ArrayList<GeaCodeValueBean>();
+	private ArrayList<GeaCodeValueBean> classSubjectList = new ArrayList<GeaCodeValueBean>();
 	
 	public String execute(){ 
+		 if (GeaUtility.hasUserNotLoggedIn(sessionMap)) {
+			 addActionError(" Please login. (Maybe you were inactive for some time) ");
+			 return "login";
+		 } 
+		 return "success";
+	}
+	
+	
+	//@Override
+	public void prepare() throws Exception {
 		try {
-			chapterList = DBUtilityTests.getChapterList(classSubject);
+			classSubjectList = DBUtilityTests.getClassSubjecList();
 		} catch (Exception e) {
 			System.out.println("# ERROR #  : "+GeaUtility.showErrorDetails(e));
 			addActionError("Some error Occurred "+GeaUtility.showErrorDetails(e));
 		}
-		return "success";
+	}
+	
+	public ArrayList<GeaCodeValueBean> getClassSubjectList() {
+		return classSubjectList;
+	}
+	public void setClassSubjectList(ArrayList<GeaCodeValueBean> classSubjectList) {
+		this.classSubjectList = classSubjectList;
 	}
 	
 	/* Required since implements SessionAware */
@@ -37,17 +54,4 @@ public class SelectTestAction  extends ActionSupport  {
     public void setSession(Map<String, Object> sessionMap) {
         this.sessionMap = sessionMap;
     }
-    
-	public String getClassSubject() {
-		return classSubject;
-	}
-	public void setClassSubject(String classSubject) {
-		this.classSubject = classSubject;
-	}
-	public ArrayList<GeaCodeValueBean> getChapterList() {
-		return chapterList;
-	}
-	public void setChapterList(ArrayList<GeaCodeValueBean> chapterList) {
-		this.chapterList = chapterList;
-	}
 }

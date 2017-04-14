@@ -27,8 +27,8 @@ public class DBUtilityTests {
 	      return classSubjecList;
 	}
 
-	public static ArrayList<GeaCodeValueBean> getChapterList(String classSubject) throws SQLException, ClassNotFoundException {
-		  String sql =  "select Chapter_id, chapter from TestClassSubjectChapter where ClassSubject_id = '"+classSubject+"' order by Chapter_id" ;
+	public static ArrayList<GeaCodeValueBean> getChapterList(String ClassSubject_id) throws SQLException, ClassNotFoundException {
+		  String sql =  "select Chapter_id, chapter from TestClassSubjectChapter where ClassSubject_id = '"+ClassSubject_id+"' order by Chapter_id" ;
 		  ArrayList<GeaCodeValueBean> chapterList = new ArrayList<GeaCodeValueBean>();
 		  Connection conn = DBUtility.getDatabaseConnection();
 		  System.out.println(sql);
