@@ -83,8 +83,8 @@ public class TestView extends ActionSupport implements SessionAware, Serializabl
 			
 			return "startTest";	
 		} catch (Exception e) {
-			System.out.println("# ERROR # LoginAction : "+GeaUtility.showErrorDetails(e));
-			addActionError("Some error Occurred during your login, please try again later or Contact Me");
+			System.out.println(GeaUtility.getActualErrorMessage(e));
+			addActionError(GeaUtility.getGeaActionErrorMessage(e));
 			return "error";
 		}
 

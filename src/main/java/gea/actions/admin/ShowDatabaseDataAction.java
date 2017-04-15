@@ -53,8 +53,8 @@ public class ShowDatabaseDataAction  extends ActionSupport implements SessionAwa
 
 			 return "error"; /* if tableCode is not received as expected */
 		 } catch (Exception e) {
-			System.out.println("# ERROR # ShowDatabaseData : "+GeaUtility.showErrorDetails(e));
-			addActionError("Error while retrieving tables data for admin:"+GeaUtility.showErrorDetails(e));
+			System.out.println(GeaUtility.getActualErrorMessage(e));
+			addActionError(GeaUtility.getGeaActionErrorMessage(e));
 			return "error";
 		}
 	 } 

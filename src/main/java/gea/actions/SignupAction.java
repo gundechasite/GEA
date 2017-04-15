@@ -31,8 +31,8 @@ public class SignupAction extends ActionSupport  implements SessionAware {
 			  return "success";  
 		  }
 		} catch (Exception e) {
-			System.out.println("# ERROR # SignupAction : "+GeaUtility.showErrorDetails(e));
-			addActionError("Some error Occurred while signing you up, please try again later or Contact Me");
+			System.out.println(GeaUtility.getActualErrorMessage(e));
+			addActionError(GeaUtility.getGeaActionErrorMessage(e));
 			return "error";
 		}
 	 } 

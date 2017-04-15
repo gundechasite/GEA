@@ -65,9 +65,9 @@ public class EmailUtility {
 	     mimeMessage.setContent(message, "text/html; charset=utf-8");
 	     //send message  
 	     Transport.send(mimeMessage);    
-	     System.out.println("message sent successfully");    
+	     //System.out.println("message sent successfully");    
 	    } catch (MessagingException e) {
-	    	System.out.println("# ERROR # EmailUtility : "+GeaUtility.showErrorDetails(e));
+	    	System.out.println(GeaUtility.getActualErrorMessage(e));
 	    	//throw new RuntimeException(e); Commented on 11 Apr, 2017 as email not sent is fine.
 	    }    
 		

@@ -29,8 +29,8 @@ public class AdminLoginAction extends ActionSupport implements SessionAware {
 				 return "error";
 			}
 		 } catch (Exception e) {
-			System.out.println("# ERROR # AdminLogin : "+GeaUtility.showErrorDetails(e));
-			addActionError("Error while authorizing admin: " +GeaUtility.showErrorDetails(e));
+			System.out.println(GeaUtility.getActualErrorMessage(e));
+			addActionError(GeaUtility.getGeaActionErrorMessage(e));
 			return "error";
 		}
 	 } 

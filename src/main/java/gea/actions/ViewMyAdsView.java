@@ -58,8 +58,8 @@ public class ViewMyAdsView  extends SearchResultsAction {
 				
 			} catch (Exception e) {
 
-		        System.out.println("# ERROR # View My Ads Error : "+GeaUtility.showErrorDetails(e));
-				addActionError("Some error Occurred while View ads for " + GeaUtility.getLoggedUserLoginId(sessionMap));
+		        System.out.println(GeaUtility.getActualErrorMessage(e));
+				addActionError(GeaUtility.getGeaActionErrorMessage(e));
 				return "error";
 			}	
 	}

@@ -9,6 +9,8 @@ import org.apache.commons.lang.StringUtils;
 
 public class GeaUtility {
 	
+	public static final String GEA_EMAIL = "gundecha.parents.portal@gmail.com";
+	
 	/* Used for form Field Validation */
 	public static boolean isFieldEmpty (String field) {
 		if (field == null || field.trim().equals("")) {
@@ -69,7 +71,7 @@ public class GeaUtility {
 		sessionMap.put("LoggedUser", null);
 	}
 	
-	public static String showErrorDetails(Exception e) {
+	public static String getActualErrorMessage(Exception e) {
 		String message = e.getMessage();
         Throwable inner = null;
         Throwable root = e;
@@ -81,5 +83,8 @@ public class GeaUtility {
         return message;
 	}
 	
+	public static String getGeaActionErrorMessage(Exception e) {
+		return "The following error occurred: "+getActualErrorMessage(e)+". Please email me at "+GEA_EMAIL;
+	}
 	
 }

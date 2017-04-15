@@ -37,8 +37,8 @@ public class SelectClassSubjectView  extends ActionSupport implements Preparable
 		try {
 			classSubjectList = DBUtilityTests.getClassSubjecList();
 		} catch (Exception e) {
-			System.out.println("# ERROR #  : "+GeaUtility.showErrorDetails(e));
-			addActionError("Some error Occurred "+GeaUtility.showErrorDetails(e));
+			System.out.println(GeaUtility.getActualErrorMessage(e));
+			addActionError(GeaUtility.getGeaActionErrorMessage(e));
 		}
 	}
 	

@@ -33,8 +33,8 @@ public class GeaParentsLibraryView extends ActionSupport  implements SessionAwar
 			booksList5_9 = DBUtilityLibrary.getBooksList("5-9", loggedUserLoginId, screenCode);
 			return "success";
 		} catch (Exception e) {
-	        System.out.println("# ERROR # GeaParentsLibraryView : "+GeaUtility.showErrorDetails(e));
-			addActionError("Some error Occurred:  " + GeaUtility.showErrorDetails(e));
+	        System.out.println(GeaUtility.getActualErrorMessage(e));
+			addActionError(GeaUtility.getGeaActionErrorMessage(e));
 			return "error";
 		}	
 	}

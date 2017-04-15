@@ -51,7 +51,7 @@ public class DBUtilityLibrary {
 		  ArrayList<BookBean> booksList = new ArrayList<BookBean>();
 		  Connection conn = DBUtility.getDatabaseConnection();
 		  
-		  System.out.println("getBooksList Query:  "+sql);
+		  //System.out.println("getBooksList Query:  "+sql);
 		  
 	      ResultSet rs = conn.createStatement().executeQuery(sql);
 	      while (rs.next()) {
@@ -91,7 +91,7 @@ public class DBUtilityLibrary {
 		  ArrayList<BookBean> booksList = new ArrayList<BookBean>();
 		  Connection conn = DBUtility.getDatabaseConnection();
 		  
-		  System.out.println("getBooksList Query:  "+sql);
+		  //System.out.println("getBooksList Query:  "+sql);
 		  
 	      ResultSet rs = conn.createStatement().executeQuery(sql);
 	      while (rs.next()) {

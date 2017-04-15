@@ -37,8 +37,8 @@ public class SelectClassSubjectAction  extends ActionSupport implements SessionA
 			ClassSubject = DBUtilityTests.getClassSubject(ClassSubject_id);
 			sessionMap.put("GEA_TEST_ClassSubject", ClassSubject); /* For Report */
 		} catch (Exception e) {
-			System.out.println("# ERROR #  : "+GeaUtility.showErrorDetails(e));
-			addActionError("Some error Occurred "+GeaUtility.showErrorDetails(e));
+			System.out.println(GeaUtility.getActualErrorMessage(e));
+			addActionError(GeaUtility.getGeaActionErrorMessage(e));
 		}
 		return "success";
 	}
