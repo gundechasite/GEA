@@ -4,7 +4,7 @@
 <table width=90% id=geaContentTable>
   <tr>
 	  <td colspan=2>
-	  <label class="geaFormSubHeading">Gea Parents Library
+	  <label class="geaFormSubHeading">Search Book Results  
 	  </label>
 	  </td>
   </tr>
@@ -17,10 +17,22 @@
 	   </s:if>
    </td>
    </tr>
+    <tr> 
+	   <td colspan=2>
+	   
+	    You Searched for
+	   <label class="geaFormSmallText"> 
+	    <br>Book Title = <s:property value="bookTitle"/> 
+	    <br>ISBN = <s:property value="bookISBN"/>  
+	    <br>Author = <s:property value="bookAuthor"/>
+	   </label>
+	   </td>
+    </tr>
+    
 </table>
 
 
-<div id="Preschool" class="tabcontent">
+<div>
 	<table class=alternateColor width=90% align=center>
     <tr>
 	    <th>Title</th>
@@ -41,3 +53,4 @@
 	</s:iterator>
 	</table>  
 </div>
+<br>

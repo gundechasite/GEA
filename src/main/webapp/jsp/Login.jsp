@@ -40,11 +40,9 @@
   <tr>
 	  <td colspan=2>
 		  <label class="geaFormSmallText">
-		  Your mobile phone# is your login Id<br>
-		  If you have forgotten your password, please let me know via Contact Me and I will send you your password.
-		  If you have not signed up, please signup first.
-		  <br>
-		  </label>
+		  Your mobile phone no. is your login Id. If you have forgotten your password, please email me at gundecha.parents.portal@gmail.com with subject Forgot Password.
+		  If you have not signed up, please signup first. 
+		  </label><a href="/GEA/Signup">Signup</a>
 	  </td>
   </tr>
 

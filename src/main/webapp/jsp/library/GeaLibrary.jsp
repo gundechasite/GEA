@@ -5,10 +5,8 @@
   <tr>
 	  <td colspan=2>
 	  <label class="geaFormSubHeading">Gea Parents Library - 
-	  <s:if test="%{(screenCode.equals('MyBooks'))}">Books I added to Library</s:if>
-	  <s:else>
-    Books added by other parents to Library
-</s:else>
+	  		<s:if test="%{(screenCode.equals('MyBooks'))}">Books I added to Library</s:if>
+	  		<s:else>Books added by other parents to Library</s:else>
 	  </label>
 	  </td>
   </tr>
@@ -19,9 +17,6 @@
 				<s:actionerror/>
 			</div>
 	   </s:if>
-   		<label class="geaFormSmallText"> 
-		Either you may meet the parent to exchange your books, or if your kids are big and if they can meet in school, they may exchange books in school. This website is not responsible for damaged books. 
-	    </label>
    </td>
    </tr>
 
@@ -46,7 +41,7 @@ div.tab button:hover {
 
 /* active/current tablink */
 div.tab button.active {
-    background-color: #DAE9BC;
+    background-color: #BCCE98;
 }
 </style>
 
@@ -56,7 +51,8 @@ div.tab button.active {
   <button class="tablinks" onclick="openTab(event, '1-4')">Class 1 - 4 books</button>
   <button class="tablinks" onclick="openTab(event, '5-9')">Class 5 - 9 books</button>
 </div>
-<div style="border-top:5px solid #DAE9BC;clear:both;"></div>
+<div style="border-top:8px solid #BCCE98;clear:both;"></div>
+<div style="border-top:1px solid black;clear:both;"></div>
 <br>
 
 <!-- Preschool Tab -->
@@ -67,16 +63,28 @@ div.tab button.active {
 	    <th>ISBN</th>
 	    <th>Author</th>
 	    <th>Total Pages</th>
-	    <th>Parents Details</th>
+	    <s:if test="%{(!screenCode.equals('MyBooks'))}"><th>Parents Details</th></s:if>
+	    <s:if test="%{(screenCode.equals('MyBooks'))}"><th></th></s:if>
     </tr>
-    <s:if test="%{(getBooksListPreschool()==null)||getBooksListPreschool().isEmpty()}"><tr><td colspan=5 align=center>No Records Found</td></tr></s:if>
+    <s:if test="%{(getBooksListPreschool()==null)||getBooksListPreschool().isEmpty()}"><tr><td colspan=6 align=center>No Records Found</td></tr></s:if>
 	<s:iterator value="booksListPreschool">
 	  <tr>
 	    <td><s:property value="bookTitle"/></td>
 	    <td><s:property value="bookISBN" /></td>
 	    <td><s:property value="bookAuthor"/></td>
-	    <td><s:property value="bookTotalPages"/></td>
-	    <td><s:property value="parentDetails"/></td>	    
+	    <td align=center><s:property value="bookTotalPages"/></td>
+	    <s:if test="%{(!screenCode.equals('MyBooks'))}"><td><s:property value="parentDetails"/></td></s:if>	    
+	    
+	    <s:if test="%{(screenCode.equals('MyBooks'))}">
+	    <td align=center>
+	    	<s:url var="url" action="DeleteMyBook">
+		           <s:param name="Book_id"><s:property value='Book_id'/></s:param>
+		           <s:param name="bookTitle"><s:property value='bookTitle'/></s:param>
+	        </s:url>
+	        <s:a href="%{url}">Delete</s:a>
+	    </td>
+	    </s:if>
+	    
 	  </tr>
 	</s:iterator>
 	</table>  
@@ -90,16 +98,27 @@ div.tab button.active {
 	    <th>ISBN</th>
 	    <th>Author</th>
 	    <th>Total Pages</th>
-	    <th>Parents Details</th>
+	    <s:if test="%{(!screenCode.equals('MyBooks'))}"><th>Parents Details</th></s:if>
+	    <s:if test="%{(screenCode.equals('MyBooks'))}"><th></th></s:if>
     </tr>
-    <s:if test="%{(getBooksList1_4()==null)||getBooksList1_4().isEmpty()}"><tr><td colspan=5 align=center>No Records Found</td></tr></s:if>
+    <s:if test="%{(getBooksList1_4()==null)||getBooksList1_4().isEmpty()}"><tr><td colspan=6 align=center>No Records Found</td></tr></s:if>
 	<s:iterator value="booksList1_4">
 	  <tr>
 	    <td><s:property value="bookTitle"/></td>
 	    <td><s:property value="bookISBN" /></td>
 	    <td><s:property value="bookAuthor"/></td>
-	    <td><s:property value="bookTotalPages"/></td>
-	    <td><s:property value="parentDetails"/></td>	    
+	    <td  align=center><s:property value="bookTotalPages"/></td>
+	    <s:if test="%{(!screenCode.equals('MyBooks'))}"><td><s:property value="parentDetails"/></td></s:if>		
+	    
+	    <s:if test="%{(screenCode.equals('MyBooks'))}">
+	    <td  align=center>
+	    	<s:url var="url" action="DeleteMyBook">
+		           <s:param name="Book_id"><s:property value='Book_id'/></s:param>
+	        </s:url>
+	        <s:a href="%{url}">Delete</s:a>
+	    </td>
+	    </s:if>
+	        
 	  </tr>
 	</s:iterator>
 	</table>  
@@ -113,16 +132,27 @@ div.tab button.active {
 	    <th>ISBN</th>
 	    <th>Author</th>
 	    <th>Total Pages</th>
-	    <th>Parents Details</th>
+	    <s:if test="%{(!screenCode.equals('MyBooks'))}"><th>Parents Details</th></s:if>
+	    <s:if test="%{(screenCode.equals('MyBooks'))}"><th></th></s:if>
     </tr>
-    <s:if test="%{(getBooksList5_9()==null)||getBooksList5_9().isEmpty()}"><tr><td colspan=5 align=center>No Records Found</td></tr></s:if>
+    <s:if test="%{(getBooksList5_9()==null)||getBooksList5_9().isEmpty()}"><tr><td colspan=6 align=center>No Records Found</td></tr></s:if>
 	<s:iterator value="booksList5_9">
 	  <tr>
 	    <td><s:property value="bookTitle"/></td>
 	    <td><s:property value="bookISBN" /></td>
 	    <td><s:property value="bookAuthor"/></td>
-	    <td><s:property value="bookTotalPages"/></td>
-	    <td><s:property value="parentDetails"/></td>	    
+	    <td  align=center><s:property value="bookTotalPages"/></td>
+	    <s:if test="%{(!screenCode.equals('MyBooks'))}"><td><s:property value="parentDetails"/></td></s:if>
+	    
+	    <s:if test="%{(screenCode.equals('MyBooks'))}">
+	    <td  align=center>
+	    	<s:url var="url" action="DeleteMyBook">
+		           <s:param name="Book_id"><s:property value='Book_id'/></s:param>
+	        </s:url>
+	        <s:a href="%{url}">Delete</s:a>
+	    </td>
+	    </s:if>
+	    	    
 	  </tr>
 	</s:iterator>
 	</table>  
@@ -147,4 +177,4 @@ function openTab(evt, cityName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
-     
+<br>    

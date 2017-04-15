@@ -140,13 +140,16 @@ values ('2', '6-2=?', '6','8','10','4','D','6-2=4');
 DROP TABLE GeaParentsLibrary;
 
 CREATE TABLE GeaParentsLibrary 
-(loginId VARCHAR(15),
-bookTitle VARCHAR(100),
+(
+Book_id MEDIUMINT NOT NULL AUTO_INCREMENT,
+loginId VARCHAR(15),
+bookTitle VARCHAR(150),
 bookISBN VARCHAR(15),
-bookAuthor VARCHAR(60),
-bookTotalPages TINYINT,
+bookAuthor VARCHAR(100),
+bookTotalPages MEDIUMINT,
 bookCategory VARCHAR(3),
-submissionDate DATE
+submissionDate DATE,
+ PRIMARY KEY (Book_id)
 )
 
 delete from ContactMe;

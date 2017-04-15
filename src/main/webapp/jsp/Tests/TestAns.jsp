@@ -63,7 +63,7 @@
 </tr>
 </table>
 
-<s:set name="VARcorrectlyAnswered" value="correctlyAnswered"/>
+<s:set name="VARcorrectlyAnswered" value="qn.correctlyAnswered"/>
 <!-- If correctly answered, Ovation sound -->
 <s:if test="%{#VARcorrectlyAnswered==true}">
 	<audio autoplay>

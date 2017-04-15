@@ -20,13 +20,14 @@
 		<td><img src="images/logo.png" alt="" style="width:50px;height:50px;"></td>
 		<td>
 		
-			<a href="/GEA/LibraryReadme">Gea Parents Library</a>
-		 	|
-		 	<a href="/GEA/BuySellTextbookReadme">Textbooks</a>
-		 	|
+			<a href="/GEA/LibraryReadme"> Library</a>&nbsp;
+		 	|&nbsp;
+		 	<a href="/GEA/selectClassSubject">Tests</a>&nbsp;
+		 	|&nbsp;
+		 	<a href="/GEA/BuySellTextbookReadme">Textbooks</a>&nbsp;
+		 	|&nbsp;
 		 	<a href="/GEA/BuySellUniformReadme">Uniforms</a>
-		 	|
-		 	<a href="/GEA/selectClassSubject">Tests</a>
+		 	
 		 	
 		</td>
 		<td align=right  style="padding-right:40px">

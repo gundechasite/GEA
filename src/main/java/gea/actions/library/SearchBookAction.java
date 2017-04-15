@@ -38,7 +38,7 @@ public class SearchBookAction extends ActionSupport  implements SessionAware {
 
 	/* Validate */
 	public void validate() {
-		  if (GeaUtility.isFieldEmpty(bookTitle) && GeaUtility.isFieldEmpty(bookTitle) && GeaUtility.isFieldEmpty(bookTitle)) {
+		  if (GeaUtility.isFieldEmpty(bookTitle) && GeaUtility.isFieldEmpty(bookISBN) && GeaUtility.isFieldEmpty(bookAuthor)) {
 	    	  addActionError("Please enter at least one of the 3 values to search book");
 	      } 
 	 }

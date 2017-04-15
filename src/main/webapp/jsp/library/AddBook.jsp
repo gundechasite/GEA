@@ -21,7 +21,7 @@
     <tr> 
 	   <td colspan=2>
 	   <label class="geaFormSmallText"> 
-	    Please add book details that you would love to exchange with other parents. Please do not add books which you absolutely do not want to get damaged even little bit.
+	    Please add books that you would like to exchange with other parents. Please do not add books which you do not want to get damaged even little bit.
 	   </label>
 	   </td>
     </tr>    

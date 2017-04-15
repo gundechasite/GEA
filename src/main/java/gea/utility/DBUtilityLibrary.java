@@ -56,7 +56,7 @@ public class DBUtilityLibrary {
 	      ResultSet rs = conn.createStatement().executeQuery(sql);
 	      while (rs.next()) {
 				booksList.add(
-						new BookBean(rs.getString("bookTitle"), rs.getString("bookISBN"), rs.getString("bookAuthor"), rs.getString("bookCategory"), rs.getString("bookTotalPages"), rs.getString("loginId"), rs.getString("parentDetails")));
+						new BookBean(rs.getString("Book_id"),rs.getString("bookTitle"), rs.getString("bookISBN"), rs.getString("bookAuthor"), rs.getString("bookCategory"), rs.getString("bookTotalPages"), rs.getString("loginId"), rs.getString("parentDetails")));
 		  } 
 	      conn.close();
 	      return booksList;
@@ -79,7 +79,7 @@ public class DBUtilityLibrary {
 				if (!GeaUtility.isFieldEmpty(bookISBN)) {
 					sql = sql + " bookISBN like '%"+bookISBN+"%' or";
 				}
-		  		if (!GeaUtility.isFieldEmpty(bookISBN)) {
+		  		if (!GeaUtility.isFieldEmpty(bookAuthor)) {
 					sql = sql + " bookAuthor like '%"+bookAuthor+"%'";
 		  		}
 		  		if (sql.endsWith("or")) {
@@ -96,9 +96,23 @@ public class DBUtilityLibrary {
 	      ResultSet rs = conn.createStatement().executeQuery(sql);
 	      while (rs.next()) {
 				booksList.add(
-						new BookBean(rs.getString("bookTitle"), rs.getString("bookISBN"), rs.getString("bookAuthor"), rs.getString("bookCategory"), rs.getString("bookTotalPages"), rs.getString("loginId"), rs.getString("parentDetails")));
+						new BookBean(rs.getString("Book_id"), rs.getString("bookTitle"), rs.getString("bookISBN"), rs.getString("bookAuthor"), rs.getString("bookCategory"), rs.getString("bookTotalPages"), rs.getString("loginId"), rs.getString("parentDetails")));
 		  } 
 	      conn.close();
 	      return booksList;
+	}
+
+	public static void deleteMyBook(String book_id) throws SQLException, ClassNotFoundException {
+		  Connection conn = DBUtility.getDatabaseConnection();
+		  String query = "delete from GeaParentsLibrary where book_id=?";
+		  PreparedStatement preparedStmt = conn.prepareStatement(query);
+	      preparedStmt.setString(1, book_id);
+	      
+		  //System.out.println("Delete Query:  "+preparedStmt);
+		  
+	      preparedStmt.execute();
+		  conn.close();	
+
+		
 	}
 }
