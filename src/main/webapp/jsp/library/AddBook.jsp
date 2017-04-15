@@ -55,3 +55,6 @@
   	
 </table>
 </s:form>
+<script>
+window.onload = populateEmptyRowHTML;
+</script>

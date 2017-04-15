@@ -15,6 +15,7 @@
 	<action name="HomePage" class="gea.actions.GEAHomePageView">            
    		<result name="Blank" type="tiles">GEAHomePageTileDefinition</result>
    		<result name="Login" type="tiles">LoginTilesDefinition</result>
+   		<result  name="Signup" type="tiles">SignupTilesDefinition</result>
 	</action>  
      
 <!-- Footer links --> 

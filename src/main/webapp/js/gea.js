@@ -16,5 +16,21 @@ function insRow()
 {
     var x=document.getElementById('POITable');
     var new_row = x.rows[1].cloneNode(true);
+    var cleared_new_row = cleanUpInputs(new_row);
     x.appendChild( new_row );
+}
+
+function cleanUpInputs(obj) {
+    var focusNode = null;
+ 
+    for (var i = 0; n = obj.childNodes[i]; ++i) {
+        if (n.childNodes && n.tagName != 'INPUT') {
+            cleanUpInputs(n);
+        } else if (n.tagName == 'INPUT' && n.type == 'text') {
+            focusNode = n;
+            n.value = '';
+        }
+    }
+ 
+    return focusNode;
 }
