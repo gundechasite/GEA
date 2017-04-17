@@ -30,7 +30,7 @@ public class SellTextbooksAction extends GeaBasicAdAction {
 			} else {
 				currentComments = comments[i];
 			}
-			ST_Ads.add(new TextbookAd(childsClass, booksType[i], price[i], textbookCondition[i], currentComments , GeaUtility.getLoggedUserLoginId(sessionMap), getHideContactDetails(), sellerOrBuyer));
+			ST_Ads.add(new TextbookAd(childsClass, booksType[i], price[i], textbookCondition[i], currentComments , GeaUtility.getLoggedUserLoginId(sessionMap), sellerOrBuyer));
 			
 		}
 

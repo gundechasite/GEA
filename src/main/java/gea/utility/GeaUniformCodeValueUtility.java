@@ -135,11 +135,6 @@ public class GeaUniformCodeValueUtility {
 				} 
 			}
 		
-    	    if (uniformAdFromDatabaseWithCodes.getHideContactDetails().equalsIgnoreCase("Y")) {
-    	    	uniformAdForScreen.setHideContactDetails("true"); 
-    	    } else {
-    	    	uniformAdForScreen.setHideContactDetails("false");
-    	    }
 			uniformAdForScreen.setSellerOrBuyer(uniformAdFromDatabaseWithCodes.getSellerOrBuyer());
 			uniformAdForScreen.setLoginId(uniformAdFromDatabaseWithCodes.getLoginId());
 			uniformAdForScreen.setComments(uniformAdFromDatabaseWithCodes.getComments());

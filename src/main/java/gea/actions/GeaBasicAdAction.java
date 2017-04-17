@@ -32,8 +32,6 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 		
 	}
 
-	/* common Form Fields */
-	private String hideContactDetails;
 	
 	/* Common fields for Action (not screen fields - used by base class to decide which methods to call) */  
 	protected char uniformOrTextbooks;
@@ -142,12 +140,7 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 	
 	
 	/* getters and setters */
-	 public String getHideContactDetails() {
-		return hideContactDetails;
-	}
-	public void setHideContactDetails(String hideContactDetails) {
-		this.hideContactDetails = hideContactDetails;
-	}
+	
 	public ArrayList<GeaCodeValueBean> getVedaList() {
 		return vedaList;
 	}

@@ -17,7 +17,6 @@ public class UniformAd {
 	private String price;
 	private String comments;
 	private String loginId;
-	private String hideContactDetails;
 	private String sellerOrBuyer;
 	private String adOwnerNamePhoneEmail;
 	private String adOwnerName;
@@ -32,7 +31,7 @@ public class UniformAd {
 	public UniformAd(
 			String veda, String size, String partOfUniform,
 			String uniformCondition, String price, String comments, String loginId,
-			String hideContactDetails, String sellerOrBuyer) {
+			String sellerOrBuyer) {
 		
 		this.veda = veda;
 		this.size = size;
@@ -41,14 +40,13 @@ public class UniformAd {
 		this.price = price;
 		this.comments = comments;
 		this.loginId = loginId;
-		this.hideContactDetails = hideContactDetails;
 		this.sellerOrBuyer = sellerOrBuyer;
 	}
 	
 	public UniformAd(
 			String veda,String vedaDBCode, String size, String partOfUniform,
 			String uniformCondition, String price, String comments, String loginId,
-			String hideContactDetails, String sellerOrBuyer) {
+			 String sellerOrBuyer) {
 		
 		this.veda = veda;
 		this.vedaDBCode = vedaDBCode;
@@ -58,7 +56,6 @@ public class UniformAd {
 		this.price = price;
 		this.comments = comments;
 		this.loginId = loginId;
-		this.hideContactDetails = hideContactDetails;
 		this.sellerOrBuyer = sellerOrBuyer;
 	}
 	
@@ -116,12 +113,6 @@ public class UniformAd {
 	}
 	public void setLoginId(String loginId) {
 		this.loginId = loginId;
-	}
-	public String getHideContactDetails() {
-		return hideContactDetails;
-	}
-	public void setHideContactDetails(String hideContactDetails) {
-		this.hideContactDetails = hideContactDetails;
 	}
 	public String getSellerOrBuyer() {
 		return sellerOrBuyer;

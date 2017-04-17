@@ -32,7 +32,7 @@ public class SellUniformAction extends GeaBasicAdAction {
 			} else {
 				currentComments = comments[i];
 			}
-			SU_Ads.add(new UniformAd(veda[i], veda[i], uniformSize[i], partOfUniform[i], uniformCondition[i], price[i], currentComments, GeaUtility.getLoggedUserLoginId(sessionMap), getHideContactDetails(), sellerOrBuyer));
+			SU_Ads.add(new UniformAd(veda[i], veda[i], uniformSize[i], partOfUniform[i], uniformCondition[i], price[i], currentComments, GeaUtility.getLoggedUserLoginId(sessionMap),  sellerOrBuyer));
 		}
 		
 		/* 4. Call super.execute() */

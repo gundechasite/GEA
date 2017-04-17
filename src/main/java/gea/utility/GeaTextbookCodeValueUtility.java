@@ -123,11 +123,6 @@ public class GeaTextbookCodeValueUtility {
 			}
 		}
 		
-		if (textbookAdFromDatabaseWithCodes.getHideContactDetails().equalsIgnoreCase("Y")) {
-    		  textbookAdForScreen.setHideContactDetails("true"); 
-		} else {
-    		  textbookAdForScreen.setHideContactDetails("false");
-		}
 		textbookAdForScreen.setAdOwnerNamePhoneEmail(textbookAdFromDatabaseWithCodes.getAdOwnerNamePhoneEmail());
 		textbookAdForScreen.setAdOwnerName(textbookAdFromDatabaseWithCodes.getAdOwnerName());
 		textbookAdForScreen.setAdOwnerPhone(textbookAdFromDatabaseWithCodes.getAdOwnerPhone());

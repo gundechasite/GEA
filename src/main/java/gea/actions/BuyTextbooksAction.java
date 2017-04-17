@@ -20,7 +20,7 @@ public class BuyTextbooksAction extends GeaBasicAdAction {
 		
 		/* 3. set BT ads user has entered on screen */
 		for (int i=0;i<booksType.length;i++) {
-			BT_Ads.add(new TextbookAd(childsClass, booksType[i], null, null, null, GeaUtility.getLoggedUserLoginId(sessionMap), getHideContactDetails(), sellerOrBuyer));
+			BT_Ads.add(new TextbookAd(childsClass, booksType[i], null, null, null, GeaUtility.getLoggedUserLoginId(sessionMap), sellerOrBuyer));
 		}
 		
 		/* 4. Call super.execute() */

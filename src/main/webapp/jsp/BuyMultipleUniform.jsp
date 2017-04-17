@@ -4,8 +4,6 @@
  
 <s:form name="BuyUniformForm"  namespace="/" action="processBuyMultipleUniform" method="post" validate="true">
 
-<s:hidden name="hideContactDetails"  value="false"/>
-
 <table width=90% id=geaContentTable>
    
    <tr><td colspan=2><label class="geaFormHeading">Buy Uniform</label></td></tr>

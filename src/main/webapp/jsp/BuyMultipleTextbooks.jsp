@@ -3,8 +3,6 @@
    
 <s:form name="BuyTextbooksForm"  namespace="/" action="processBuyMultipleTextbooks" method="post" validate="true">
 
-<s:hidden name="hideContactDetails"  value="false"/>
-
 <table width=90% id=geaContentTable>
 
 	<tr><td colspan=2><label class="geaFormHeading">Buy Textbooks</label></td></tr>

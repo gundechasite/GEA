@@ -4,7 +4,6 @@
  
 <s:form name="SellTextbooksForm"  namespace="/" action="processSellMultipleTextbooks" method="post" validate="true">
 
-<s:hidden name="hideContactDetails"  value="false"/>
 
 <table width=80% id=geaContentTable>
    <tr><td colspan=2><label class="geaFormHeading">Sell Textbook</label></td></tr>
