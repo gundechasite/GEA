@@ -19,8 +19,7 @@
 
 	<s:iterator value="uniformAdList" >
 	<tr>
-		<td><s:property value="submissionDate"/></td>
-	    <td><s:property value="adOwnerNamePhoneEmail" /></td>
+		<td><s:property value="adOwnerNamePhoneEmail" /></td>
 	    <td><s:property value="sellerOrBuyer"/></td>
 	    <td><s:property value="veda" /> <s:property value="partOfUniform"/></td>
 	    <td><s:property value="size"/></td>

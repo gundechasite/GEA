@@ -17,8 +17,7 @@ booksType VARCHAR(2),
 price VARCHAR(3),
 textbookCondition VARCHAR(2), 
 loginId VARCHAR(15),
-sellerOrBuyer VARCHAR(1),
-submissionDate DATE);
+sellerOrBuyer VARCHAR(1));
 
 alter table TextbooksAds add unique (childsClass, booksType, loginId);
 
@@ -33,14 +32,26 @@ partOfUniform VARCHAR(2),
 price VARCHAR(3),
 uniformCondition VARCHAR(2),
 loginId VARCHAR(15),
-sellerOrBuyer VARCHAR(1),
-submissionDate DATE);
+sellerOrBuyer VARCHAR(1));
 
 alter table UniformAds add unique (veda, partOfUniform, size, loginId);
 
 
 
 
+DROP TABLE GeaParentsLibrary;
+
+CREATE TABLE GeaParentsLibrary 
+(
+Book_id MEDIUMINT NOT NULL AUTO_INCREMENT,
+loginId VARCHAR(15),
+bookTitle VARCHAR(60),
+bookISBN VARCHAR(15),
+bookAuthor VARCHAR(60),
+bookTotalPages SMALLINT,
+bookCategory VARCHAR(3),
+ PRIMARY KEY (Book_id)
+)
 
 DROP TABLE TestClassSubject;
 
@@ -95,34 +106,4 @@ values ('1', '1+9=?', '6','8','10','12','C','1+9=10');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
 values ('2', '6-2=?', '6','8','10','4','D','6-2=4');
 
-DROP TABLE GeaParentsLibrary;
 
-CREATE TABLE GeaParentsLibrary 
-(
-Book_id MEDIUMINT NOT NULL AUTO_INCREMENT,
-loginId VARCHAR(15),
-bookTitle VARCHAR(150),
-bookISBN VARCHAR(15),
-bookAuthor VARCHAR(100),
-bookTotalPages MEDIUMINT,
-bookCategory VARCHAR(3),
-submissionDate DATE,
- PRIMARY KEY (Book_id)
-)
-
-
-
--------------------------------------------------------------------
-
-delete from ContactMe;
-delete from SiteFeedBack;
-delete from UniformAds;
-delete from TextbooksAds;
-delete from RegisteredUsers;
-
-DROP TABLE ContactMe;
-
-CREATE TABLE ContactMe 
-(loginId VARCHAR(15),
-message VARCHAR(600),
-submissionDate DATE);

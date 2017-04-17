@@ -29,7 +29,7 @@ public class BuyUniformAction extends GeaBasicAdAction {
 				} else {
 					currentVeda = veda[i];
 				}
-				BU_Ads.add(new UniformAd(currentVeda,currentVeda, uniformSize[i], partOfUniform[i], null, null, null, GeaUtility.getLoggedUserLoginId(sessionMap), sellerOrBuyer));			
+				BU_Ads.add(new UniformAd(currentVeda,currentVeda, uniformSize[i], partOfUniform[i], null, null, GeaUtility.getLoggedUserLoginId(sessionMap), sellerOrBuyer));			
 			}
 			
 			/* 4. Call super.execute() */

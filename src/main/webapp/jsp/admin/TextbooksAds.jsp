@@ -18,7 +18,6 @@
 
 	<s:iterator value="textbookAdList" >
 	<tr>
-	    <td><s:property value="submissionDate"/></td>
 	    <td><s:property value="adOwnerNamePhoneEmail" /></td>
 	    <td><s:property value="sellerOrBuyer"/></td>
 	    <td><s:property value="childsClass"/></td>

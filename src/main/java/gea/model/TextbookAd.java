@@ -16,7 +16,6 @@ public class TextbookAd {
 	private String loginId;
 	private String sellerOrBuyer;
 	private String adOwnerNamePhoneEmail;
-	private String submissionDate;
 	private String adOwnerName;
 	private String adOwnerPhone;
 	private String adOwnerEmail;
@@ -80,15 +79,6 @@ public class TextbookAd {
 	public void setAdOwnerNamePhoneEmail(String adOwnerNamePhoneEmail) {
 		this.adOwnerNamePhoneEmail = adOwnerNamePhoneEmail;
 	}
-
-	public String getSubmissionDate() {
-		return submissionDate;
-	}
-
-	public void setSubmissionDate(String submissionDate) {
-		this.submissionDate = submissionDate;
-	}
-
 	public String getBookTypeDBCode() {
 		return bookTypeDBCode;
 	}

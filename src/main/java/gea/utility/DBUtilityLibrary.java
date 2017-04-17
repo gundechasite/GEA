@@ -13,8 +13,8 @@ public class DBUtilityLibrary {
 	
 	public static void addBook(ArrayList<BookBean> bookBeanList) throws SQLException, ClassNotFoundException {
 		String insertStmt = 
-				  "INSERT INTO GeaParentsLibrary (loginId, bookTitle, bookISBN, bookAuthor, bookTotalPages, bookCategory, submissionDate) " +
-				  "VALUES(?, ?, ?, ?, ?, ?, NOW())";
+				  "INSERT INTO GeaParentsLibrary (loginId, bookTitle, bookISBN, bookAuthor, bookTotalPages, bookCategory) " +
+				  "VALUES(?, ?, ?, ?, ?, ?)";
 
 		  Connection conn = DBUtility.getDatabaseConnection();
 	      PreparedStatement preparedStmt = conn.prepareStatement(insertStmt);
@@ -47,7 +47,7 @@ public class DBUtilityLibrary {
 		String sql = 
 				  "select l.*,CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parentDetails from GeaParentsLibrary l, RegisteredUsers r "
 		  		+ "where l.bookCategory='"+bookCategory+"' and "+loginIdCondition+" and l.loginId=r.loginId  "
-		  		+ "order by submissionDate desc" ;
+		  		+ "order by Book_id desc" ;
 		  ArrayList<BookBean> booksList = new ArrayList<BookBean>();
 		  Connection conn = DBUtility.getDatabaseConnection();
 		  
@@ -86,7 +86,7 @@ public class DBUtilityLibrary {
 		  			sql = sql.substring(0, sql.length()-2); //remove or if it is at end
 		  		}
 		  		sql = sql + ") ";
-		  		sql = sql + "order by submissionDate desc" ;
+		  		sql = sql + "order by Book_id desc" ;
 		  		
 		  ArrayList<BookBean> booksList = new ArrayList<BookBean>();
 		  Connection conn = DBUtility.getDatabaseConnection();

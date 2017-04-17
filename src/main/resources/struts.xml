@@ -28,8 +28,11 @@
 	<action name="HowToUseSite" class="gea.actions.DoNothingView">            
 		<result name="success" type="tiles">HowToUseSiteTileDefinition</result>                     
 	</action>
-	<action name="ContactMe" class="gea.actions.GeaForceLoginView">   
+	<action name="ContactMeOld" class="gea.actions.GeaForceLoginView">   
 		<result name="login" type="tiles">LoginTilesDefinition</result>         
+		<result name="success" type="tiles">ContactMeTileDefinition</result>                     
+	</action>
+	<action name="ContactMe" class="gea.actions.DoNothingView">   
 		<result name="success" type="tiles">ContactMeTileDefinition</result>                     
 	</action>
 	<action name="processContactMe" class="gea.actions.ContactMeAction">            

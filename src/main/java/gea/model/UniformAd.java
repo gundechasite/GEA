@@ -22,7 +22,6 @@ public class UniformAd {
 	private String adOwnerPhone;
 	private String adOwnerEmail;
 	
-	private String submissionDate;
 	
 
 	/* Constructors */
@@ -62,12 +61,6 @@ public class UniformAd {
 	}
 	public void setAdOwnerNamePhoneEmail(String adOwnerNamePhoneEmail) {
 		this.adOwnerNamePhoneEmail = adOwnerNamePhoneEmail;
-	}
-	public String getSubmissionDate() {
-		return submissionDate;
-	}
-	public void setSubmissionDate(String submissionDate) {
-		this.submissionDate = submissionDate;
 	}
 	public String getVeda() {
 		return veda;

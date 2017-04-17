@@ -38,11 +38,11 @@
 				<td></td>
 		   </tr>
 		   <tr align=center>
-			    <td><s:textfield name="bookTitle" theme="simple" style="width:200px;" maxlength="100" /></td>
+			    <td><s:textfield name="bookTitle" theme="simple" style="width:200px;" maxlength="60" /></td>
 			    <td><s:textfield name="bookISBN" theme="simple"  maxlength="15" style="width:60px;" /></td>
 			    <td><s:textfield name="bookAuthor" theme="simple"  maxlength="60" /></td>
 			    <td><s:select name="bookCategory" headerKey="" headerValue="Select " list="#{'PRE':'Preschool', '1-4':'Class 1-4', '5-9':'Class 5-9'}" theme="simple" /></td>
-			    <td><s:textfield name="bookTotalPages" theme="simple"  maxlength="3" style="width:30px;" /></td>
+			    <td><s:textfield name="bookTotalPages" theme="simple"  maxlength="4" style="width:30px;" /></td>
 			    <td><input type="button" id="delPOIbutton" value="Delete" onclick="deleteRow(this)" theme="simple"/></td>
 			</tr>
 		</table>

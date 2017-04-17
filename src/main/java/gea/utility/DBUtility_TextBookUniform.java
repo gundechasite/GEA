@@ -43,7 +43,6 @@ public class DBUtility_TextBookUniform {
 	    	  uniformAd.setUniformCondition(rs.getString("uniformCondition"));
 	    	  uniformAd.setLoginId(rs.getString("loginId"));
 	    	  uniformAd.setSellerOrBuyer(rs.getString("sellerOrBuyer"));
-	    	  uniformAd.setSubmissionDate(rs.getString("submissionDate"));
 	    	  if (getScreenValues) {
 	    		  uniformAd = GeaUniformCodeValueUtility.getScreenValueFromDatabaseCodes(uniformAd);
 	    	  }
@@ -79,7 +78,6 @@ public class DBUtility_TextBookUniform {
 	    	  textbookAd.setLoginId(rs.getString("loginId"));
 	    	  textbookAd.setPrice(rs.getString("price"));
 	    	  textbookAd.setSellerOrBuyer(rs.getString("sellerOrBuyer"));
-	    	  textbookAd.setSubmissionDate(rs.getString("submissionDate"));
 	    	  if (getScreenValues) {
 	    		  textbookAd = GeaTextbookCodeValueUtility.getScreenValueFromDatabaseCodes(textbookAd);
 	    	  }
@@ -93,8 +91,8 @@ public class DBUtility_TextBookUniform {
 	public static void insertTextbookAdDetails(ArrayList<TextbookAd> inputTextbooksAdsList)  throws SQLException, ClassNotFoundException {
 	  
 	  String insertStmt = 
-			"INSERT IGNORE INTO TextbooksAds (childsClass, booksType, price, textbookCondition, loginId, sellerOrBuyer, submissionDate) " +
-			"VALUES(?, ?, ?, ?, ?, ?,  NOW())";
+			"INSERT IGNORE INTO TextbooksAds (childsClass, booksType, price, textbookCondition, loginId, sellerOrBuyer) " +
+			"VALUES(?, ?, ?, ?, ?, ?)";
 
 	  Connection conn = DBUtility.getDatabaseConnection();
       PreparedStatement preparedStmt = conn.prepareStatement(insertStmt);
@@ -154,8 +152,8 @@ public class DBUtility_TextBookUniform {
 	public static void insertUniformAdDetails(ArrayList<UniformAd> inputUniformAdsList) throws SQLException, ClassNotFoundException {
 		  String insertStmt = 
 				" INSERT ignore INTO UniformAds " +
-				" (veda,size,partOfUniform,price,uniformCondition,loginId,sellerOrBuyer,submissionDate) " +
-				" VALUES ( ?, ?, ?, ?, ?, ?, ?, NOW())";
+				" (veda,size,partOfUniform,price,uniformCondition,loginId,sellerOrBuyer) " +
+				" VALUES ( ?, ?, ?, ?, ?, ?, ?)";
 
 		  Connection conn = DBUtility.getDatabaseConnection();
 	      PreparedStatement preparedStmt = conn.prepareStatement(insertStmt);
@@ -181,19 +179,19 @@ public class DBUtility_TextBookUniform {
 	/* get All Uniform ads for admin */
 	public static ArrayList<UniformAd> getUniformAdsListForAdmin()  throws SQLException, ClassNotFoundException {
 		  String sql = " select u.veda, u.size, u.partOfUniform, u.price, u.uniformCondition, u.loginId, " +
-		  		" u.sellerOrBuyer, u.submissionDate,  CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent,  " +
+		  		" u.sellerOrBuyer,  CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent,  " +
 		  		" r.parentName,r.parentPhone,r.parentEmail " +
 		  		" from UniformAds u, RegisteredUsers r  " +
-		  		" where u.loginId=r.loginId order by u.submissionDate desc " ;
+		  		" where u.loginId=r.loginId  " ;
 		  return getUniformAdsList(sql, true, true);
 	}
 	
 	/* get All Textbook ads for admin */
 	public static ArrayList<TextbookAd> getTextbookAdsListForAdmin()  throws SQLException, ClassNotFoundException {
-		  String sql = " select t.childsClass, t.booksType, t.loginId, t.price,  t.textbookCondition, t.sellerOrBuyer, t.submissionDate, " +
+		  String sql = " select t.childsClass, t.booksType, t.loginId, t.price,  t.textbookCondition, t.sellerOrBuyer,  " +
 		  		" CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent, " +
 		  		" r.parentName,r.parentPhone,r.parentEmail " +
-		  		" from TextbooksAds t, RegisteredUsers r where t.loginId=r.loginId order by t.submissionDate desc " ;
+		  		" from TextbooksAds t, RegisteredUsers r where t.loginId=r.loginId " ;
 		  return getTextbookAdsList(sql, true, true);
 	}
 

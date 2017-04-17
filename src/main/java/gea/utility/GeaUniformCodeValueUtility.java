@@ -138,7 +138,6 @@ public class GeaUniformCodeValueUtility {
 			uniformAdForScreen.setSellerOrBuyer(uniformAdFromDatabaseWithCodes.getSellerOrBuyer());
 			uniformAdForScreen.setLoginId(uniformAdFromDatabaseWithCodes.getLoginId());
 			uniformAdForScreen.setSize(uniformAdFromDatabaseWithCodes.getSize());
-			uniformAdForScreen.setSubmissionDate(uniformAdFromDatabaseWithCodes.getSubmissionDate());
 			uniformAdForScreen.setPartOfUniformDBCode(uniformAdFromDatabaseWithCodes.getPartOfUniform());
 			uniformAdForScreen.setVedaDBCode(uniformAdFromDatabaseWithCodes.getVedaDBCode());
 			uniformAdForScreen.setAdOwnerNamePhoneEmail(uniformAdFromDatabaseWithCodes.getAdOwnerNamePhoneEmail());

@@ -20,9 +20,13 @@
 	  <definition name="HowToUseSiteTileDefinition" template="/jsp/GEA.jsp">  
 	  		<put-attribute name="content" value="/html/HowToUseSite.html"></put-attribute>  
 	  </definition>
-	  <definition name="ContactMeTileDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="ContactMeTileDefinitionOLD" template="/jsp/GEA.jsp">  
 		  	<put-attribute name="content" value="/jsp/ContactMe.jsp"></put-attribute>  
 	  </definition>
+	  <definition name="ContactMeTileDefinition" template="/jsp/GEA.jsp">  
+		  	<put-attribute name="content" value="/html/ContactMeReadme.html"></put-attribute>  
+	  </definition>
+	  
 	  <definition name="SiteFeedbackTileDefinition" template="/jsp/GEA.jsp">  
 	  		<put-attribute name="content" value="/jsp/SiteFeedback.jsp"></put-attribute>  
 	  </definition>
