@@ -1,6 +1,23 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
  
+ 
+ <table width=90% id=geaContentTable>
+  <tr><td colspan=2><label class="geaFormHeading">Contact Me</label></td></tr>
+  <tr>
+  <td colspan=2><div style="border-top:1px solid gray;clear:both;">
+  </td>
+  </tr>
+   <tr>
+	   <td colspan=2>
+		  <label class="geaFormSmallText">
+		  You may contact me at gundecha.parents.portal@gmail.com. Thank You.
+		  </label>
+	   </td>
+  </tr>
+</table>
+ 
+ <!-- 
 <s:form name="ContactMeForm" namespace="/" action="processContactMe" method="post" validate="true">
 <table width=90% id=geaContentTable>
   
@@ -42,3 +59,4 @@
 
 </table>
 </s:form>
+ -->

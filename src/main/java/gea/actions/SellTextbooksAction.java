@@ -9,7 +9,6 @@ public class SellTextbooksAction extends GeaBasicAdAction {
 	 private String childsClass;
 	 private String[] booksType;
 	 private String[] price;
-	 private String[] comments;
 	 private String[] textbookCondition;
 	 
 	 
@@ -23,15 +22,8 @@ public class SellTextbooksAction extends GeaBasicAdAction {
 		sellerOrBuyer = "S";
 		
 		/* 3. set ST ads user has entered on screen */
-		String currentComments = null;
 		for (int i=0;i<booksType.length;i++) {
-			if (comments == null) {
-				currentComments = null;
-			} else {
-				currentComments = comments[i];
-			}
-			ST_Ads.add(new TextbookAd(childsClass, booksType[i], price[i], textbookCondition[i], currentComments , GeaUtility.getLoggedUserLoginId(sessionMap), sellerOrBuyer));
-			
+			ST_Ads.add(new TextbookAd(childsClass, booksType[i], price[i], textbookCondition[i], GeaUtility.getLoggedUserLoginId(sessionMap), sellerOrBuyer));
 		}
 
 		/* 4. Call super.execute() */
@@ -72,13 +64,6 @@ public class SellTextbooksAction extends GeaBasicAdAction {
 		}
 		public void setTextbookCondition(String[] textbookCondition) {
 			this.textbookCondition = textbookCondition;
-		}
-
-		public String[] getComments() {
-			return comments;
-		}
-		public void setComments(String[] comments) {
-			this.comments = comments;
 		}
 		public String getChildsClass() {
 			return childsClass;

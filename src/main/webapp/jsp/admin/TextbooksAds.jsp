@@ -12,7 +12,6 @@
 	    <th>class</th>
 	    <th>book</th>
 	    <th>price</th>
-	    <th>Comments</th>
 	</tr>
   
     <s:if test="%{(getTextbookAdList()==null)||getTextbookAdList().isEmpty()}"><tr><td colspan=6 align=center>No Records Found</td></tr></s:if>
@@ -25,7 +24,6 @@
 	    <td><s:property value="childsClass"/></td>
 	    <td><s:property value="bookType"/></td>
 	    <td><s:property value="price"/></td>
-	    <td><s:property value="comments"/></td>
 	</tr>
 	</s:iterator>
 

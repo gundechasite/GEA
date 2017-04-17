@@ -9,7 +9,6 @@
 	    <th>Size</th>
 	    <th>Condition</th>
 	    <th>Price</th>
-	    <th>Comments</th>
 	    <th></th>
  	</tr>
  	
@@ -21,8 +20,7 @@
 	    <td align=center><s:property value="size"/></td>
 	    <td><s:property value="uniformCondition"/></td>
 	    <td><s:property value="price"/></td>
-	    <td><s:property value="comments"/></td>
-		<td  align=center>
+	    <td  align=center>
 		    <s:url var="url" action="DeleteAd">
 		           <s:param name="actionCode">SU</s:param>
 		           <s:param name="veda"><s:property value='veda'/></s:param>

@@ -37,8 +37,6 @@
    
    <tr><s:select cssClass="geaSelect" label="Condition" list="textbookConditionList" listKey="code" listValue="value" name="textbookCondition" /></tr> 
 
-   <tr><s:textfield label="Comments" name="comments" cssClass="geaInput" maxlength="400" tooltip="You can describe book condition or at what time, buyer can contact you or leave this empty."/></tr>  	
-  
    <tr><td></td><td><s:submit value="Submit" cssClass="geaSubmitButton" theme="simple" /></td></tr>
   	
 </table>

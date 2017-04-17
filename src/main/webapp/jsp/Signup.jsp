@@ -43,7 +43,7 @@
   
   <tr>
   	<td><label class="geaFormlabel">E-mail of Parent</label></td>
-    <td><s:textfield  cssClass="geaInput"  name="email"  theme="simple"  maxlength="50"/></td>
+    <td><s:textfield  cssClass="geaInput"  name="email"  theme="simple"  maxlength="40"/></td>
   </tr>
   
   <tr>

@@ -102,7 +102,6 @@ public class EmailUtility {
 		" 	    <th style='padding: 10px;'  align=center>Size</th> "+
 		" 	    <th style='padding: 10px;'  align=center>Condition</th> "+
 		" 	    <th style='padding: 10px;'  align=center>Price</th> "+
-		" 	    <th style='padding: 10px;'  align=center>Comments</th> "+
 		"  	</tr> "+
 		"  	 "+
 		" 	<tr style='background-color: #DAE9BC;'> "+
@@ -110,7 +109,6 @@ public class EmailUtility {
 		" 	    <td style='padding: 10px;'  align=center>"+newUniformAd.getSize()+"</td> "+
 		" 	    <td style='padding: 10px;'  align=center>"+newUniformAd.getUniformCondition()+"</td> "+
 		" 	    <td style='padding: 10px;'  align=center>"+newUniformAd.getPrice()+"</td> "+
-		" 	    <td style='padding: 10px;'  align=center>"+newUniformAd.getComments()+"</td> "+
 		" 	</tr> "+
 		" </table> ";
 		return SU_message;
@@ -160,14 +158,12 @@ public class EmailUtility {
 		" <th style='padding: 10px;'  align=center>Book</th> "+
 		" <th style='padding: 10px;'  align=center>Condition</th> "+
 		" <th style='padding: 10px;'  align=center>Price</th> "+
-		" <th style='padding: 10px;'  align=center>Comments</th> "+
 		" </tr> "+
 		" <tr style='background-color: #DAE9BC;'> "+
 		" <td style='padding: 10px;'  align=center>"+newTextbookAd.getChildsClass()+"</td> "+
 		" <td style='padding: 10px;'  align=center>"+newTextbookAd.getBookType()+"</td> "+
 		" <td style='padding: 10px;'  align=center>"+newTextbookAd.getCondition()+"</td> "+
 		" <td style='padding: 10px;'  align=center>"+newTextbookAd.getPrice()+"</td> "+
-		" <td style='padding: 10px;'  align=center>"+newTextbookAd.getComments()+"</td> "+
 		" </tr> "+
 		" </table> ";
 		return  ST_message;

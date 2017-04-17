@@ -41,7 +41,6 @@
 	    <th>Size</th>
 	    <th>Condition</th>
 	    <th>Price</th>
-	    <th>Comments</th>
 	    <th>Parents Details</th>
 	</tr>
 	  
@@ -53,7 +52,6 @@
 		    <td align=center><s:property value="size"/></td>
 		    <td><s:property value="uniformCondition"/></td>
 		    <td><s:property value="price"/></td>
-		     <td><s:property value="comments"/></td>
 		    <td><s:property value="adOwnerNamePhoneEmail"/></td>
 		</tr>
 	</s:iterator>

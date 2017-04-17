@@ -40,7 +40,6 @@ public class DBUtility_TextBookUniform {
 	    	  }
 	    	  uniformAd.setPartOfUniform(rs.getString("partOfUniform"));
 	    	  uniformAd.setPrice(rs.getString("price"));
-	    	  uniformAd.setComments(rs.getString("comments"));
 	    	  uniformAd.setUniformCondition(rs.getString("uniformCondition"));
 	    	  uniformAd.setLoginId(rs.getString("loginId"));
 	    	  uniformAd.setSellerOrBuyer(rs.getString("sellerOrBuyer"));
@@ -76,7 +75,6 @@ public class DBUtility_TextBookUniform {
 	    	  textbookAd.setBookType(rs.getString("booksType"));
 	    	  textbookAd.setBookTypeDBCode(rs.getString("booksType"));
 	    	  textbookAd.setChildsClass(rs.getString("childsClass"));
-	    	  textbookAd.setComments(rs.getString("comments"));
 	    	  textbookAd.setCondition(rs.getString("textbookCondition"));
 	    	  textbookAd.setLoginId(rs.getString("loginId"));
 	    	  textbookAd.setPrice(rs.getString("price"));
@@ -95,8 +93,8 @@ public class DBUtility_TextBookUniform {
 	public static void insertTextbookAdDetails(ArrayList<TextbookAd> inputTextbooksAdsList)  throws SQLException, ClassNotFoundException {
 	  
 	  String insertStmt = 
-			"INSERT IGNORE INTO TextbooksAds (childsClass, booksType, price, comments, textbookCondition, loginId, sellerOrBuyer, submissionDate) " +
-			"VALUES(?, ?, ?, ?, ?, ?, ?,  NOW())";
+			"INSERT IGNORE INTO TextbooksAds (childsClass, booksType, price, textbookCondition, loginId, sellerOrBuyer, submissionDate) " +
+			"VALUES(?, ?, ?, ?, ?, ?,  NOW())";
 
 	  Connection conn = DBUtility.getDatabaseConnection();
       PreparedStatement preparedStmt = conn.prepareStatement(insertStmt);
@@ -106,10 +104,9 @@ public class DBUtility_TextBookUniform {
 	      preparedStmt.setString(1, textbookAd.getChildsClass());
 	      preparedStmt.setString(2, textbookAd.getBookType());
 	      preparedStmt.setString(3, textbookAd.getPrice());
-	      preparedStmt.setString(4, textbookAd.getComments());
-	      preparedStmt.setString(5, textbookAd.getCondition());
-	      preparedStmt.setString(6, textbookAd.getLoginId());
-	      preparedStmt.setString(7, textbookAd.getSellerOrBuyer());
+	      preparedStmt.setString(4, textbookAd.getCondition());
+	      preparedStmt.setString(5, textbookAd.getLoginId());
+	      preparedStmt.setString(6, textbookAd.getSellerOrBuyer());
 	      
 	      
 		  //System.out.println("insertTextbookAdDetails Query:  "+preparedStmt);
@@ -157,8 +154,8 @@ public class DBUtility_TextBookUniform {
 	public static void insertUniformAdDetails(ArrayList<UniformAd> inputUniformAdsList) throws SQLException, ClassNotFoundException {
 		  String insertStmt = 
 				" INSERT ignore INTO UniformAds " +
-				" (veda,size,partOfUniform,price,comments,uniformCondition,loginId,sellerOrBuyer,submissionDate) " +
-				" VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
+				" (veda,size,partOfUniform,price,uniformCondition,loginId,sellerOrBuyer,submissionDate) " +
+				" VALUES ( ?, ?, ?, ?, ?, ?, ?, NOW())";
 
 		  Connection conn = DBUtility.getDatabaseConnection();
 	      PreparedStatement preparedStmt = conn.prepareStatement(insertStmt);
@@ -168,10 +165,9 @@ public class DBUtility_TextBookUniform {
 		      preparedStmt.setString(2, uniformAd.getSize());
 		      preparedStmt.setString(3, uniformAd.getPartOfUniform());
 		      preparedStmt.setString(4, uniformAd.getPrice());
-		      preparedStmt.setString(5, uniformAd.getComments());
-		      preparedStmt.setString(6, uniformAd.getUniformCondition());
-		      preparedStmt.setString(7, uniformAd.getLoginId());
-		      preparedStmt.setString(8, uniformAd.getSellerOrBuyer());
+		      preparedStmt.setString(5, uniformAd.getUniformCondition());
+		      preparedStmt.setString(6, uniformAd.getLoginId());
+		      preparedStmt.setString(7, uniformAd.getSellerOrBuyer());
 			  preparedStmt.addBatch();
 		  }
 	      
@@ -184,7 +180,7 @@ public class DBUtility_TextBookUniform {
 	
 	/* get All Uniform ads for admin */
 	public static ArrayList<UniformAd> getUniformAdsListForAdmin()  throws SQLException, ClassNotFoundException {
-		  String sql = " select u.veda, u.size, u.partOfUniform, u.price, u.comments, u.uniformCondition, u.loginId, " +
+		  String sql = " select u.veda, u.size, u.partOfUniform, u.price, u.uniformCondition, u.loginId, " +
 		  		" u.sellerOrBuyer, u.submissionDate,  CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent,  " +
 		  		" r.parentName,r.parentPhone,r.parentEmail " +
 		  		" from UniformAds u, RegisteredUsers r  " +
@@ -194,7 +190,7 @@ public class DBUtility_TextBookUniform {
 	
 	/* get All Textbook ads for admin */
 	public static ArrayList<TextbookAd> getTextbookAdsListForAdmin()  throws SQLException, ClassNotFoundException {
-		  String sql = " select t.childsClass, t.booksType, t.loginId, t.price, t.comments, t.textbookCondition, t.sellerOrBuyer, t.submissionDate, " +
+		  String sql = " select t.childsClass, t.booksType, t.loginId, t.price,  t.textbookCondition, t.sellerOrBuyer, t.submissionDate, " +
 		  		" CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent, " +
 		  		" r.parentName,r.parentPhone,r.parentEmail " +
 		  		" from TextbooksAds t, RegisteredUsers r where t.loginId=r.loginId order by t.submissionDate desc " ;

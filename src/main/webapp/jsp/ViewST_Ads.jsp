@@ -9,7 +9,6 @@
 	    <th>Book</th>
 	    <th>Condition</th>
 	    <th>Price</th>
-	    <th>Comments</th>
 	    <th></th>
   	</tr>
   
@@ -21,7 +20,6 @@
 	    <td><s:property value="bookType" /></td>
 	    <td><s:property value="condition"/></td>
 	    <td><s:property value="price"/></td>
-	    <td><s:property value="comments"/></td>
 	    <td  align=center>
 		    <s:url var="url" action="DeleteAd">
 		           <s:param name="actionCode">ST</s:param>

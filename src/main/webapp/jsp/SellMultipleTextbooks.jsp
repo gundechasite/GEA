@@ -37,14 +37,12 @@
 			    <td>Books type </td>
 			    <td>Price</td>
 			    <td>Condition</td>
-			    <td>Comments</td>
-				<td></td>
+			    <td></td>
 		   </tr>
 		   <tr align=center>
 			    <td><s:select cssClass="geaSelect" label="Books type" list="booksTypeList"  listKey="code" listValue="value" name="booksType" theme="simple" /></td>
 			    <td><s:select cssClass="geaSelect" label="Price" list="textbookPriceList" listKey="code" listValue="value" name="price" theme="simple" /></td>
 				 <td><s:select cssClass="geaSelect" label="Condition" list="textbookConditionList" listKey="code" listValue="value" name="textbookCondition" theme="simple" /></td>
-			     <td><s:textfield label="Comments" name="comments" theme="simple"  maxlength="400" /></td>
 			     <td><input type="button" id="delPOIbutton" value="Delete" onclick="deleteRow(this)"  theme="simple"/></td>
 			</tr>
 		</table>

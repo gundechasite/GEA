@@ -15,7 +15,6 @@ public class UniformAd {
 	private String size;
 	private String uniformCondition;
 	private String price;
-	private String comments;
 	private String loginId;
 	private String sellerOrBuyer;
 	private String adOwnerNamePhoneEmail;
@@ -30,7 +29,7 @@ public class UniformAd {
 	public UniformAd() {}
 	public UniformAd(
 			String veda, String size, String partOfUniform,
-			String uniformCondition, String price, String comments, String loginId,
+			String uniformCondition, String price, String loginId,
 			String sellerOrBuyer) {
 		
 		this.veda = veda;
@@ -38,14 +37,13 @@ public class UniformAd {
 		this.partOfUniform = partOfUniform;
 		this.uniformCondition = uniformCondition;
 		this.price = price;
-		this.comments = comments;
 		this.loginId = loginId;
 		this.sellerOrBuyer = sellerOrBuyer;
 	}
 	
 	public UniformAd(
 			String veda,String vedaDBCode, String size, String partOfUniform,
-			String uniformCondition, String price, String comments, String loginId,
+			String uniformCondition, String price, String loginId,
 			 String sellerOrBuyer) {
 		
 		this.veda = veda;
@@ -54,7 +52,6 @@ public class UniformAd {
 		this.partOfUniform = partOfUniform;
 		this.uniformCondition = uniformCondition;
 		this.price = price;
-		this.comments = comments;
 		this.loginId = loginId;
 		this.sellerOrBuyer = sellerOrBuyer;
 	}
@@ -101,12 +98,6 @@ public class UniformAd {
 	}
 	public void setPrice(String price) {
 		this.price = price;
-	}
-	public String getComments() {
-		return comments;
-	}
-	public void setComments(String comments) {
-		this.comments = comments;
 	}
 	public String getLoginId() {
 		return loginId;

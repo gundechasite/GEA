@@ -5,10 +5,8 @@ CREATE TABLE RegisteredUsers
 (loginId VARCHAR(15), 
 password VARCHAR(15),
 parentName VARCHAR(30),
-parentPhone VARCHAR(20), 
-parentEmail VARCHAR(50), 
-creationDate DATE);
-
+parentPhone VARCHAR(15), 
+parentEmail VARCHAR(40));
 
 
 DROP TABLE TextbooksAds;
@@ -17,7 +15,6 @@ CREATE TABLE TextbooksAds
 (childsClass VARCHAR(2), 
 booksType VARCHAR(2),
 price VARCHAR(3),
-comments VARCHAR(400), 
 textbookCondition VARCHAR(2), 
 loginId VARCHAR(15),
 sellerOrBuyer VARCHAR(1),
@@ -34,7 +31,6 @@ CREATE TABLE UniformAds
 size VARCHAR(3), 
 partOfUniform VARCHAR(2), 
 price VARCHAR(3),
-comments VARCHAR(400), 
 uniformCondition VARCHAR(2),
 loginId VARCHAR(15),
 sellerOrBuyer VARCHAR(1),
@@ -44,12 +40,6 @@ alter table UniformAds add unique (veda, partOfUniform, size, loginId);
 
 
 
-DROP TABLE ContactMe;
-
-CREATE TABLE ContactMe 
-(loginId VARCHAR(15),
-message VARCHAR(600),
-submissionDate DATE);
 
 
 DROP TABLE TestClassSubject;
@@ -120,8 +110,19 @@ submissionDate DATE,
  PRIMARY KEY (Book_id)
 )
 
+
+
+-------------------------------------------------------------------
+
 delete from ContactMe;
 delete from SiteFeedBack;
 delete from UniformAds;
 delete from TextbooksAds;
 delete from RegisteredUsers;
+
+DROP TABLE ContactMe;
+
+CREATE TABLE ContactMe 
+(loginId VARCHAR(15),
+message VARCHAR(600),
+submissionDate DATE);

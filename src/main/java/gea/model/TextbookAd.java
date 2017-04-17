@@ -13,7 +13,6 @@ public class TextbookAd {
 	private String bookType;
 	private String condition;
 	private String price;
-	private String comments;
 	private String loginId;
 	private String sellerOrBuyer;
 	private String adOwnerNamePhoneEmail;
@@ -25,13 +24,12 @@ public class TextbookAd {
 	/* Constructors */
 	public TextbookAd(){}
 	public TextbookAd(String childsClass, String bookType, String price, String condition,
-			String comments, String loginId,
+			 String loginId,
 			String sellerOrBuyer) {
 		this.childsClass = childsClass;
 		this.bookType = bookType;
 		this.price = price;
 		this.condition = condition;
-		this.comments = comments;
 		this.loginId = loginId;
 		this.sellerOrBuyer = sellerOrBuyer;
 	}
@@ -61,12 +59,6 @@ public class TextbookAd {
 	}
 	public void setPrice(String price) {
 		this.price = price;
-	}
-	public String getComments() {
-		return comments;
-	}
-	public void setComments(String comments) {
-		this.comments = comments;
 	}
 	public String getLoginId() {
 		return loginId;

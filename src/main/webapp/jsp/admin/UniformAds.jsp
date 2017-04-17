@@ -13,7 +13,6 @@
 	    <th>Size</th>
 	    <th>Condition</th>
 	    <th>Price</th>
-	    <th>Comments</th>
     </tr>
 
     <s:if test="%{(getUniformAdList()==null)||getUniformAdList().isEmpty()}"><tr><td colspan=6 align=center>No Records Found</td></tr></s:if>
@@ -27,7 +26,6 @@
 	    <td><s:property value="size"/></td>
 	    <td><s:property value="uniformCondition"/></td>
 	    <td><s:property value="price"/></td>
-	    <td><s:property value="comments"/></td>
 	</tr>
 	</s:iterator>
 

@@ -131,7 +131,6 @@ public class GeaTextbookCodeValueUtility {
 		textbookAdForScreen.setBookTypeDBCode(textbookAdFromDatabaseWithCodes.getBookType());
 		textbookAdForScreen.setSellerOrBuyer(textbookAdFromDatabaseWithCodes.getSellerOrBuyer());
 		textbookAdForScreen.setLoginId(textbookAdFromDatabaseWithCodes.getLoginId());
-		textbookAdForScreen.setComments(textbookAdFromDatabaseWithCodes.getComments());
 		textbookAdForScreen.setSubmissionDate(textbookAdFromDatabaseWithCodes.getSubmissionDate());
 		return textbookAdForScreen;
 	} 

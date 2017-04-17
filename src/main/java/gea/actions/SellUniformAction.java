@@ -11,8 +11,6 @@ public class SellUniformAction extends GeaBasicAdAction {
 	private String[] partOfUniform;
 	private String[] uniformCondition;
 	private String[] price;
-	private String[] comments;
-
 	
 	
 	/* Execute */
@@ -25,14 +23,8 @@ public class SellUniformAction extends GeaBasicAdAction {
 		sellerOrBuyer = "S";
 		
 		/* 3. set SU ads user has entered on screen */
-		String currentComments = null;
 		for (int i=0;i<uniformSize.length;i++) {
-			if (comments == null) {
-				currentComments = null;
-			} else {
-				currentComments = comments[i];
-			}
-			SU_Ads.add(new UniformAd(veda[i], veda[i], uniformSize[i], partOfUniform[i], uniformCondition[i], price[i], currentComments, GeaUtility.getLoggedUserLoginId(sessionMap),  sellerOrBuyer));
+			SU_Ads.add(new UniformAd(veda[i], veda[i], uniformSize[i], partOfUniform[i], uniformCondition[i], price[i], GeaUtility.getLoggedUserLoginId(sessionMap),  sellerOrBuyer));
 		}
 		
 		/* 4. Call super.execute() */
@@ -99,10 +91,5 @@ public class SellUniformAction extends GeaBasicAdAction {
 		public void setPrice(String[] price) {
 			this.price = price;
 		}
-		public String[] getComments() {
-			return comments;
-		}
-		public void setComments(String[] comments) {
-			this.comments = comments;
-		}
+
 }

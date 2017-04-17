@@ -39,7 +39,6 @@
 	    <th>Book</th>
 	    <th>Condition</th>
 	    <th>Price</th>
-	    <th>Comments</th>
 	    <th>Parents Details</th>
     </tr>
 
@@ -51,7 +50,6 @@
 	    <td><s:property value="bookType" /></td>
 	    <td><s:property value="condition"/></td>
 	    <td><s:property value="price"/></td>
-	    <td><s:property value="comments"/></td>
 	    <td><s:property value="adOwnerNamePhoneEmail"/></td>	    
 	  </tr>
 	</s:iterator>

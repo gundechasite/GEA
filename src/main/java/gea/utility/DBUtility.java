@@ -28,8 +28,8 @@ public class DBUtility {
 	public static void signupUser (String name, String email, String phone, String password) throws SQLException, ClassNotFoundException {
 		
 		String insertStmt = 
-		  "INSERT INTO RegisteredUsers (loginId, password, parentName, parentPhone, parentEmail, creationDate) " +
-		  "VALUES(?, ?, ?, ?, ?, NOW())";
+		  "INSERT INTO RegisteredUsers (loginId, password, parentName, parentPhone, parentEmail) " +
+		  "VALUES(?, ?, ?, ?, ?)";
 
 		  Connection conn = getDatabaseConnection();
 	      PreparedStatement preparedStmt = conn.prepareStatement(insertStmt);
