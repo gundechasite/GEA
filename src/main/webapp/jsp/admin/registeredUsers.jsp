@@ -16,7 +16,6 @@
 
 	<s:iterator value="resisteredUsers">
 	<tr>
-	    <td><s:property value="creationDate"/></td>
 	    <td><s:property value="loginId" /></td>
 	    <td><s:property value="name"/></td>
 	    <td><s:property value="phone"/></td>

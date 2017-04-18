@@ -239,8 +239,9 @@
 	    <result  name="success" type="tiles">MessageScreenLibraryTilesDefinition</result>  
 		<result  name="error" type="tiles">AddBookTileDefinition</result> 
 	</action>
-	<action name="GeaParentsLibrary" class="gea.actions.library.GeaParentsLibraryView">            
-		<result name="success" type="tiles">GeaParentsLibraryTileDefinition</result>
+	<action name="GeaParentsLibrary" class="gea.actions.library.GeaParentsLibraryView">
+	    <result name="login" type="tiles">LoginTilesDefinition</result> 
+	    <result name="success" type="tiles">GeaParentsLibraryTileDefinition</result>
 		<result name="error" type="tiles">GeaParentsLibraryTileDefinition</result>                     
 	</action>
 	<action name="DeleteMyBook" class="gea.actions.library.DeleteMyBookAction">            

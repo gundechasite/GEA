@@ -21,7 +21,7 @@
     <tr> 
 	   <td colspan=2>
 	   <label class="geaFormSmallText"> 
-	    Please add books that you would like to exchange with other parents. Please do not add books which you do not want to get damaged even little bit.
+	    Please add books that you would like to exchange with other parents. Please do not add books which you do not want to get damaged even little bit. Entering ISBN is optional, but other things must be entered for the book. Use your rough judgement to decide the Category of the book.
 	   </label>
 	   </td>
     </tr>    
@@ -39,7 +39,7 @@
 		   </tr>
 		   <tr align=center>
 			    <td><s:textfield name="bookTitle" theme="simple" style="width:200px;" maxlength="60" /></td>
-			    <td><s:textfield name="bookISBN" theme="simple"  maxlength="15" style="width:60px;" /></td>
+			    <td><s:textfield name="bookISBN" theme="simple"  maxlength="13" style="width:60px;" /></td>
 			    <td><s:textfield name="bookAuthor" theme="simple"  maxlength="60" /></td>
 			    <td><s:select name="bookCategory" headerKey="" headerValue="Select " list="#{'PRE':'Preschool', '1-4':'Class 1-4', '5-9':'Class 5-9'}" theme="simple" /></td>
 			    <td><s:textfield name="bookTotalPages" theme="simple"  maxlength="4" style="width:30px;" /></td>

@@ -25,7 +25,7 @@ public class SelectClassSubjectView  extends ActionSupport implements Preparable
 	
 	public String execute(){ 
 		 if (GeaUtility.hasUserNotLoggedIn(sessionMap)) {
-			 addActionError(" Please login. (Maybe you were inactive for some time) ");
+			 addActionError(" Please login. (Either you have not logged in or you were inactive for some time) ");
 			 return "login";
 		 } 
 		 return "success";

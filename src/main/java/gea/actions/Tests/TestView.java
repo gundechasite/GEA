@@ -41,7 +41,7 @@ public class TestView extends ActionSupport implements SessionAware, Serializabl
 	/* Execute */
 	public String execute(){ 
 		 if (GeaUtility.hasUserNotLoggedIn(sessionMap)) {
-			 addActionError(" Please login. (Maybe you were inactive for some time) ");
+			 addActionError(" Please login. (Either you have not logged in or you were inactive for some time) ");
 			 return "login";
 		 } 
 		
@@ -105,18 +105,20 @@ public class TestView extends ActionSupport implements SessionAware, Serializabl
 		}
 		correctlyAnsweredQuestions = correctlyAnswered;
 		
-		
+		selectedChapter = (String)sessionMap.get("GEA_TEST_Chapter");
+		selectedClassSubject = (String)sessionMap.get("GEA_TEST_ClassSubject"); 
+		System.out.println("-------------------------");
+		System.out.println(selectedChapter);
+		System.out.println(selectedClassSubject);
 		String loggedUserEmailId = GeaUtility.getLoggedUserEmailId(sessionMap);
 		if (!GeaUtility.isFieldEmpty(loggedUserEmailId)) {
-			selectedChapter = (String)sessionMap.get("GEA_TEST_Chapter");
-			selectedClassSubject = (String)sessionMap.get("GEA_TEST_ClassSubject"); 
 			String message = EmailUtility.getTestReportHTMLMessage(answeredQuestionList, selectedChapter, selectedClassSubject);
 			String subject = "Test Report : "+selectedClassSubject+" "+selectedChapter;
 			EmailUtility.sendEmail(loggedUserEmailId, subject, message);
 			addActionMessage("We have also emailed this Test Report to "+loggedUserEmailId);
 		} else {
 			addActionMessage("This Test Report could not be emailed to you (maybe you did not enter Email at time of signup or you were inactive for long time) "
-					+ " If you did not enter email at time of signup, kindly send me your email through Contact Me, so next time we can email the Test Report. ");
+					+ " If you did not enter email at time of signup, kindly send me your email through Contact Me, so next time we can email the Test Report every time your child gives a test. ");
 		}
 		return "testReport";
 	}

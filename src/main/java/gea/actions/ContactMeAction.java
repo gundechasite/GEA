@@ -23,7 +23,7 @@ public class ContactMeAction extends ActionSupport  implements SessionAware {
 	public String execute() { 
 		
 			 if (GeaUtility.hasUserNotLoggedIn(sessionMap)) {
-				 addActionError(" Please login. (Maybe you were inactive for some time) Go Back to get your message, login and please send again. ");
+				 addActionError(" Please login. (Either you have not logged in or you were inactive for some time) Go Back to get your message, login and please send again. ");
 				 return "login";
 			 } 
 		

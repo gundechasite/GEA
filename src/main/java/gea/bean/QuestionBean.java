@@ -1,15 +1,9 @@
-//Chapter_id MEDIUMINT NOT NULL REFERENCES TestClassSubjectChapter(Chapter_id),
-//question VARCHAR(100),
-//optionA VARCHAR(100),
-//optionB VARCHAR(100),
-//optionC VARCHAR(100),
-//optionD VARCHAR(100),
-//correctOption VARCHAR(1),
-//correctOptionDesc VARCHAR(100));
 
 package gea.bean;
 
-public class QuestionBean {
+import java.io.Serializable;
+
+public class QuestionBean implements Serializable {
 	private String Chapter_id;
 	private String question;
 	private String optionA;

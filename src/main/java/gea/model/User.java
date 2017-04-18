@@ -6,7 +6,6 @@ public class User {
 	private String phone;
 	private String email;
 	private String name;
-	private String creationDate;
 	
 	public User() {
 	}
@@ -48,12 +47,4 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getCreationDate() {
-		return creationDate;
-	}
-	public void setCreationDate(String creationDate) {
-		this.creationDate = creationDate;
-	}
-	
-	
 }

@@ -1,4 +1,7 @@
 
+show tables;
+
+
 DROP TABLE RegisteredUsers;
 
 CREATE TABLE RegisteredUsers 
@@ -7,6 +10,7 @@ password VARCHAR(15),
 parentName VARCHAR(30),
 parentPhone VARCHAR(15), 
 parentEmail VARCHAR(40));
+
 
 
 DROP TABLE TextbooksAds;
@@ -46,42 +50,48 @@ CREATE TABLE GeaParentsLibrary
 Book_id MEDIUMINT NOT NULL AUTO_INCREMENT,
 loginId VARCHAR(15),
 bookTitle VARCHAR(60),
-bookISBN VARCHAR(15),
+bookISBN VARCHAR(13),
 bookAuthor VARCHAR(60),
 bookTotalPages SMALLINT,
 bookCategory VARCHAR(3),
  PRIMARY KEY (Book_id)
-)
+);
+
+
 
 DROP TABLE TestClassSubject;
 
 CREATE TABLE TestClassSubject (
 ClassSubject_id MEDIUMINT NOT NULL AUTO_INCREMENT,
 class VARCHAR(2),
-subject VARCHAR(50),
+subject VARCHAR(16),
  PRIMARY KEY (ClassSubject_id)
 );
 
-
 insert into TestClassSubject (class, subject) values ('2','Maths');
+
+
+
 
 DROP TABLE TestClassSubjectChapter;
 
 CREATE TABLE TestClassSubjectChapter (
-Chapter_id MEDIUMINT NOT NULL AUTO_INCREMENT,
+Chapter_id SMALLINT NOT NULL AUTO_INCREMENT,
 ClassSubject_id MEDIUMINT NOT NULL REFERENCES TestClassSubject(ClassSubject_id),
-chapter VARCHAR(100),
+chapter VARCHAR(15),
  PRIMARY KEY (Chapter_id)
 );
 
 insert into  TestClassSubjectChapter (ClassSubject_id, chapter) values ('1', 'Addition');
-insert into  TestClassSubjectChapter (ClassSubject_id, chapter) values ('1', 'Subtraction');
+
+
+
 
 DROP TABLE geaTest;
 	
 CREATE TABLE geaTest 
 ( 
-Chapter_id MEDIUMINT NOT NULL REFERENCES TestClassSubjectChapter(Chapter_id),
+Chapter_id SMALLINT NOT NULL REFERENCES TestClassSubjectChapter(Chapter_id),
 question VARCHAR(100),
 optionA VARCHAR(100),
 optionB VARCHAR(100),
@@ -92,7 +102,7 @@ correctOptionDesc VARCHAR(100));
 
 
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
-values ('1', '6+2=?', '6','8','10','12','B','6+2=8');
+values ('1', 'There are 15 cats, 18 dogs and 13 rats. How many animals are there altogether?', '45','46','64','38','B','Add all the animals : 15 + 18 + 13 = 46');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
 values ('1', '2+3=?', '5','8','10','12','A','2+3=5');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
@@ -101,9 +111,4 @@ insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, c
 values ('1', '4+5=?', '6','8','9','12','C','4+5=9');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
 values ('1', '1+9=?', '6','8','10','12','C','1+9=10');
-
-
-insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
-values ('2', '6-2=?', '6','8','10','4','D','6-2=4');
-
 

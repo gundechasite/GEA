@@ -57,7 +57,6 @@ public class DBUtility {
 	      if (rs.next()) {
 		    	User loggedUser = new User();
 				loggedUser.setEmail(rs.getString("parentEmail"));
-				loggedUser.setCreationDate(rs.getString("creationDate"));
 				loggedUser.setLoginId(rs.getString("loginId"));
 				loggedUser.setName(rs.getString("parentName"));
 				loggedUser.setPhone(rs.getString("parentPhone"));
@@ -137,7 +136,7 @@ public class DBUtility {
 	
 	
 	public static ArrayList<User> getResisteredUsers()  throws SQLException, ClassNotFoundException {
-		  String sql = "select loginId, parentName, parentPhone, parentEmail, creationDate from RegisteredUsers order by creationDate desc";
+		  String sql = "select loginId, parentName, parentPhone, parentEmail from RegisteredUsers";
 		  ArrayList<User> resisteredUsers = new ArrayList<User>();
 		  Connection conn = getDatabaseConnection();
 		  
@@ -148,7 +147,6 @@ public class DBUtility {
 	      while (rs.next()) {
 		    	User loggedUser = new User();
 				loggedUser.setEmail(rs.getString("parentEmail"));
-				loggedUser.setCreationDate(rs.getString("creationDate"));
 				loggedUser.setLoginId(rs.getString("loginId"));
 				loggedUser.setName(rs.getString("parentName"));
 				loggedUser.setPhone(rs.getString("parentPhone"));

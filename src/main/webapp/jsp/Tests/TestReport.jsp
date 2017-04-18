@@ -10,7 +10,7 @@
 	   <td colspan=2><div style="border-top:1px solid gray;clear:both;">
 	   Chapter: <s:property value="selectedChapter" />
 	   <br>Total Questions: <s:property value="totalQuestions" />
-	   <br>Correctly answered: <s:property value="correctlyAnsweredQuestions" /> <s:if test="hasActionMessages()"><div class=geaMessage  style="list-style: none;padding-top:0px" ><s:actionmessage/></div></s:if></td>
+	   <br>Correctly answered: <s:property value="correctlyAnsweredQuestions" /> <s:if test="hasActionMessages()"><div class=geaFormSmallText  style="list-style: none;padding-top:0px" ><s:actionmessage/></div></s:if></td>
    </tr>
 </table>
 
@@ -46,7 +46,7 @@
   	</td>
 </tr>
 <tr>
-   <td colspan="2" style="padding-top:5px;padding-bottom:5px;padding-left:5px;">Exlanation: <label class="geaFormLabel"><s:property value="correctOptionDesc" /></label> </td>
+   <td colspan="2" style="padding-top:5px;padding-bottom:5px;padding-left:5px;">Explanation: <label class="geaFormLabel"><s:property value="correctOptionDesc" /></label> </td>
 </tr>
 </table> 
 
