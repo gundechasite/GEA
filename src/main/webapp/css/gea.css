@@ -13,7 +13,6 @@
 		font-size:  15px;
     	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;
 	}
-
     .geaFormlabel {
     	font-size:  16px;
     	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;
@@ -21,10 +20,8 @@
 	}
 	.geaFormSmallText {
     	font-size:  13px;
-    	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;
-			
+    	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;			
 	}
-
     .geaFormSubHeading {
     	padding-top: 30px;
     	padding-left: 25px;
@@ -32,7 +29,6 @@
     	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;
 		font-weight: bold;	
 	}
-
     .geaFormHeading {
     	padding-top: 40px;
     	padding-left: 25px;
@@ -40,7 +36,6 @@
     	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;
 		font-weight: bold;	
 	}
-
 	.geaInput{
 		width:200px;
 	}
@@ -114,71 +109,55 @@
  	table.alternateColor th {
  		background-color: #BCCE98;
  	} 
- 	
-
   .lightGreenTable {
     background-color: #DAE9BC;
     border-collapse: collapse;
     padding-bottom:0px;
     align:center;
   } 	
- 
- 	
  			/* Layout */
 		body {
 			min-width: 630px;
 		}
-
 		#container {
 			height:100%;
 			padding-left: 200px;
 			padding-right: 190px;
 		}
-		
 		#container .column {
 			position: relative;
 			float: left;
 		}
-		
 		#center {
 			padding: 10px 20px;
 			width: 100%;
 		}
-		
 		#left {
 			width: 180px;
 			right: 240px;
 			margin-left: -100%;
 		}
-		
 		#right {
 			width: 50px;
 		}
-		
 		#footer {
 			clear: both;
 		}
-		
 		/* IE hack */
 		* html #left {
 			left: 150px;
 		}
-
 		/* Make the columns the same height as each other */
 		#container {
 			overflow: hidden;
 		}
-
 		#container .column {
 			padding-bottom: 1001em;
 			margin-bottom: -1000em;
 		}
-
-		/* Fix for the footer */
 		* html body {
 			overflow: hidden;
 		}
-		
 		* html #footer-wrapper {
 			float: left;
 			position: relative;
@@ -187,44 +166,35 @@
 			margin-bottom: -10000px;
 			background: #fff;
 		}
-
-		/* Aesthetics */
 		body {
 			margin: 0;
 			padding: 0;
 			font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif, sans-serif;
 			line-height: 1.5em;
 		}
-		
 		nav ul {
 			list-style-type: none;
 			margin: 0;
 			padding: 0;
 		}
-		
 		nav ul a {
 			color: darkgreen;
 			text-decoration: none;
 		}
-
 		#header, #footer {
 			font-size: large;
 			padding: 0.3em;
 			background: #BCCE98;
 		}
-
 		#left {
 			background: #DAE9BC;
 		}
-		
 		#right {
 			background: #F7FDEB;
 		}
-
 		#center {
 			background: #fff;
 		}
-
 		#container .column {
 			padding-top: 1em;
 		}

@@ -36,4 +36,8 @@
         <location>/jsp/ErrorPage.jsp</location>
     </error-page>
       
+      
+    <session-config>
+    	<session-timeout>10</session-timeout>
+	</session-config>
 </web-app> 

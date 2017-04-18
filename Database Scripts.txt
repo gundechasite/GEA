@@ -68,7 +68,7 @@ subject VARCHAR(16),
  PRIMARY KEY (ClassSubject_id)
 );
 
-insert into TestClassSubject (class, subject) values ('2','Maths');
+insert into TestClassSubject (class, subject) values ('1','Maths');
 
 
 
@@ -82,7 +82,7 @@ chapter VARCHAR(15),
  PRIMARY KEY (Chapter_id)
 );
 
-insert into  TestClassSubjectChapter (ClassSubject_id, chapter) values ('1', 'Addition');
+insert into  TestClassSubjectChapter (ClassSubject_id, chapter) values ('1', 'Money');
 
 
 
@@ -93,22 +93,18 @@ CREATE TABLE geaTest
 ( 
 Chapter_id SMALLINT NOT NULL REFERENCES TestClassSubjectChapter(Chapter_id),
 question VARCHAR(100),
-optionA VARCHAR(100),
-optionB VARCHAR(100),
-optionC VARCHAR(100),
-optionD VARCHAR(100),
+optionA VARCHAR(50),
+optionB VARCHAR(50),
+optionC VARCHAR(50),
+optionD VARCHAR(50),
 correctOption VARCHAR(1),
 correctOptionDesc VARCHAR(100));	
 
-
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
-values ('1', 'There are 15 cats, 18 dogs and 13 rats. How many animals are there altogether?', '45','46','64','38','B','Add all the animals : 15 + 18 + 13 = 46');
+values ('1', 'I have 3 five rupee notes in my purse. So how much total money do I have?', '20','10','15','30','C','3 five rupees notes = 5+5+5 = Rs. 15');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
-values ('1', '2+3=?', '5','8','10','12','A','2+3=5');
+values ('1', 'How many Rs. 5 notes do you need to make Rs. 25', '5','6','4','7','A','5+5+5+5+5=25, So 5 notes will be needed to make Rs. 25');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
-values ('1', '3+4=?', '6','7','10','12','B','3+4=7');
+values ('1', 'Smith has Rs. 18. He spends Rs. 6. How much money is left with him now?', '18','6','10','12','D','Since Rs. 6 have been spent, subtract them from 18. 18-6=12. So Rs. 12 is left with Smith.');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
-values ('1', '4+5=?', '6','8','9','12','C','4+5=9');
-insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
-values ('1', '1+9=?', '6','8','10','12','C','1+9=10');
-
+values ('1', 'A pen costs Rs. 10 and a pencil costs Rs. 5. How much money is needed to buy 1 pen and 2 pencils.', '10','20','15','25','B','cost of 1 pen=Rs.10, cost of 2 pencil=5+5, total cost of 1 pen and 2 pencils=10+10=Rs. 20');
