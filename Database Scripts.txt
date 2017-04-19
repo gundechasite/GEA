@@ -6,10 +6,9 @@ DROP TABLE RegisteredUsers;
 
 CREATE TABLE RegisteredUsers 
 (loginId VARCHAR(15), 
-password VARCHAR(15),
-parentName VARCHAR(30),
-parentPhone VARCHAR(15), 
-parentEmail VARCHAR(40));
+password VARCHAR(9),
+parentName VARCHAR(20),
+parentEmail VARCHAR(35));
 
 
 
@@ -49,9 +48,9 @@ CREATE TABLE GeaParentsLibrary
 (
 Book_id MEDIUMINT NOT NULL AUTO_INCREMENT,
 loginId VARCHAR(15),
-bookTitle VARCHAR(60),
+bookTitle VARCHAR(50),
 bookISBN VARCHAR(13),
-bookAuthor VARCHAR(60),
+bookAuthor VARCHAR(20),
 bookTotalPages SMALLINT,
 bookCategory VARCHAR(3),
  PRIMARY KEY (Book_id)
@@ -62,7 +61,7 @@ bookCategory VARCHAR(3),
 DROP TABLE TestClassSubject;
 
 CREATE TABLE TestClassSubject (
-ClassSubject_id MEDIUMINT NOT NULL AUTO_INCREMENT,
+ClassSubject_id SMALLINT NOT NULL AUTO_INCREMENT,
 class VARCHAR(2),
 subject VARCHAR(16),
  PRIMARY KEY (ClassSubject_id)
@@ -77,7 +76,7 @@ DROP TABLE TestClassSubjectChapter;
 
 CREATE TABLE TestClassSubjectChapter (
 Chapter_id SMALLINT NOT NULL AUTO_INCREMENT,
-ClassSubject_id MEDIUMINT NOT NULL REFERENCES TestClassSubject(ClassSubject_id),
+ClassSubject_id SMALLINT NOT NULL REFERENCES TestClassSubject(ClassSubject_id),
 chapter VARCHAR(15),
  PRIMARY KEY (Chapter_id)
 );
@@ -93,10 +92,10 @@ CREATE TABLE geaTest
 ( 
 Chapter_id SMALLINT NOT NULL REFERENCES TestClassSubjectChapter(Chapter_id),
 question VARCHAR(100),
-optionA VARCHAR(50),
-optionB VARCHAR(50),
-optionC VARCHAR(50),
-optionD VARCHAR(50),
+optionA VARCHAR(20),
+optionB VARCHAR(20),
+optionC VARCHAR(20),
+optionD VARCHAR(20),
 correctOption VARCHAR(1),
 correctOptionDesc VARCHAR(100));	
 

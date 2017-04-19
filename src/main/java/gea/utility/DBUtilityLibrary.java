@@ -45,7 +45,7 @@ public class DBUtilityLibrary {
 			loginIdCondition = "l.loginId!='"+loggedUserLoginId+"'";
 		}
 		String sql = 
-				  "select l.*,CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parentDetails from GeaParentsLibrary l, RegisteredUsers r "
+				  "select l.*,CONCAT(r.parentName,' ',r.loginId,' ',r.parentEmail) parentDetails from GeaParentsLibrary l, RegisteredUsers r "
 		  		+ "where l.bookCategory='"+bookCategory+"' and "+loginIdCondition+" and l.loginId=r.loginId  "
 		  		+ "order by Book_id desc" ;
 		  ArrayList<BookBean> booksList = new ArrayList<BookBean>();
@@ -69,7 +69,7 @@ public class DBUtilityLibrary {
 					throws SQLException, ClassNotFoundException {
 
 		String sql = 
-				  "select l.*,CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parentDetails from GeaParentsLibrary l, RegisteredUsers r "
+				  "select l.*,CONCAT(r.parentName,' ',r.loginId,' ',r.parentEmail) parentDetails from GeaParentsLibrary l, RegisteredUsers r "
 		  		+ "where l.loginId!='"+loggedUserLoginId+"' and l.loginId=r.loginId and "
 		  				+ "(";
 				if (!GeaUtility.isFieldEmpty(bookTitle)) {

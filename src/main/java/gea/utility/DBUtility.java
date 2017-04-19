@@ -28,16 +28,15 @@ public class DBUtility {
 	public static void signupUser (String name, String email, String phone, String password) throws SQLException, ClassNotFoundException {
 		
 		String insertStmt = 
-		  "INSERT INTO RegisteredUsers (loginId, password, parentName, parentPhone, parentEmail) " +
-		  "VALUES(?, ?, ?, ?, ?)";
+		  "INSERT INTO RegisteredUsers (loginId, password, parentName, parentEmail) " +
+		  "VALUES(?, ?, ?, ?)";
 
 		  Connection conn = getDatabaseConnection();
 	      PreparedStatement preparedStmt = conn.prepareStatement(insertStmt);
 	      preparedStmt.setString(1, phone);
 	      preparedStmt.setString(2, password);
 	      preparedStmt.setString(3, name);
-	      preparedStmt.setString(4, phone);
-	      preparedStmt.setString(5, email);
+	      preparedStmt.setString(4, email);
 		  
 		  //System.out.println("signupUser Query:  "+preparedStmt);
 		  
@@ -59,7 +58,7 @@ public class DBUtility {
 				loggedUser.setEmail(rs.getString("parentEmail"));
 				loggedUser.setLoginId(rs.getString("loginId"));
 				loggedUser.setName(rs.getString("parentName"));
-				loggedUser.setPhone(rs.getString("parentPhone"));
+				loggedUser.setPhone(rs.getString("loginId"));
 				conn.close();
 				return loggedUser;
 	      } else {
@@ -136,7 +135,7 @@ public class DBUtility {
 	
 	
 	public static ArrayList<User> getResisteredUsers()  throws SQLException, ClassNotFoundException {
-		  String sql = "select loginId, parentName, parentPhone, parentEmail from RegisteredUsers";
+		  String sql = "select loginId, parentName, parentEmail from RegisteredUsers";
 		  ArrayList<User> resisteredUsers = new ArrayList<User>();
 		  Connection conn = getDatabaseConnection();
 		  
@@ -149,7 +148,7 @@ public class DBUtility {
 				loggedUser.setEmail(rs.getString("parentEmail"));
 				loggedUser.setLoginId(rs.getString("loginId"));
 				loggedUser.setName(rs.getString("parentName"));
-				loggedUser.setPhone(rs.getString("parentPhone"));
+				loggedUser.setPhone(rs.getString("loginId"));
 				resisteredUsers.add(loggedUser);
 		  } 
 	      conn.close();
@@ -158,7 +157,7 @@ public class DBUtility {
 
 	
 	public static ArrayList<ContactMeBean> getContactMeMessages()  throws SQLException, ClassNotFoundException {
-		  String sql = "select c.submissionDate, c.message, CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent " +
+		  String sql = "select c.submissionDate, c.message, CONCAT(r.parentName,' ',r.loginId,' ',r.parentEmail) parent " +
 		  		" from ContactMe c, RegisteredUsers r where c.loginId=r.loginId order by c.submissionDate desc";
 		  ArrayList<ContactMeBean> contactMeMessages = new ArrayList<ContactMeBean>();
 		  Connection conn = getDatabaseConnection();
@@ -182,7 +181,7 @@ public class DBUtility {
 
 	public static ArrayList<SiteFeedbackBean> getSiteFeedbackList()  throws SQLException, ClassNotFoundException {
 		  String sql = " select s.submissionDate, s.siteUsefullness, s.pricesOk, s.howToImprove, s.whichOtherItems, s.whichOtherSites, s.practicePapers, s.exchange, " +
-		  		" CONCAT(r.parentName,' ',r.parentPhone,' ',r.parentEmail) parent from SiteFeedBack s, RegisteredUsers r " +
+		  		" CONCAT(r.parentName,' ',r.loginId,' ',r.parentEmail) parent from SiteFeedBack s, RegisteredUsers r " +
 		  		" where s.loginId=r.loginId order by s.submissionDate desc";
 		  ArrayList<SiteFeedbackBean> siteFeedbackList = new ArrayList<SiteFeedbackBean>();
 		  Connection conn = getDatabaseConnection();

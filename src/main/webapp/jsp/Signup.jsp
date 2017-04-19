@@ -28,22 +28,22 @@
 
   <tr>
 	   <td><label class="geaFormlabel"> Select Password</label><label class="redStar">*</label></td>
-	   <td><s:password  cssClass="geaInput"  name="password"  theme="simple"  maxlength="15"/></td>
+	   <td><s:password  cssClass="geaInput"  name="password"  theme="simple"  maxlength="9"/></td>
   </tr>
   
   <tr>
 	   <td><label class="geaFormlabel"> Enter password again</label><label class="redStar">*</label></td>
-	   <td><s:password  cssClass="geaInput"  name="password2"  theme="simple"  maxlength="15"/></td>
+	   <td><s:password  cssClass="geaInput"  name="password2"  theme="simple"  maxlength="9"/></td>
   </tr>
   
   <tr>
   		<td><label class="geaFormlabel">Name of Parent</label><label class="redStar">*</label></td>
-    	<td><s:textfield  cssClass="geaInput"  name="name"  theme="simple"  maxlength="30"/></td>
+    	<td><s:textfield  cssClass="geaInput"  name="name"  theme="simple"  maxlength="20"/></td>
   </tr>
   
   <tr>
   	<td><label class="geaFormlabel">E-mail of Parent</label></td>
-    <td><s:textfield  cssClass="geaInput"  name="email"  theme="simple"  maxlength="40"/></td>
+    <td><s:textfield  cssClass="geaInput"  name="email"  theme="simple"  maxlength="35"/></td>
   </tr>
   
   <tr>

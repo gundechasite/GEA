@@ -29,7 +29,7 @@
 
   <tr>
     <td><label class="geaFormlabel">  Password</label><label class="redStar">*</label></td>
-    <td><s:password  cssClass="geaInput"  name="password"  theme="simple"  maxlength="15"/></td>
+    <td><s:password  cssClass="geaInput"  name="password"  theme="simple"  maxlength="9"/></td>
   </tr>
   
   <tr>
