@@ -24,10 +24,6 @@ public class SelectClassSubjectView  extends ActionSupport implements Preparable
 	private ArrayList<GeaCodeValueBean> classSubjectList = new ArrayList<GeaCodeValueBean>();
 	
 	public String execute(){ 
-		 if (GeaUtility.hasUserNotLoggedIn(sessionMap)) {
-			 addActionError(" Please login. ");
-			 return "login";
-		 } 
 		 return "success";
 	}
 	

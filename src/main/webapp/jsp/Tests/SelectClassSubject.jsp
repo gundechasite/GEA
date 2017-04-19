@@ -20,9 +20,7 @@
     <tr> 
 	   <td colspan=2>
 	   <label class="geaFormSmallText"> 
-	    Note: I have only demonstrated 1 test. (Class 2 Maths) I would like to proceed further to other subjects/Class a bit later.
-	    I would need volunteers to do the typing of the question banks for various class/subjects. 
-	    Let me know if you can volunteer to help setup the questions bank. 
+	    <u>Note</u>: I have demonstrated only 1 test. (Class 1 Maths - Money) I would like to proceed further to other subjects/Class later.
 	   </label>
 	   </td>
     </tr>

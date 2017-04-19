@@ -6,7 +6,7 @@
 <s:hidden name="actionCode" value="StartTest"/>
 <table width=90% id=geaContentTable>
 
-   <tr><td colspan=2><label class="geaFormHeading">Select Chapter of <s:property value="ClassSubject" />: </label></td></tr>
+   <tr><td colspan=2><label class="geaFormHeading">Select Chapter for <s:property value="ClassSubject" />: </label></td></tr>
    
    <tr>
 	   <td colspan=2><div style="border-top:1px solid gray;clear:both;">

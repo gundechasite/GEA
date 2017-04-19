@@ -19,10 +19,9 @@
 		<tr>
 		<td><img src="images/logo.png" alt="" style="width:50px;height:50px;"></td>
 		<td>
-		
-			<a href="/GEA/LibraryReadme"> Library</a>&nbsp;
+			<a href="/GEA/selectClassSubject">Tests</a>&nbsp;
 		 	|&nbsp;
-		 	<a href="/GEA/selectClassSubject">Tests</a>&nbsp;
+			<a href="/GEA/LibraryReadme"> Library</a>&nbsp;
 		 	|&nbsp;
 		 	<a href="/GEA/BuySellTextbookReadme">Textbooks</a>&nbsp;
 		 	|&nbsp;

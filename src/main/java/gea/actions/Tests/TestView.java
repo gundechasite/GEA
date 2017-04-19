@@ -40,11 +40,6 @@ public class TestView extends ActionSupport implements SessionAware, Serializabl
 	
 	/* Execute */
 	public String execute(){ 
-		 if (GeaUtility.hasUserNotLoggedIn(sessionMap)) {
-			 addActionError(" Please login. (Either you have not logged in or you were inactive for some time) ");
-			 return "login";
-		 } 
-		
 		if (actionCode.equals("StartTest")) {
 			return startTest();
 		} else if (actionCode.equals("NextQn")) {
@@ -117,8 +112,7 @@ public class TestView extends ActionSupport implements SessionAware, Serializabl
 			EmailUtility.sendEmail(loggedUserEmailId, subject, message);
 			addActionMessage("We have also emailed this Test Report to "+loggedUserEmailId);
 		} else {
-			addActionMessage("This Test Report could not be emailed to you (maybe you did not enter Email at time of signup or you were inactive for long time) "
-					+ " If you did not enter email at time of signup, kindly send me your email through Contact Me, so next time we can email the Test Report every time your child gives a test. ");
+			addActionMessage("This Test Report could not be emailed to you as your email was not found. (maybe you have not logged in/you did not enter Email at time of signup/you were inactive for long time)");
 		}
 		return "testReport";
 	}

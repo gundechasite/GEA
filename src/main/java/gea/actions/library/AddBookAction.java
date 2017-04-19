@@ -59,8 +59,8 @@ public class AddBookAction extends ActionSupport  implements SessionAware {
 			try {
 				
 				DBUtilityLibrary.addBook(bookBeanList);
-			  addActionMessage("Your books have been added to GEA Parents Library. Thank You!");
-			  return "success";  
+			  addActionMessage("Your books have been added to GEA Parents Library. You can view your added books by clicking on 'My Books' link on left. Thank You!");
+			  return "success";   
 		  
 			} catch (Exception e) {
 				System.out.println(GeaUtility.getActualErrorMessage(e));

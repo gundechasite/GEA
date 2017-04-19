@@ -26,7 +26,7 @@ public class GeaParentsLibraryView extends ActionSupport  implements SessionAwar
 	/* Execute */
 	public String execute(){ 
 		 if (screenCode.equals("MyBooks") && GeaUtility.hasUserNotLoggedIn(sessionMap)) {
-			 addActionError(" Please login. (Either you have not logged in or you were inactive for some time). ");
+			 addActionError(" Please login. ");
 			 return "login";
 		 }	
 		

@@ -27,11 +27,6 @@ public class SelectClassSubjectAction  extends ActionSupport implements SessionA
 	
 	public String execute(){ 
 		
-		 if (GeaUtility.hasUserNotLoggedIn(sessionMap)) {
-			 addActionError(" Please login. (Either you have not logged in or you were inactive for some time) ");
-			 return "login";
-		 } 
-		
 		try {
 			chapterList = DBUtilityTests.getChapterList(ClassSubject_id);
 			ClassSubject = DBUtilityTests.getClassSubject(ClassSubject_id);
