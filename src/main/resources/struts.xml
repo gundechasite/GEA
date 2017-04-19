@@ -11,45 +11,18 @@
    		  <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>  
     </result-types>     
              
-             
+ 
+<!-- Home Page -->             
 	<action name="HomePage" class="gea.actions.GEAHomePageView">            
-   		<result name="Blank" type="tiles">GEAHomePageTileDefinition</result>
+   		<result name="Blank" type="tiles">BlankTileDefinition</result>
    		<result name="Login" type="tiles">LoginTilesDefinition</result>
    		<result  name="Signup" type="tiles">SignupTilesDefinition</result>
 	</action>  
+
      
 <!-- Footer links --> 
-	<action name="AboutMe" class="gea.actions.DoNothingView">            
-		<result name="success" type="tiles">AboutMeTileDefinition</result>                     
-	</action> 
-	<action name="AboutThisWebsite" class="gea.actions.DoNothingView">            
-		<result name="success" type="tiles">AboutThisWebsiteTileDefinition</result>                     
-	</action>
-	<action name="HowToUseSite" class="gea.actions.DoNothingView">            
-		<result name="success" type="tiles">HowToUseSiteTileDefinition</result>                     
-	</action>
-	<action name="ContactMeOld" class="gea.actions.GeaForceLoginView">   
-		<result name="login" type="tiles">LoginTilesDefinition</result>         
-		<result name="success" type="tiles">ContactMeTileDefinition</result>                     
-	</action>
 	<action name="ContactMe" class="gea.actions.DoNothingView">   
 		<result name="success" type="tiles">ContactMeTileDefinition</result>                     
-	</action>
-	<action name="processContactMe" class="gea.actions.ContactMeAction">            
-		<result name="input" type="tiles">ContactMeTileDefinition</result> 
-		<result name="login" type="tiles">LoginTilesDefinition</result>
-		<result  name="success" type="tiles">MessageScreenTilesDefinition</result>
-		<result  name="error" type="tiles">MessageScreenTilesDefinition</result>                    
-	</action>
-	<action name="SiteFeedback" class="gea.actions.GeaForceLoginView">            
-		<result name="login" type="tiles">LoginTilesDefinition</result>
-		<result name="success" type="tiles">SiteFeedbackTileDefinition</result>                     
-	</action>	
-	<action name="processSiteFeedback" class="gea.actions.SiteFeedbackAction" >   
-		<result name="input" type="tiles">SiteFeedbackTileDefinition</result>    
-		<result name="login" type="tiles">LoginTilesDefinition</result>     
-		<result  name="success" type="tiles">MessageScreenTilesDefinition</result>
-		<result  name="error" type="tiles">MessageScreenTilesDefinition</result>                      
 	</action>
 	
  
@@ -74,9 +47,8 @@
 		<result name="signup" type="tiles">SignupTilesDefinition</result>
 		<result  name="error" type="tiles">LoginTilesDefinition</result>                    
 	</action> 
-    <action name="Vendor" class="gea.actions.DoNothingView">            
-		<result  name="success" type="tiles">VendorTilesDefinition</result>                     
-	</action>
+
+
   
 <!-- Buy/Sell Textbooks links --> 
 	<action name="BuySellTextbookReadme" class="gea.actions.DoNothingView">            
@@ -90,6 +62,18 @@
 		<result name="success" type="tiles">BuyMultipleTextbookTileDefinition</result>
 		<result name="login" type="tiles">LoginTilesDefinition</result>                      
 	</action>
+	<action name="processBuyTextbooks" class="gea.actions.BuyTextbooksAction"> 
+		<result name="BT" type="tiles">ViewBTAdsTileDefinition</result>
+		<result name="login" type="tiles">LoginTilesDefinition</result>
+		<result name="input"   type="tiles">BuyTextbookTileDefinition</result>          
+		<result name="error" type="tiles">BuyTextbookTileDefinition</result>                  
+	</action> 
+	<action name="processBuyMultipleTextbooks" class="gea.actions.BuyTextbooksAction"> 
+		<result name="BT" type="tiles">ViewBTAdsTileDefinition</result>
+		<result name="login" type="tiles">LoginTilesDefinition</result>
+		<result name="input"   type="tiles">BuyMultipleTextbookTileDefinition</result>          
+		<result name="error" type="tiles">BuyMultipleTextbookTileDefinition</result>                  
+	</action> 
 	<action name="SellTextbook" class="gea.actions.TextbooksBuySellView"> 
 		<result name="success" type="tiles">SellTextbookTileDefinition</result>  
 		<result name="login" type="tiles">LoginTilesDefinition</result>                    
@@ -98,30 +82,18 @@
 		<result name="success" type="tiles">SellMultipleTextbookTileDefinition</result> 
 		<result name="login" type="tiles">LoginTilesDefinition</result>                     
 	</action> 
- 	<action name="processSellMultipleTextbooks" class="gea.actions.SellTextbooksAction"> 
-		<result name="ST" type="tiles">ViewSTAdsTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result>
- 		<result name="input"   type="tiles">SellMultipleTextbookTileDefinition</result> 
-		<result name="error" type="tiles">SellMultipleTextbookTileDefinition</result>                  
-	</action>
 	<action name="processSellTextbooks" class="gea.actions.SellTextbooksAction"> 
 		<result name="ST" type="tiles">ViewSTAdsTileDefinition</result>
 		<result name="login" type="tiles">LoginTilesDefinition</result>
 		<result name="input"   type="tiles">SellTextbookTileDefinition</result>
 		<result name="error" type="tiles">SellTextbookTileDefinition</result>    
 	</action> 
-	<action name="processBuyMultipleTextbooks" class="gea.actions.BuyTextbooksAction"> 
-		<result name="BT" type="tiles">ViewBTAdsTileDefinition</result>
+ 	<action name="processSellMultipleTextbooks" class="gea.actions.SellTextbooksAction"> 
+		<result name="ST" type="tiles">ViewSTAdsTileDefinition</result>
 		<result name="login" type="tiles">LoginTilesDefinition</result>
-		<result name="input"   type="tiles">BuyMultipleTextbookTileDefinition</result>          
-		<result name="error" type="tiles">BuyMultipleTextbookTileDefinition</result>                  
-	</action> 
-	<action name="processBuyTextbooks" class="gea.actions.BuyTextbooksAction"> 
-		<result name="BT" type="tiles">ViewBTAdsTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result>
-		<result name="input"   type="tiles">BuyTextbookTileDefinition</result>          
-		<result name="error" type="tiles">BuyTextbookTileDefinition</result>                  
-	</action> 
+ 		<result name="input"   type="tiles">SellMultipleTextbookTileDefinition</result> 
+		<result name="error" type="tiles">SellMultipleTextbookTileDefinition</result>                  
+	</action>
 
 <!-- Buy/Sell Uniform links --> 
 
@@ -132,17 +104,9 @@
 		<result name="success" type="tiles">SellUniformTileDefinition</result>     
 		<result name="login" type="tiles">LoginTilesDefinition</result>                 
 	</action> 
-	<action name="BuyUniform" class="gea.actions.UniformsBuySellView">            
-		<result name="success" type="tiles">BuyUniformTileDefinition</result> 
-		<result name="login" type="tiles">LoginTilesDefinition</result>                     
-	</action> 
 	<action name="SellMultipleUniform" class="gea.actions.UniformsBuySellView">            
 		<result name="success" type="tiles">SellMultipleUniformTileDefinition</result>
 		<result name="login" type="tiles">LoginTilesDefinition</result>                      
-	</action> 
-	<action name="BuyMultipleUniform" class="gea.actions.UniformsBuySellView">            
-		<result name="success" type="tiles">BuyMultipleUniformTileDefinition</result> 
-		<result name="login" type="tiles">LoginTilesDefinition</result>                     
 	</action> 
   	<action name="processSellUniform" class="gea.actions.SellUniformAction">
   		<result name="SU" type="tiles">ViewSUAdsTileDefinition</result>
@@ -151,19 +115,27 @@
 		<result name="searchResults" type="tiles">SearchResultsTilesDefinition</result>           
 		<result  name="error" type="tiles">SellUniformTileDefinition</result>                  
 	</action>
-  	<action name="processBuyUniform" class="gea.actions.BuyUniformAction">
-  		<result name="BU" type="tiles">ViewBUAdsTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result> 
-		<result name="input"   type="tiles">BuyUniformTileDefinition</result> 
-		<result name="searchResults" type="tiles">SearchResultsTilesDefinition</result>            
-		<result  name="error" type="tiles">BuyUniformTileDefinition</result>                  
-	</action>
 	<action name="processSellMultipleUniform" class="gea.actions.SellUniformAction">
 		<result name="SU" type="tiles">ViewSUAdsTileDefinition</result>
 		<result name="login" type="tiles">LoginTilesDefinition</result> 
 		<result name="input"   type="tiles">SellMultipleUniformTileDefinition</result>  
 		<result name="searchResults" type="tiles">SearchResultsTilesDefinition</result>           
 		<result  name="error" type="tiles">SellMultipleUniformTileDefinition</result>                  
+	</action>
+	<action name="BuyUniform" class="gea.actions.UniformsBuySellView">            
+		<result name="success" type="tiles">BuyUniformTileDefinition</result> 
+		<result name="login" type="tiles">LoginTilesDefinition</result>                     
+	</action> 
+	<action name="BuyMultipleUniform" class="gea.actions.UniformsBuySellView">            
+		<result name="success" type="tiles">BuyMultipleUniformTileDefinition</result> 
+		<result name="login" type="tiles">LoginTilesDefinition</result>                     
+	</action> 
+  	<action name="processBuyUniform" class="gea.actions.BuyUniformAction">
+  		<result name="BU" type="tiles">ViewBUAdsTileDefinition</result>
+		<result name="login" type="tiles">LoginTilesDefinition</result> 
+		<result name="input"   type="tiles">BuyUniformTileDefinition</result> 
+		<result name="searchResults" type="tiles">SearchResultsTilesDefinition</result>            
+		<result  name="error" type="tiles">BuyUniformTileDefinition</result>                  
 	</action>
   	<action name="processBuyMultipleUniform" class="gea.actions.BuyUniformAction">
   		<result name="BU" type="tiles">ViewBUAdsTileDefinition</result>
@@ -189,8 +161,6 @@
   		<result name="registeredUsers" type="tiles">registeredUsersTilesDefinition</result>            
 		<result  name="UniformAds" type="tiles">adminUniformAdsTilesDefinition</result>  
 		<result name="TextbooksAds" type="tiles">adminTextbooksAdsTilesDefinition</result>            
-		<result  name="ContactMe" type="tiles">adminContactMeTilesDefinition</result>  
-		<result  name="SiteFeedBack" type="tiles">adminSiteFeedBackTilesDefinition</result>  
 		<result  name="error" type="tiles">adminMessageScreenTilesDefinition</result>                    
 	</action>
 	<action name="adminLogout" class="gea.actions.LogoutAction">            
@@ -213,10 +183,6 @@
         <result name="error" type="tiles">MessageScreenTilesDefinition</result>
 	</action>
 
-	<action name="ErrorPage" class="gea.actions.DoNothingView">            
-		<result name="success" type="tiles">ErrorPageTileDefinition</result>                     
-	</action> 
-
 <!-- For Library -->
 	<action name="LibraryReadme" class="gea.actions.DoNothingView">            
 		<result name="success" type="tiles">LibraryReadmeTileDefinition</result>                     
@@ -225,6 +191,12 @@
 		<result name="success" type="tiles">AddBookTileDefinition</result> 
 		<result name="login" type="tiles">LoginTilesDefinition</result>                    
 	</action> 
+	<action name="processAddBook" class="gea.actions.library.AddBookAction">   
+	    <result name="login" type="tiles">LoginTilesDefinition</result> 
+	    <result name="input" type="tiles">AddBookTileDefinition</result>    
+	    <result  name="success" type="tiles">MessageScreenLibraryTilesDefinition</result>  
+		<result  name="error" type="tiles">AddBookTileDefinition</result> 
+	</action>
 	<action name="SearchBook" class="gea.actions.DoNothingView">            
 		<result name="success" type="tiles">SearchBookTileDefinition</result>
  	</action> 
@@ -232,12 +204,6 @@
 		<result name="success" type="tiles">SearchBookResultsTileDefinition</result>  
 		<result name="error" type="tiles">SearchBookTileDefinition</result>
 		<result name="input" type="tiles">SearchBookTileDefinition</result>                    
-	</action>
-	<action name="processAddBook" class="gea.actions.library.AddBookAction">   
-	    <result name="login" type="tiles">LoginTilesDefinition</result> 
-	    <result name="input" type="tiles">AddBookTileDefinition</result>    
-	    <result  name="success" type="tiles">MessageScreenLibraryTilesDefinition</result>  
-		<result  name="error" type="tiles">AddBookTileDefinition</result> 
 	</action>
 	<action name="GeaParentsLibrary" class="gea.actions.library.GeaParentsLibraryView">
 	    <result name="login" type="tiles">LoginTilesDefinition</result> 
@@ -263,9 +229,8 @@
 		<result name="startTest" type="tiles">TestQnTileDefinition</result>
 		<result name="nextQuestion" type="tiles">TestQnTileDefinition</result>  
 		<result name="ans" type="tiles">TestAnsTileDefinition</result>
-		<result name="NoQns" type="tiles">TestQnTileDefinition</result>
+		<result name="NoQns" type="tiles">TestQnTileDefinition</result> <!-- To be tested -->
 		<result name="testReport" type="tiles">TestReportTileDefinition</result>
 	</action>
-
 </package>       
 </struts>   

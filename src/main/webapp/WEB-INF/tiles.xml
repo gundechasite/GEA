@@ -4,33 +4,16 @@
   
 <tiles-definitions>  
  
-  
-  <definition name="GEAHomePageTileDefinition" template="/jsp/GEA.jsp">  
-  	<put-attribute name="content" value="/html/blank.html"></put-attribute>  
-  </definition>   
- 
+<!-- Home Page -->  
+  	  <definition name="BlankTileDefinition" template="/jsp/GEA.jsp">  
+  			<put-attribute name="content" value="/html/blank.html"></put-attribute>  
+  	  </definition>   
  
 <!-- Footer links -->
-	  <definition name="AboutMeTileDefinition" template="/jsp/GEA.jsp">  
-	  		<put-attribute name="content" value="/html/AboutMe.html"></put-attribute>  
-	  </definition>
-	  <definition name="AboutThisWebsiteTileDefinition" template="/jsp/GEA.jsp">  
-	  		<put-attribute name="content" value="/html/AboutThisWebsite.html"></put-attribute>  
-	  </definition>
-	  <definition name="HowToUseSiteTileDefinition" template="/jsp/GEA.jsp">  
-	  		<put-attribute name="content" value="/html/HowToUseSite.html"></put-attribute>  
-	  </definition>
-	  <definition name="ContactMeTileDefinitionOLD" template="/jsp/GEA.jsp">  
-		  	<put-attribute name="content" value="/jsp/ContactMe.jsp"></put-attribute>  
-	  </definition>
 	  <definition name="ContactMeTileDefinition" template="/jsp/GEA.jsp">  
 		  	<put-attribute name="content" value="/html/ContactMeReadme.html"></put-attribute>  
 	  </definition>
 	  
-	  <definition name="SiteFeedbackTileDefinition" template="/jsp/GEA.jsp">  
-	  		<put-attribute name="content" value="/jsp/SiteFeedback.jsp"></put-attribute>  
-	  </definition>
- 
 <!-- Header links -->
 	  <definition name="SignupTilesDefinition" template="/jsp/GEA.jsp">  
 		  	<put-attribute name="content" value="/jsp/Signup.jsp"    />  
@@ -38,18 +21,12 @@
 	  <definition name="LoginTilesDefinition" template="/jsp/GEA.jsp">  
 	  		<put-attribute name="content" value="/jsp/Login.jsp"></put-attribute>  
 	  </definition>
-	  <definition name="VendorTilesDefinition" template="/jsp/GEA.jsp">  
-	  		<put-attribute name="content" value="/html/UniformVendor.html"></put-attribute>  
-	  </definition>
-	  
-	  
   
 <!-- Buy/Sell Textbooks links --> 
- 	 <definition name="BuySellTextbookTileDefinition" template="/jsp/GEA.jsp">  
+ 	  <definition name="BuySellTextbookTileDefinition" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/BuySellTextbookLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/html/BuySellTextBookReadme.html"></put-attribute>  
-  	 </definition>
-
+  	  </definition>
 	  <definition name="SellTextbookTileDefinition" template="/jsp/GEA.jsp">  
 		  	<put-attribute name="leftNav" value="/html/BuySellTextbookLeftNav.html"></put-attribute>
 		  	<put-attribute name="content" value="/jsp/SellTextbooks.jsp"></put-attribute>  
@@ -93,31 +70,19 @@
 	  <definition name="adminLoginTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
 		  	<put-attribute name="content" value="/jsp/admin/adminLogin.jsp"></put-attribute>  
 	  </definition>
-	  
 	  <definition name="adminMessageScreenTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
 	  		<put-attribute name="content" value="/jsp/MessageScreen.jsp"></put-attribute>  
 	  </definition>
-	  
 	  <definition name="registeredUsersTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
 	  		<put-attribute name="content" value="/jsp/admin/registeredUsers.jsp"></put-attribute>  
 	  </definition>
-	
 	  <definition name="adminUniformAdsTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
 	  		<put-attribute name="content" value="/jsp/admin/UniformAds.jsp"></put-attribute>  
 	  </definition>
-	
 	  <definition name="adminTextbooksAdsTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
 	  		<put-attribute name="content" value="/jsp/admin/TextbooksAds.jsp"></put-attribute>  
 	  </definition>
-	  
-	  <definition name="adminContactMeTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
-	  		<put-attribute name="content" value="/jsp/admin/ContactMe.jsp"></put-attribute>  
-	  </definition>
 	
-	  <definition name="adminSiteFeedBackTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
-	  		<put-attribute name="content" value="/jsp/admin/SiteFeedBack.jsp"></put-attribute>  
-	  </definition>
-
 
 <!-- View My Ads -->		
 	  <definition name="ViewBTAdsTileDefinition" template="/jsp/GEA.jsp">  
@@ -144,10 +109,6 @@
  	 <definition name="MessageScreenTilesDefinition" template="/jsp/GEA.jsp">  
   			<put-attribute name="content" value="/jsp/MessageScreen.jsp"></put-attribute>  
   	 </definition>
-  	 
- 	 <definition name="ErrorPageTileDefinition" template="/jsp/GEA.jsp">  
-  			<put-attribute name="content" value="/jsp/ErrorPage.jsp"></put-attribute>  
-  	 </definition> 
   	 
 <!-- For Library -->
  	 <definition name="LibraryReadmeTileDefinition" template="/jsp/GEA.jsp">  
@@ -176,7 +137,6 @@
   	 </definition>
   	 
 <!-- Tests -->
-
  	 <definition name="SelectTestTileDefinition" template="/jsp/GEA.jsp">  
  	 		<put-attribute name="leftNav" value="/html/blank.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/Tests/SelectClassSubject.jsp"></put-attribute>  
