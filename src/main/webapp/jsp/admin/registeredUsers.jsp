@@ -8,7 +8,6 @@
 	    <th>Creation Date</th>
 	    <th>LoginId</th>
 	    <th>Name</th>
-	    <th>Phone</th>
 	    <th>Email</th>
     </tr>
 
@@ -18,7 +17,6 @@
 	<tr>
 	    <td><s:property value="loginId" /></td>
 	    <td><s:property value="name"/></td>
-	    <td><s:property value="phone"/></td>
 	    <td><s:property value="email"/></td>
 	</tr>
 	</s:iterator>
