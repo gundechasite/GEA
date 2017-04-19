@@ -11,10 +11,6 @@ import com.opensymphony.xwork2.ActionSupport;
  
 public class GEAHomePageView extends ActionSupport implements SessionAware {
 
-	/*
-	 * If user has already logged -> content tile of Home Page = Blank
-	 * else content tile = Login Screen    
-	 */
 	 public String execute(){ 
 		 if (GeaUtility.hasUserNotLoggedIn(sessionMap)) {
 			 return "Signup";
