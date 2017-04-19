@@ -1,14 +1,5 @@
 package gea.actions.admin;
 
-import gea.bean.ContactMeBean;
-import gea.bean.SiteFeedbackBean;
-import gea.model.TextbookAd;
-import gea.model.UniformAd;
-import gea.model.User;
-import gea.utility.DBUtility;
-import gea.utility.DBUtility_TextBookUniform;
-import gea.utility.GeaUtility;
-
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -16,13 +7,18 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import gea.model.TextbookAd;
+import gea.model.UniformAd;
+import gea.model.User;
+import gea.utility.DBUtility;
+import gea.utility.DBUtility_TextBookUniform;
+import gea.utility.GeaUtility;
+
 public class ShowDatabaseDataAction  extends ActionSupport implements SessionAware {
 	/* Form Fields */
 	private String tableCode;
 	
 	ArrayList<User> resisteredUsers ;
-	ArrayList<ContactMeBean> contactMeMessages;
-	ArrayList<SiteFeedbackBean> siteFeedbackList;
 	ArrayList<TextbookAd> textbookAdList;
 	ArrayList<UniformAd> uniformAdList;
 	
@@ -43,13 +39,7 @@ public class ShowDatabaseDataAction  extends ActionSupport implements SessionAwa
 			 } else if ("T".equals(tableCode)) {
 				 textbookAdList = DBUtility_TextBookUniform.getTextbookAdsListForAdmin();
 	 			 return "TextbooksAds";
-			 } else if ("C".equals(tableCode)) {
-				 contactMeMessages = DBUtility.getContactMeMessages();
-		 		 return "ContactMe";
-			 } else if ("F".equals(tableCode)) {
-				 siteFeedbackList = DBUtility.getSiteFeedbackList();
-		 		 return "SiteFeedBack";
-			 }
+			 } 
 
 			 return "error"; /* if tableCode is not received as expected */
 		 } catch (Exception e) {
@@ -72,18 +62,6 @@ public class ShowDatabaseDataAction  extends ActionSupport implements SessionAwa
 	}
 	public void setResisteredUsers(ArrayList<User> resisteredUsers) {
 		this.resisteredUsers = resisteredUsers;
-	}
-	public ArrayList<ContactMeBean> getContactMeMessages() {
-		return contactMeMessages;
-	}
-	public void setContactMeMessages(ArrayList<ContactMeBean> contactMeMessages) {
-		this.contactMeMessages = contactMeMessages;
-	}
-	public ArrayList<SiteFeedbackBean> getSiteFeedbackList() {
-		return siteFeedbackList;
-	}
-	public void setSiteFeedbackList(ArrayList<SiteFeedbackBean> siteFeedbackList) {
-		this.siteFeedbackList = siteFeedbackList;
 	}
 	public ArrayList<TextbookAd> getTextbookAdList() {
 		return textbookAdList;

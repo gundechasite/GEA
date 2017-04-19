@@ -1,14 +1,12 @@
 package gea.utility;
-import gea.bean.ContactMeBean;
-import gea.bean.SiteFeedbackBean;
-import gea.model.User;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import gea.model.User;
 
 public class DBUtility {
 	
@@ -156,59 +154,6 @@ public class DBUtility {
 	}
 
 	
-	public static ArrayList<ContactMeBean> getContactMeMessages()  throws SQLException, ClassNotFoundException {
-		  String sql = "select c.submissionDate, c.message, CONCAT(r.parentName,' ',r.loginId,' ',r.parentEmail) parent " +
-		  		" from ContactMe c, RegisteredUsers r where c.loginId=r.loginId order by c.submissionDate desc";
-		  ArrayList<ContactMeBean> contactMeMessages = new ArrayList<ContactMeBean>();
-		  Connection conn = getDatabaseConnection();
-		  
-		  
-		  //System.out.println("getContactMeMessages Query:  "+sql);
-		  
-
-		  ResultSet rs = conn.createStatement().executeQuery(sql);
-	      while (rs.next()) {
-	    	  ContactMeBean contactMeBean = new ContactMeBean();
-	    	  contactMeBean.setMessage(rs.getString("message"));
-	    	  contactMeBean.setParent(rs.getString("parent"));
-	    	  contactMeBean.setSubmissionDate(rs.getString("submissionDate"));
-	    	  contactMeMessages.add(contactMeBean);
-	      } 
-	      conn.close();
-	      return contactMeMessages;
-	}
-	
-
-	public static ArrayList<SiteFeedbackBean> getSiteFeedbackList()  throws SQLException, ClassNotFoundException {
-		  String sql = " select s.submissionDate, s.siteUsefullness, s.pricesOk, s.howToImprove, s.whichOtherItems, s.whichOtherSites, s.practicePapers, s.exchange, " +
-		  		" CONCAT(r.parentName,' ',r.loginId,' ',r.parentEmail) parent from SiteFeedBack s, RegisteredUsers r " +
-		  		" where s.loginId=r.loginId order by s.submissionDate desc";
-		  ArrayList<SiteFeedbackBean> siteFeedbackList = new ArrayList<SiteFeedbackBean>();
-		  Connection conn = getDatabaseConnection();
-		  
-		  
-		  //System.out.println("getSiteFeedbackList Query:  "+sql);
-		  
-
-		  ResultSet rs = conn.createStatement().executeQuery(sql);
-	      while (rs.next()) {
-	    	  SiteFeedbackBean siteFeedback = new SiteFeedbackBean();
-	    	  siteFeedback.setHowToImprove(rs.getString("howToImprove"));
-	    	  siteFeedback.setParent(rs.getString("parent"));
-	    	  siteFeedback.setPricesOk(rs.getString("pricesOk"));
-	    	  siteFeedback.setSiteUsefullness(getSiteUsefullnessScreenValue(rs.getString("siteUsefullness")));
-	    	  siteFeedback.setSubmissionDate(rs.getString("submissionDate"));
-	    	  siteFeedback.setWhichOtherItems(rs.getString("whichOtherItems"));
-	    	  siteFeedback.setWhichOtherSites(rs.getString("whichOtherSites"));
-	    	  siteFeedback.setPracticePapers(rs.getString("practicePapers"));
-	    	  siteFeedback.setExchange(rs.getString("exchange"));
-	    	  siteFeedbackList.add(siteFeedback);
-	      } 
-	      conn.close();
-	      return siteFeedbackList;
-	}
-
-
 	
 	private static String getSiteUsefullnessScreenValue(String siteUsefullness) {
 		if ("NO".equals(siteUsefullness)) {
