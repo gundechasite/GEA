@@ -14,223 +14,224 @@
  
 <!-- Home Page -->             
 	<action name="HomePage" class="gea.actions.GEAHomePageView">            
-   		<result name="Blank" type="tiles">BlankTileDefinition</result>
-   		<result name="Login" type="tiles">LoginTilesDefinition</result>
-   		<result  name="Signup" type="tiles">SignupTilesDefinition</result>
+   		<result name="Blank" type="tiles">Blank_TD</result>
+   		<result name="Login" type="tiles">Login_TD</result>
+   		<result  name="Signup" type="tiles">Signup_TD</result>
 	</action>  
 
      
 <!-- Footer links --> 
 	<action name="ContactMe" class="gea.actions.DoNothingView">   
-		<result name="success" type="tiles">ContactMeTileDefinition</result>                     
+		<result name="success" type="tiles">ContactMe_TD</result>                     
 	</action>
 	
  
 <!-- Header links --> 
 	<action name="Signup" class="gea.actions.DoNothingView" method="execute">            
-		<result  name="success" type="tiles">SignupTilesDefinition</result>                     
+		<result  name="success" type="tiles">Signup_TD</result>                     
 	</action>
 	<action name="processSignup" class="gea.actions.SignupAction" >   
-		<result name="input" type="tiles">SignupTilesDefinition</result>         
-		<result  name="success" type="tiles">MessageScreenTilesDefinition</result>
-		<result  name="error" type="tiles">MessageScreenTilesDefinition</result>                      
+		<result name="input" type="tiles">Signup_TD</result>         
+		<result  name="success" type="tiles">MessageScreen_TD</result>
+		<result  name="error" type="tiles">MessageScreen_TD</result>                      
 	</action>  
     <action name="Login" class="gea.actions.DoNothingView">            
-		<result  name="success" type="tiles">LoginTilesDefinition</result>                     
+		<result  name="success" type="tiles">Login_TD</result>                     
 	</action> 
 	<action name="Logout" class="gea.actions.LogoutAction">            
-		<result  name="success" type="tiles">LoginTilesDefinition</result>                     
+		<result  name="success" type="tiles">Login_TD</result>                     
 	</action> 
     <action name="processLogin" class="gea.actions.LoginAction"> 
-		<result name="input" type="tiles">LoginTilesDefinition</result>            
-		<result  name="success" type="tiles">MessageScreenTilesDefinition</result>  
-		<result name="signup" type="tiles">SignupTilesDefinition</result>
-		<result  name="error" type="tiles">LoginTilesDefinition</result>                    
+		<result name="input" type="tiles">Login_TD</result>            
+		<result  name="success" type="tiles">MessageScreen_TD</result>  
+		<result name="signup" type="tiles">Signup_TD</result>
+		<result  name="error" type="tiles">Login_TD</result>                    
 	</action> 
 
 
   
 <!-- Buy/Sell Textbooks links --> 
 	<action name="BuySellTextbookReadme" class="gea.actions.DoNothingView">            
-		<result name="success" type="tiles">BuySellTextbookTileDefinition</result>                     
+		<result name="success" type="tiles">BuySellTextbook_TD</result>                     
 	</action>
 	<action name="BuyTextbook" class="gea.actions.TextbooksBuySellView">            
-		<result name="success" type="tiles">BuyTextbookTileDefinition</result>  
-		<result name="login" type="tiles">LoginTilesDefinition</result>                    
+		<result name="success" type="tiles">BuyTextbook_TD</result>  
+		<result name="login" type="tiles">Login_TD</result>                    
 	</action> 
 	<action name="BuyMultipleTextbook" class="gea.actions.TextbooksBuySellView">            
-		<result name="success" type="tiles">BuyMultipleTextbookTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result>                      
+		<result name="success" type="tiles">BuyMultipleTextbook_TD</result>
+		<result name="login" type="tiles">Login_TD</result>                      
 	</action>
 	<action name="processBuyTextbooks" class="gea.actions.BuyTextbooksAction"> 
-		<result name="BT" type="tiles">ViewBTAdsTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result>
-		<result name="input"   type="tiles">BuyTextbookTileDefinition</result>          
-		<result name="error" type="tiles">BuyTextbookTileDefinition</result>                  
+		<result name="BT" type="tiles">ViewBTAds_TD</result>
+		<result name="login" type="tiles">Login_TD</result>
+		<result name="input"   type="tiles">BuyTextbook_TD</result>          
+		<result name="error" type="tiles">BuyTextbook_TD</result>                  
 	</action> 
 	<action name="processBuyMultipleTextbooks" class="gea.actions.BuyTextbooksAction"> 
-		<result name="BT" type="tiles">ViewBTAdsTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result>
-		<result name="input"   type="tiles">BuyMultipleTextbookTileDefinition</result>          
-		<result name="error" type="tiles">BuyMultipleTextbookTileDefinition</result>                  
+		<result name="BT" type="tiles">ViewBTAds_TD</result>
+		<result name="login" type="tiles">Login_TD</result>
+		<result name="input"   type="tiles">BuyMultipleTextbook_TD</result>          
+		<result name="error" type="tiles">BuyMultipleTextbook_TD</result>                  
 	</action> 
 	<action name="SellTextbook" class="gea.actions.TextbooksBuySellView"> 
-		<result name="success" type="tiles">SellTextbookTileDefinition</result>  
-		<result name="login" type="tiles">LoginTilesDefinition</result>                    
+		<result name="success" type="tiles">SellTextbook_TD</result>  
+		<result name="login" type="tiles">Login_TD</result>                    
 	</action> 
 	<action name="SellMultipleTextbook" class="gea.actions.TextbooksBuySellView"> 
-		<result name="success" type="tiles">SellMultipleTextbookTileDefinition</result> 
-		<result name="login" type="tiles">LoginTilesDefinition</result>                     
+		<result name="success" type="tiles">SellMultipleTextbook_TD</result> 
+		<result name="login" type="tiles">Login_TD</result>                     
 	</action> 
 	<action name="processSellTextbooks" class="gea.actions.SellTextbooksAction"> 
-		<result name="ST" type="tiles">ViewSTAdsTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result>
-		<result name="input"   type="tiles">SellTextbookTileDefinition</result>
-		<result name="error" type="tiles">SellTextbookTileDefinition</result>    
+		<result name="ST" type="tiles">ViewSTAds_TD</result>
+		<result name="login" type="tiles">Login_TD</result>
+		<result name="input"   type="tiles">SellTextbook_TD</result>
+		<result name="error" type="tiles">SellTextbook_TD</result>    
 	</action> 
  	<action name="processSellMultipleTextbooks" class="gea.actions.SellTextbooksAction"> 
-		<result name="ST" type="tiles">ViewSTAdsTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result>
- 		<result name="input"   type="tiles">SellMultipleTextbookTileDefinition</result> 
-		<result name="error" type="tiles">SellMultipleTextbookTileDefinition</result>                  
+		<result name="ST" type="tiles">ViewSTAds_TD</result>
+		<result name="login" type="tiles">Login_TD</result>
+ 		<result name="input"   type="tiles">SellMultipleTextbook_TD</result> 
+		<result name="error" type="tiles">SellMultipleTextbook_TD</result>                  
 	</action>
 
 <!-- Buy/Sell Uniform links --> 
 
 	<action name="BuySellUniformReadme" class="gea.actions.DoNothingView">            
-		<result name="success" type="tiles">BuySellUniformReadmeTileDefinition</result>                     
+		<result name="success" type="tiles">BuySellUniformReadme_TD</result>                     
 	</action>
 	<action name="SellUniform" class="gea.actions.UniformsBuySellView">            
-		<result name="success" type="tiles">SellUniformTileDefinition</result>     
-		<result name="login" type="tiles">LoginTilesDefinition</result>                 
+		<result name="success" type="tiles">SellUniform_TD</result>     
+		<result name="login" type="tiles">Login_TD</result>                 
 	</action> 
 	<action name="SellMultipleUniform" class="gea.actions.UniformsBuySellView">            
-		<result name="success" type="tiles">SellMultipleUniformTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result>                      
+		<result name="success" type="tiles">SellMultipleUniform_TD</result>
+		<result name="login" type="tiles">Login_TD</result>                      
 	</action> 
   	<action name="processSellUniform" class="gea.actions.SellUniformAction">
-  		<result name="SU" type="tiles">ViewSUAdsTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result> 
-		<result name="input"   type="tiles">SellUniformTileDefinition</result>  
-		<result name="searchResults" type="tiles">SearchResultsTilesDefinition</result>           
-		<result  name="error" type="tiles">SellUniformTileDefinition</result>                  
+  		<result name="SU" type="tiles">ViewSUAds_TD</result>
+		<result name="login" type="tiles">Login_TD</result> 
+		<result name="input"   type="tiles">SellUniform_TD</result>  
+		<result name="searchResults" type="tiles">SearchResults_TD</result>           
+		<result  name="error" type="tiles">SellUniform_TD</result>                  
 	</action>
 	<action name="processSellMultipleUniform" class="gea.actions.SellUniformAction">
-		<result name="SU" type="tiles">ViewSUAdsTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result> 
-		<result name="input"   type="tiles">SellMultipleUniformTileDefinition</result>  
-		<result name="searchResults" type="tiles">SearchResultsTilesDefinition</result>           
-		<result  name="error" type="tiles">SellMultipleUniformTileDefinition</result>                  
+		<result name="SU" type="tiles">ViewSUAds_TD</result>
+		<result name="login" type="tiles">Login_TD</result> 
+		<result name="input"   type="tiles">SellMultipleUniform_TD</result>  
+		<result name="searchResults" type="tiles">SearchResults_TD</result>           
+		<result  name="error" type="tiles">SellMultipleUniform_TD</result>                  
 	</action>
 	<action name="BuyUniform" class="gea.actions.UniformsBuySellView">            
-		<result name="success" type="tiles">BuyUniformTileDefinition</result> 
-		<result name="login" type="tiles">LoginTilesDefinition</result>                     
+		<result name="success" type="tiles">BuyUniform_TD</result> 
+		<result name="login" type="tiles">Login_TD</result>                     
 	</action> 
 	<action name="BuyMultipleUniform" class="gea.actions.UniformsBuySellView">            
-		<result name="success" type="tiles">BuyMultipleUniformTileDefinition</result> 
-		<result name="login" type="tiles">LoginTilesDefinition</result>                     
+		<result name="success" type="tiles">BuyMultipleUniform_TD</result> 
+		<result name="login" type="tiles">Login_TD</result>                     
 	</action> 
   	<action name="processBuyUniform" class="gea.actions.BuyUniformAction">
-  		<result name="BU" type="tiles">ViewBUAdsTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result> 
-		<result name="input"   type="tiles">BuyUniformTileDefinition</result> 
-		<result name="searchResults" type="tiles">SearchResultsTilesDefinition</result>            
-		<result  name="error" type="tiles">BuyUniformTileDefinition</result>                  
+  		<result name="BU" type="tiles">ViewBUAds_TD</result>
+		<result name="login" type="tiles">Login_TD</result> 
+		<result name="input"   type="tiles">BuyUniform_TD</result> 
+		<result name="searchResults" type="tiles">SearchResults_TD</result>            
+		<result  name="error" type="tiles">BuyUniform_TD</result>                  
 	</action>
   	<action name="processBuyMultipleUniform" class="gea.actions.BuyUniformAction">
-  		<result name="BU" type="tiles">ViewBUAdsTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result> 
-		<result name="input"   type="tiles">BuyMultipleUniformTileDefinition</result> 
-		<result name="searchResults" type="tiles">SearchResultsTilesDefinition</result>            
-		<result  name="error" type="tiles">BuyMultipleUniformTileDefinition</result>                  
+  		<result name="BU" type="tiles">ViewBUAds_TD</result>
+		<result name="login" type="tiles">Login_TD</result> 
+		<result name="input"   type="tiles">BuyMultipleUniform_TD</result> 
+		<result name="searchResults" type="tiles">SearchResults_TD</result>            
+		<result  name="error" type="tiles">BuyMultipleUniform_TD</result>                  
 	</action>
 
 
   
 <!-- For Admin -->
   	<action name="adminLogin" class="gea.actions.DoNothingView">            
-		<result  name="success" type="tiles">adminLoginTilesDefinition</result>                     
+		<result  name="success" type="tiles">adminLogin_TD</result>                     
 	</action>  
 	<action name="processAdminLogin" class="gea.actions.admin.AdminLoginAction"> 
-		<result name="input" type="tiles">adminLoginTilesDefinition</result>            
-		<result  name="success" type="tiles">adminMessageScreenTilesDefinition</result>  
-		<result  name="error" type="tiles">adminLoginTilesDefinition</result>                    
+		<result name="input" type="tiles">adminLogin_TD</result>            
+		<result  name="success" type="tiles">adminMessageScreen_TD</result>  
+		<result  name="error" type="tiles">adminLogin_TD</result>                    
 	</action>
   	<action name="ShowDbData" class="gea.actions.admin.ShowDatabaseDataAction"> 
-  		<result name="login" type="tiles">adminLoginTilesDefinition</result>
-  		<result name="registeredUsers" type="tiles">registeredUsersTilesDefinition</result>            
-		<result  name="UniformAds" type="tiles">adminUniformAdsTilesDefinition</result>  
-		<result name="TextbooksAds" type="tiles">adminTextbooksAdsTilesDefinition</result>            
-		<result  name="error" type="tiles">adminMessageScreenTilesDefinition</result>                    
+  		<result name="login" type="tiles">adminLogin_TD</result>
+  		<result name="registeredUsers" type="tiles">registeredUsers_TD</result>            
+		<result  name="UniformAds" type="tiles">adminUniformAds_TD</result>  
+		<result name="TextbooksAds" type="tiles">adminTextbooksAds_TD</result>
+		<result name="libraryBooks" type="tiles">libraryBooksListForAdminDefinition</result> 
+		<result  name="error" type="tiles">adminMessageScreen_TD</result>                    
 	</action>
 	<action name="adminLogout" class="gea.actions.LogoutAction">            
-		<result  name="success" type="tiles">adminLoginTilesDefinition</result>                     
+		<result  name="success" type="tiles">adminLogin_TD</result>                     
 	</action> 
 
 <!-- View My Ads -->
 	<action name="ViewMyAds" class="gea.actions.ViewMyAdsView">            
-		<result name="BT" type="tiles">ViewBTAdsTileDefinition</result>
-		<result name="ST" type="tiles">ViewSTAdsTileDefinition</result>
-		<result name="BU" type="tiles">ViewBUAdsTileDefinition</result>
-		<result name="SU" type="tiles">ViewSUAdsTileDefinition</result>
-		<result name="login" type="tiles">LoginTilesDefinition</result>  
-		<result name="error" type="tiles">MessageScreenTilesDefinition</result>                   
+		<result name="BT" type="tiles">ViewBTAds_TD</result>
+		<result name="ST" type="tiles">ViewSTAds_TD</result>
+		<result name="BU" type="tiles">ViewBUAds_TD</result>
+		<result name="SU" type="tiles">ViewSUAds_TD</result>
+		<result name="login" type="tiles">Login_TD</result>  
+		<result name="error" type="tiles">MessageScreen_TD</result>                   
 	</action> 
 
 <!-- Delete Ad -->
 	<action name="DeleteAd" class="gea.actions.DeleteAdAction">            
-		<result name="success" type="tiles">MessageScreenTilesDefinition</result>
-        <result name="error" type="tiles">MessageScreenTilesDefinition</result>
+		<result name="success" type="tiles">MessageScreen_TD</result>
+        <result name="error" type="tiles">MessageScreen_TD</result>
 	</action>
 
 <!-- For Library -->
 	<action name="LibraryReadme" class="gea.actions.DoNothingView">            
-		<result name="success" type="tiles">LibraryReadmeTileDefinition</result>                     
+		<result name="success" type="tiles">LibraryReadme_TD</result>                     
 	</action>
 	<action name="AddBook" class="gea.actions.GeaForceLoginView">            
-		<result name="success" type="tiles">AddBookTileDefinition</result> 
-		<result name="login" type="tiles">LoginTilesDefinition</result>                    
+		<result name="success" type="tiles">AddBook_TD</result> 
+		<result name="login" type="tiles">Login_TD</result>                    
 	</action> 
 	<action name="processAddBook" class="gea.actions.library.AddBookAction">   
-	    <result name="login" type="tiles">LoginTilesDefinition</result> 
-	    <result name="input" type="tiles">AddBookTileDefinition</result>    
-	    <result  name="success" type="tiles">MessageScreenLibraryTilesDefinition</result>  
-		<result  name="error" type="tiles">AddBookTileDefinition</result> 
+	    <result name="login" type="tiles">Login_TD</result> 
+	    <result name="input" type="tiles">AddBook_TD</result>    
+	    <result  name="success" type="tiles">MessageScreenLibrary_TD</result>  
+		<result  name="error" type="tiles">AddBook_TD</result> 
 	</action>
 	<action name="SearchBook" class="gea.actions.DoNothingView">            
-		<result name="success" type="tiles">SearchBookTileDefinition</result>
+		<result name="success" type="tiles">SearchBook_TD</result>
  	</action> 
 	<action name="processSearchBook" class="gea.actions.library.SearchBookAction">            
-		<result name="success" type="tiles">SearchBookResultsTileDefinition</result>  
-		<result name="error" type="tiles">SearchBookTileDefinition</result>
-		<result name="input" type="tiles">SearchBookTileDefinition</result>                    
+		<result name="success" type="tiles">SearchBookResults_TD</result>  
+		<result name="error" type="tiles">SearchBook_TD</result>
+		<result name="input" type="tiles">SearchBook_TD</result>                    
 	</action>
 	<action name="GeaParentsLibrary" class="gea.actions.library.GeaParentsLibraryView">
-	    <result name="login" type="tiles">LoginTilesDefinition</result> 
-	    <result name="success" type="tiles">GeaParentsLibraryTileDefinition</result>
-		<result name="error" type="tiles">GeaParentsLibraryTileDefinition</result>                     
+	    <result name="login" type="tiles">Login_TD</result> 
+	    <result name="success" type="tiles">GeaParentsLibrary_TD</result>
+		<result name="error" type="tiles">GeaParentsLibrary_TD</result>                     
 	</action>
 	<action name="DeleteMyBook" class="gea.actions.library.DeleteMyBookAction">            
-		<result name="success" type="tiles">MessageScreenLibraryTilesDefinition</result>
-        <result name="error" type="tiles">MessageScreenLibraryTilesDefinition</result>
+		<result name="success" type="tiles">MessageScreenLibrary_TD</result>
+        <result name="error" type="tiles">MessageScreenLibrary_TD</result>
 	</action>
 	
 <!-- Tests -->
 	<action name="selectClassSubject" class="gea.actions.Tests.SelectClassSubjectView">  
-		<result name="login" type="tiles">LoginTilesDefinition</result> 
-		<result name="success" type="tiles">SelectTestTileDefinition</result>                     
+		<result name="login" type="tiles">Login_TD</result> 
+		<result name="success" type="tiles">SelectTest_TD</result>                     
 	</action>
 	<action name="selectChapter" class="gea.actions.Tests.SelectClassSubjectAction">            
-		<result name="login" type="tiles">LoginTilesDefinition</result> 
-		<result name="success" type="tiles">SelectChapterTileDefinition</result>   
+		<result name="login" type="tiles">Login_TD</result> 
+		<result name="success" type="tiles">SelectChapter_TD</result>   
 	</action>
 	<action name="Test" class="gea.actions.Tests.TestView">            
-		<result name="login" type="tiles">LoginTilesDefinition</result> 
-		<result name="startTest" type="tiles">TestQnTileDefinition</result>
-		<result name="nextQuestion" type="tiles">TestQnTileDefinition</result>  
-		<result name="ans" type="tiles">TestAnsTileDefinition</result>
-		<result name="NoQns" type="tiles">TestQnTileDefinition</result> <!-- To be tested -->
-		<result name="testReport" type="tiles">TestReportTileDefinition</result>
+		<result name="login" type="tiles">Login_TD</result> 
+		<result name="startTest" type="tiles">TestQn_TD</result>
+		<result name="nextQuestion" type="tiles">TestQn_TD</result>  
+		<result name="ans" type="tiles">TestAns_TD</result>
+		<result name="NoQns" type="tiles">TestQn_TD</result> <!-- To be tested -->
+		<result name="testReport" type="tiles">TestReport_TD</result>
 	</action>
 </package>       
 </struts>   

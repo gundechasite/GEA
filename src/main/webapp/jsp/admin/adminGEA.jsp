@@ -21,8 +21,7 @@
 				<a href="/GEA/ShowDbData?tableCode=R">Registered Users</a> &nbsp; &nbsp;
 				<a href="/GEA/ShowDbData?tableCode=U">Uniform Ads</a> &nbsp; &nbsp;
 				<a href="/GEA/ShowDbData?tableCode=T">Textbook Ads</a> &nbsp; &nbsp;
-				<a href="/GEA/ShowDbData?tableCode=C">Contact Me</a> &nbsp; &nbsp;
-				<a href="/GEA/ShowDbData?tableCode=F">Feedback</a> &nbsp; &nbsp;
+				<a href="/GEA/ShowDbData?tableCode=L">Library</a> &nbsp; &nbsp;
 		</td>
 		<td align=right  style="padding-right:40px">
 			<% if (session.getAttribute("LoggedUser")!=null) { %>

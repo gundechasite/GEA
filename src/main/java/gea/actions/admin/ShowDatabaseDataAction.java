@@ -7,10 +7,12 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import gea.bean.BookBean;
 import gea.model.TextbookAd;
 import gea.model.UniformAd;
 import gea.model.User;
 import gea.utility.DBUtility;
+import gea.utility.DBUtilityLibrary;
 import gea.utility.DBUtility_TextBookUniform;
 import gea.utility.GeaUtility;
 
@@ -21,6 +23,8 @@ public class ShowDatabaseDataAction  extends ActionSupport implements SessionAwa
 	ArrayList<User> resisteredUsers ;
 	ArrayList<TextbookAd> textbookAdList;
 	ArrayList<UniformAd> uniformAdList;
+	ArrayList<BookBean> libraryBooks;
+	
 	
 	/* Execute */
 	public String execute(){ 
@@ -31,7 +35,7 @@ public class ShowDatabaseDataAction  extends ActionSupport implements SessionAwa
 		 
 		 try {
 			 if ("R".equals(tableCode)) {
-				 resisteredUsers = DBUtility.getResisteredUsers();
+				 resisteredUsers = DBUtility.getResisteredUsersForAdmin();
 	 			 return "registeredUsers";
 			 } else if ("U".equals(tableCode)) {
 				 uniformAdList = DBUtility_TextBookUniform.getUniformAdsListForAdmin();
@@ -39,8 +43,11 @@ public class ShowDatabaseDataAction  extends ActionSupport implements SessionAwa
 			 } else if ("T".equals(tableCode)) {
 				 textbookAdList = DBUtility_TextBookUniform.getTextbookAdsListForAdmin();
 	 			 return "TextbooksAds";
-			 } 
-
+			 } else if ("L".equals(tableCode)) {
+				 libraryBooks = DBUtilityLibrary.getLibraryBooksForAdmin();
+				 return "libraryBooks";
+			 }		
+			 addActionError("Expected tableCode not received");
 			 return "error"; /* if tableCode is not received as expected */
 		 } catch (Exception e) {
 			System.out.println(GeaUtility.getActualErrorMessage(e));
@@ -75,6 +82,13 @@ public class ShowDatabaseDataAction  extends ActionSupport implements SessionAwa
 	public void setUniformAdList(ArrayList<UniformAd> uniformAdList) {
 		this.uniformAdList = uniformAdList;
 	}
+	public ArrayList<BookBean> getLibraryBooks() {
+		return libraryBooks;
+	}
+	public void setLibraryBooks(ArrayList<BookBean> libraryBooks) {
+		this.libraryBooks = libraryBooks;
+	}
+
 
 	/* Required for implements SessionAware */
 	private Map<String, Object> sessionMap;

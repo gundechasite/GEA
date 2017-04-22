@@ -5,7 +5,6 @@
 
 <table class=alternateColor width=90% align=center>
     <tr>
-	    <th>Creation Date</th>
 	    <th>LoginId</th>
 	    <th>Name</th>
 	    <th>Email</th>

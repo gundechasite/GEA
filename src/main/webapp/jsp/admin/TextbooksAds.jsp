@@ -6,7 +6,6 @@
 <table class=alternateColor width=96% align=center>
 
 	<tr>
-	    <th>Date</th>
 	    <th>Parent</th>
 	    <th>S/B</th>
 	    <th>class</th>

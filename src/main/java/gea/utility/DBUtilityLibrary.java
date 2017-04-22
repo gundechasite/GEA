@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import gea.bean.BookBean;
+import gea.model.UniformAd;
 import gea.model.User;
 
 public class DBUtilityLibrary {
@@ -38,16 +39,26 @@ public class DBUtilityLibrary {
 	public static ArrayList<BookBean> getBooksList(
 			String bookCategory, String loggedUserLoginId, String screenCode) 
 					throws SQLException, ClassNotFoundException {
+		
 		String loginIdCondition = null; 
-		if (screenCode.equals("MyBooks")) {
-			loginIdCondition = "l.loginId='"+loggedUserLoginId+"'";
+		String sql = null;
+		if (screenCode.equals("Admin")) {
+			sql = "select l.*,CONCAT(r.parentName,' ',r.loginId,' ',r.parentEmail) parentDetails from GeaParentsLibrary l, RegisteredUsers r "
+			  	+ "where l.loginId=r.loginId  "
+			 	+ "order by Book_id desc" ;
+			
 		} else {
-			loginIdCondition = "l.loginId!='"+loggedUserLoginId+"'";
-		}
-		String sql = 
-				  "select l.*,CONCAT(r.parentName,' ',r.loginId,' ',r.parentEmail) parentDetails from GeaParentsLibrary l, RegisteredUsers r "
-		  		+ "where l.bookCategory='"+bookCategory+"' and "+loginIdCondition+" and l.loginId=r.loginId  "
+			if (screenCode.equals("MyBooks")) {
+				loginIdCondition = "l.loginId='"+loggedUserLoginId+"'";
+			} else {
+				loginIdCondition = "l.loginId!='"+loggedUserLoginId+"'";
+			}
+			sql = "select l.*,CONCAT(r.parentName,' ',r.loginId,' ',r.parentEmail) parentDetails from GeaParentsLibrary l, RegisteredUsers r "
+		 		+ "where l.bookCategory='"+bookCategory+"' and "+loginIdCondition+" and l.loginId=r.loginId  "
 		  		+ "order by Book_id desc" ;
+
+		}
+		
 		  ArrayList<BookBean> booksList = new ArrayList<BookBean>();
 		  Connection conn = DBUtility.getDatabaseConnection();
 		  
@@ -114,5 +125,9 @@ public class DBUtilityLibrary {
 		  conn.close();	
 
 		
+	}
+
+	public static ArrayList<BookBean> getLibraryBooksForAdmin() throws SQLException, ClassNotFoundException {
+		return getBooksList(null, null, "Admin"); 
 	}
 }

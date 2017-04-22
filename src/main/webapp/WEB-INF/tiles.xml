@@ -5,155 +5,158 @@
 <tiles-definitions>  
  
 <!-- Home Page -->  
-  	  <definition name="BlankTileDefinition" template="/jsp/GEA.jsp">  
+  	  <definition name="Blank_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="content" value="/html/blank.html"></put-attribute>  
   	  </definition>   
  
 <!-- Footer links -->
-	  <definition name="ContactMeTileDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="ContactMe_TD" template="/jsp/GEA.jsp">  
 		  	<put-attribute name="content" value="/html/ContactMeReadme.html"></put-attribute>  
 	  </definition>
 	  
 <!-- Header links -->
-	  <definition name="SignupTilesDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="Signup_TD" template="/jsp/GEA.jsp">  
 		  	<put-attribute name="content" value="/jsp/Signup.jsp"    />  
 	  </definition>
-	  <definition name="LoginTilesDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="Login_TD" template="/jsp/GEA.jsp">  
 	  		<put-attribute name="content" value="/jsp/Login.jsp"></put-attribute>  
 	  </definition>
   
 <!-- Buy/Sell Textbooks links --> 
- 	  <definition name="BuySellTextbookTileDefinition" template="/jsp/GEA.jsp">  
+ 	  <definition name="BuySellTextbook_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/BuySellTextbookLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/html/BuySellTextBookReadme.html"></put-attribute>  
   	  </definition>
-	  <definition name="SellTextbookTileDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="SellTextbook_TD" template="/jsp/GEA.jsp">  
 		  	<put-attribute name="leftNav" value="/html/BuySellTextbookLeftNav.html"></put-attribute>
 		  	<put-attribute name="content" value="/jsp/SellTextbooks.jsp"></put-attribute>  
 	  </definition>
-	  <definition name="SellMultipleTextbookTileDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="SellMultipleTextbook_TD" template="/jsp/GEA.jsp">  
 	  		<put-attribute name="leftNav" value="/html/BuySellTextbookLeftNav.html"></put-attribute>
 	  		<put-attribute name="content" value="/jsp/SellMultipleTextbooks.jsp"></put-attribute>  
 	  </definition>
-	  <definition name="BuyTextbookTileDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="BuyTextbook_TD" template="/jsp/GEA.jsp">  
 	  		<put-attribute name="leftNav" value="/html/BuySellTextbookLeftNav.html"></put-attribute>
 	  		<put-attribute name="content" value="/jsp/BuyTextbook.jsp"></put-attribute>  
 	  </definition>
-	  <definition name="BuyMultipleTextbookTileDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="BuyMultipleTextbook_TD" template="/jsp/GEA.jsp">  
 	  		<put-attribute name="leftNav" value="/html/BuySellTextbookLeftNav.html"></put-attribute>
 	  		<put-attribute name="content" value="/jsp/BuyMultipleTextbooks.jsp"></put-attribute>  
 	  </definition>
 
 <!-- Buy/Sell Uniform links -->
- 	 <definition name="BuySellUniformReadmeTileDefinition" template="/jsp/GEA.jsp">  
+ 	 <definition name="BuySellUniformReadme_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/BuySellUniformLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/html/BuySellUniformReadme.html"></put-attribute>  
   	 </definition>
-	  <definition name="SellUniformTileDefinition" template="/jsp/GEA.jsp"> 
+	  <definition name="SellUniform_TD" template="/jsp/GEA.jsp"> 
 	  		<put-attribute name="leftNav" value="/html/BuySellUniformLeftNav.html"></put-attribute> 
 	  		<put-attribute name="content" value="/jsp/SellUniform.jsp"></put-attribute>  
 	  </definition>
-	  <definition name="BuyUniformTileDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="BuyUniform_TD" template="/jsp/GEA.jsp">  
 	  		<put-attribute name="leftNav" value="/html/BuySellUniformLeftNav.html"></put-attribute>
 	  		<put-attribute name="content" value="/jsp/BuyUniform.jsp"></put-attribute>  
 	  </definition>
-	  <definition name="SellMultipleUniformTileDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="SellMultipleUniform_TD" template="/jsp/GEA.jsp">  
 	  		<put-attribute name="leftNav" value="/html/BuySellUniformLeftNav.html"></put-attribute>
 		  	<put-attribute name="content" value="/jsp/SellMultipleUniform.jsp"></put-attribute>  
 	  </definition>
-	  <definition name="BuyMultipleUniformTileDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="BuyMultipleUniform_TD" template="/jsp/GEA.jsp">  
 		  	<put-attribute name="leftNav" value="/html/BuySellUniformLeftNav.html"></put-attribute>
 		  	<put-attribute name="content" value="/jsp/BuyMultipleUniform.jsp"></put-attribute>  
 	  </definition>
 
 <!-- For Admin -->
-	  <definition name="adminLoginTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
+	  <definition name="adminLogin_TD" template="/jsp/admin/adminGEA.jsp">  
 		  	<put-attribute name="content" value="/jsp/admin/adminLogin.jsp"></put-attribute>  
 	  </definition>
-	  <definition name="adminMessageScreenTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
+	  <definition name="adminMessageScreen_TD" template="/jsp/admin/adminGEA.jsp">  
 	  		<put-attribute name="content" value="/jsp/MessageScreen.jsp"></put-attribute>  
 	  </definition>
-	  <definition name="registeredUsersTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
+	  <definition name="registeredUsers_TD" template="/jsp/admin/adminGEA.jsp">  
 	  		<put-attribute name="content" value="/jsp/admin/registeredUsers.jsp"></put-attribute>  
 	  </definition>
-	  <definition name="adminUniformAdsTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
+	  <definition name="adminUniformAds_TD" template="/jsp/admin/adminGEA.jsp">  
 	  		<put-attribute name="content" value="/jsp/admin/UniformAds.jsp"></put-attribute>  
 	  </definition>
-	  <definition name="adminTextbooksAdsTilesDefinition" template="/jsp/admin/adminGEA.jsp">  
+	  <definition name="adminTextbooksAds_TD" template="/jsp/admin/adminGEA.jsp">  
 	  		<put-attribute name="content" value="/jsp/admin/TextbooksAds.jsp"></put-attribute>  
+	  </definition>
+	  <definition name="libraryBooksListForAdminDefinition" template="/jsp/admin/adminGEA.jsp">  
+	  		<put-attribute name="content" value="/jsp/admin/libraryBooks.jsp"></put-attribute>  
 	  </definition>
 	
 
 <!-- View My Ads -->		
-	  <definition name="ViewBTAdsTileDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="ViewBTAds_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/BuySellTextbookLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/ViewBT_Ads.jsp"></put-attribute>  
       </definition>
-	  <definition name="ViewSTAdsTileDefinition" template="/jsp/GEA.jsp">  
+	  <definition name="ViewSTAds_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/BuySellTextbookLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/ViewST_Ads.jsp"></put-attribute>  
       </definition>
-      <definition name="ViewBUAdsTileDefinition" template="/jsp/GEA.jsp">  
+      <definition name="ViewBUAds_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/BuySellUniformLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/ViewBU_Ads.jsp"></put-attribute>  
       </definition>
-      <definition name="ViewSUAdsTileDefinition" template="/jsp/GEA.jsp">  
+      <definition name="ViewSUAds_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/BuySellUniformLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/ViewSU_Ads.jsp"></put-attribute>  
       </definition>		
-  	  <definition name="SearchResultsTilesDefinition" template="/jsp/GEA.jsp">  
+  	  <definition name="SearchResults_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="content" value="/jsp/SearchResults.jsp"></put-attribute>  
   	  </definition>
  
 <!-- Common -->   		    		
- 	 <definition name="MessageScreenTilesDefinition" template="/jsp/GEA.jsp">  
+ 	 <definition name="MessageScreen_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="content" value="/jsp/MessageScreen.jsp"></put-attribute>  
   	 </definition>
   	 
 <!-- For Library -->
- 	 <definition name="LibraryReadmeTileDefinition" template="/jsp/GEA.jsp">  
+ 	 <definition name="LibraryReadme_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/html/LibraryReadme.html"></put-attribute>  
   	 </definition>
- 	 <definition name="AddBookTileDefinition" template="/jsp/GEA.jsp">  
+ 	 <definition name="AddBook_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/library/AddBook.jsp"></put-attribute>  
   	 </definition>
- 	 <definition name="GeaParentsLibraryTileDefinition" template="/jsp/GEA.jsp"> 
+ 	 <definition name="GeaParentsLibrary_TD" template="/jsp/GEA.jsp"> 
  	  		<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/library/GeaLibrary.jsp"></put-attribute>  
   	 </definition>
-  	 <definition name="SearchBookTileDefinition" template="/jsp/GEA.jsp">  
+  	 <definition name="SearchBook_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/library/SearchBook.jsp"></put-attribute>  
   	 </definition> 
-  	 <definition name="SearchBookResultsTileDefinition" template="/jsp/GEA.jsp">  
+  	 <definition name="SearchBookResults_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/library/SearchBookResults.jsp"></put-attribute>  
   	 </definition> 
-  	 <definition name="MessageScreenLibraryTilesDefinition" template="/jsp/GEA.jsp">  
+  	 <definition name="MessageScreenLibrary_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/LibraryLeftNav.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/MessageScreen.jsp"></put-attribute>  
   	 </definition>
   	 
 <!-- Tests -->
- 	 <definition name="SelectTestTileDefinition" template="/jsp/GEA.jsp">  
+ 	 <definition name="SelectTest_TD" template="/jsp/GEA.jsp">  
  	 		<put-attribute name="leftNav" value="/html/blank.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/Tests/SelectClassSubject.jsp"></put-attribute>  
   	 </definition> 
- 	 <definition name="SelectChapterTileDefinition" template="/jsp/GEA.jsp">  
+ 	 <definition name="SelectChapter_TD" template="/jsp/GEA.jsp">  
   			<put-attribute name="leftNav" value="/html/blank.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/Tests/SelectChapter.jsp"></put-attribute>  
   	 </definition> 
-  	 <definition name="TestQnTileDefinition" template="/jsp/Tests/GEAtest.jsp">  
+  	 <definition name="TestQn_TD" template="/jsp/Tests/GEAtest.jsp">  
   			<put-attribute name="leftNav" value="/html/blank.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/Tests/TestQn.jsp"></put-attribute>  
   	 </definition>
-  	 <definition name="TestAnsTileDefinition" template="/jsp/Tests/GEAtest.jsp">  
+  	 <definition name="TestAns_TD" template="/jsp/Tests/GEAtest.jsp">  
   			<put-attribute name="leftNav" value="/html/blank.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/Tests/TestAns.jsp"></put-attribute>  
   	 </definition>
- 	 <definition name="TestReportTileDefinition" template="/jsp/GEA.jsp">  
+ 	 <definition name="TestReport_TD" template="/jsp/GEA.jsp">  
  	 		<put-attribute name="leftNav" value="/html/blank.html"></put-attribute>
   			<put-attribute name="content" value="/jsp/Tests/TestReport.jsp"></put-attribute>  
   	 </definition>

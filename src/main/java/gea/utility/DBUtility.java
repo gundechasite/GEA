@@ -132,7 +132,7 @@ public class DBUtility {
 	}
 	
 	
-	public static ArrayList<User> getResisteredUsers()  throws SQLException, ClassNotFoundException {
+	public static ArrayList<User> getResisteredUsersForAdmin()  throws SQLException, ClassNotFoundException {
 		  String sql = "select loginId, parentName, parentEmail from RegisteredUsers";
 		  ArrayList<User> resisteredUsers = new ArrayList<User>();
 		  Connection conn = getDatabaseConnection();

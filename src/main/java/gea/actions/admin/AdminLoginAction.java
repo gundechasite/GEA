@@ -43,7 +43,7 @@ public class AdminLoginAction extends ActionSupport implements SessionAware {
 	      if (GeaUtility.isFieldEmpty(password)) {
 	    	  addActionError("Please select a password for your login.");
 	      }
-		  if (!loginId.equals("321654987")) {
+		  if (!loginId.equals(System.getenv("GEA_ADMIN_LOGINID"))) {
 	    	  addActionError("You are not an authorized user.");
 	      }
 	 }
