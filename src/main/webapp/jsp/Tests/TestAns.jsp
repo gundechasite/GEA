@@ -61,6 +61,13 @@
 	</s:else>
 </td>
 </tr>
+	<s:if test="%{#VARthisIsLastQn==true}">
+	<tr><td align=right>
+	<br>
+	<label class="geaFormSmallText">Please wait after clicking 'End Test'. If your email exists, Test Report will be emailed to you, and it takes some time. </label>
+	</td>
+	</tr>
+	</s:if>
 </table>
 
 <s:set name="VARcorrectlyAnswered" value="qn.correctlyAnswered"/>

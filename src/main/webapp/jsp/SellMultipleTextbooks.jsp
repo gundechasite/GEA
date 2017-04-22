@@ -24,8 +24,7 @@
     <tr> 
 	   <td colspan=2>
 	   <label class="geaFormSmallText"> 
-	    Recommended price for external exam books is free or Rs. 20 each. 
-		Contact Me to let me know your suggestions how I should better price options.
+	    Recommended price for external exam books is free or Rs. 20 each.
 	   </label>
 	   </td>
     </tr>    

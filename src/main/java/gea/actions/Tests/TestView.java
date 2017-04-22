@@ -102,13 +102,10 @@ public class TestView extends ActionSupport implements SessionAware, Serializabl
 		
 		selectedChapter = (String)sessionMap.get("GEA_TEST_Chapter");
 		selectedClassSubject = (String)sessionMap.get("GEA_TEST_ClassSubject"); 
-		System.out.println("-------------------------");
-		System.out.println(selectedChapter);
-		System.out.println(selectedClassSubject);
 		String loggedUserEmailId = GeaUtility.getLoggedUserEmailId(sessionMap);
 		if (!GeaUtility.isFieldEmpty(loggedUserEmailId)) {
 			String message = EmailUtility.getTestReportHTMLMessage(answeredQuestionList, selectedChapter, selectedClassSubject);
-			String subject = "Test Report : "+selectedClassSubject+" "+selectedChapter;
+			String subject = "Test Report : "+selectedClassSubject+" - "+selectedChapter;
 			EmailUtility.sendEmail(loggedUserEmailId, subject, message);
 			addActionMessage("We have also emailed this Test Report to "+loggedUserEmailId);
 		} else {

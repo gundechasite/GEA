@@ -200,22 +200,24 @@ public class EmailUtility {
 			}
 			
 			/* if optioncolor== null make it "" , else whole style becomes null */
-			String optionAcolor = currentQuestionDetails.getOptionA();
+			String optionAcolor = currentQuestionDetails.getOptionAcolor();
 			if (optionAcolor == null) {
 				optionAcolor = "";
 			}
-			String optionBcolor =currentQuestionDetails.getOptionB();
+			String optionBcolor =currentQuestionDetails.getOptionBcolor();
 			if (optionBcolor == null) {
 				optionBcolor = "";
 			}
-			String optionCcolor =currentQuestionDetails.getOptionC();
+			String optionCcolor =currentQuestionDetails.getOptionCcolor();
 			if (optionCcolor == null) {
 				optionCcolor = "";
 			}
-			String optionDcolor =currentQuestionDetails.getOptionD();
+			String optionDcolor =currentQuestionDetails.getOptionDcolor();
 			if (optionDcolor == null) {
 				optionDcolor = "";
 			}
+			
+			
 			QuestionDetails = QuestionDetails +
 		"<table  width=90% align=center border=1 cellpadding='0' cellspacing='0' >"
 		+"<tr><th colspan='2' align=left  style='padding-top:5px;padding-bottom:5px;padding-left:5px;'><label class='geaFormLabel'>Question "+(i+1)+": "+currentQuestionDetails.getQuestion()+"</label> </th></tr>"
@@ -225,7 +227,7 @@ public class EmailUtility {
 		+"		      <label class='geaFormLabel'>A. "+currentQuestionDetails.getOptionA()+"</label>"
 		+"		    </div>  	"
 		+" 	</td>"
-		+"	<td  style='padding-top:5px;padding-bottom:5px;padding-left:5px;background-color:#DAE9BC;"+optionBcolor+"'>"  
+		+"	<td  style='padding-top:5px;padding-bottom:5px;padding-left:5px;"+optionBcolor+"'>"  
 		+"		    <div style='height:100%;width:100%'>"
 		+"		      <label class='geaFormLabel'>B. "+currentQuestionDetails.getOptionB()+"</label>"
 		+"		    </div>"
@@ -253,13 +255,14 @@ public class EmailUtility {
 
 		
 		testReportHTMLMessage = "<table width=90% id=geaContentTable>"
-		+"  <tr><td colspan=2><label class='geaFormHeading'>Test Report : "+selectedClassSubject+" "+selectedChapter+"</label></td></tr>"
+		+"  <tr><td colspan=2><label class='geaFormHeading'>Test Report : "+selectedClassSubject+" - "+selectedChapter+"</label></td></tr>"
 		+"  <tr>"
-		+"	   <td colspan=2><div style='border-top:1px solid gray;clear:both;'>"
+		+"	   <td colspan=2>"
 		+"	    Total Questions: "+answeredQuestionList.size()
 		+"		<br>Correctly answered: "+correctlyAnswered+"</td>"
 		+"  </tr>"
-		+"</table>";
+		+"</table>"
+		+"<br>";
 
 		testReportHTMLMessage = testReportHTMLMessage +QuestionDetails;
 				return testReportHTMLMessage;

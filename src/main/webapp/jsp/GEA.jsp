@@ -17,7 +17,7 @@
 	<div id="header">
 		<table width=100%>
 		<tr>
-		<td><img src="images/logo.png" alt="" style="width:40px;height:40px;"></td>
+		<td><img src="images/logo.png" alt="" style="width:35px;height:35px;"></td>
 		<td>
 			<a href="/GEA/selectClassSubject">Tests</a>&nbsp;
 		 	|&nbsp;

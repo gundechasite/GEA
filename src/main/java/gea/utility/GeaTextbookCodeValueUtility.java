@@ -26,7 +26,7 @@ public class GeaTextbookCodeValueUtility {
 		textbookPriceList.add(new GeaCodeValueBean("20",  "Rs. 20"));
 		textbookPriceList.add(new GeaCodeValueBean("50",  "Rs. 50"));
 		textbookPriceList.add(new GeaCodeValueBean("100", "Rs. 100"));
-		textbookPriceList.add(new GeaCodeValueBean("200", "Rs. 200"));
+		//textbookPriceList.add(new GeaCodeValueBean("200", "Rs. 200")); Since textbooks have changed
 		return textbookPriceList;
 	}
 		
