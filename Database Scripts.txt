@@ -1,6 +1,4 @@
 
-show tables;
-
 
 DROP TABLE RegisteredUsers;
 
