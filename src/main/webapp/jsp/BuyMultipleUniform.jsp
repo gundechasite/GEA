@@ -31,6 +31,14 @@
 		</table>
 	</td>
    </tr>
+   
+  <tr>
+   <td colspan=2>
+   		<label class="geaFormSmallText"> 
+		Try searching for bigger size if you do not find size you are looking for. 
+	    </label>
+   </td>
+  </tr>
  
    <tr><td colspan=2> <input type="button" id="More" value="Buy More Items" onclick="insRow()"/></td></tr>
     

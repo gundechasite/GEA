@@ -24,6 +24,14 @@
   
   <tr><td colspan=2><s:textfield name="uniformSize" cssClass="geaInput" label="size (e.g. 22)" scope="request"  maxlength="3"/></td></tr>
  
+  <tr>
+   <td colspan=2>
+   		<label class="geaFormSmallText"> 
+		Try searching for bigger size if you do not find size you are looking for. 
+	    </label>
+   </td>
+  </tr>
+ 
   <tr><td></td><td><s:submit value="Submit" cssClass="geaSubmitButton" theme="simple" /></td></tr>
 </table>
 
