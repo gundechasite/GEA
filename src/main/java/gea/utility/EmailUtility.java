@@ -170,10 +170,14 @@ public class EmailUtility {
 	}
 	
 	public static String getSubject(String screenCode, UniformAd newUniformAd) {
+		String veda = newUniformAd.getVeda();
+		if (veda == null) {
+			veda = "";
+		}
 		if (screenCode.equals("BU")) {
-			return newUniformAd.getVeda()+ " " + newUniformAd.getPartOfUniform() + " needed by a parent";
+			return veda + " " + newUniformAd.getPartOfUniform() + " needed by a parent";
 		} else {
-			return newUniformAd.getVeda()+ " " + newUniformAd.getPartOfUniform() + " on sale";
+			return veda + " " + newUniformAd.getPartOfUniform() + " on sale";
 		}
 	}
 

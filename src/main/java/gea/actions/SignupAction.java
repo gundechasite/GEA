@@ -39,20 +39,26 @@ public class SignupAction extends ActionSupport  implements SessionAware {
 	 
 	/* Validate */
 	public void validate() {
-	      if (phone == null || phone.trim().equals("")) {
+	      if (GeaUtility.isFieldEmpty(phone)) {
 	    	  addActionError("Please enter your mobile# as loginId.");
-	      } else if (!GeaUtility.isFieldNumeric(phone)) {
-	    	  addActionError("Please enter your mobile# as loginId.(Only numbers allowed)");
+	      } else {
+	    	  if (!GeaUtility.isFieldNumeric(phone)) {
+	    		  addActionError("Please enter only numbers in mobile phone entry)");
+	      	  } else if (phone.length()<6) {
+	      		addActionError("Phone number does not look valid.");
+	      	  }
 	      }
-	      if (password == null || password.trim().equals("")) {
+	      if (GeaUtility.isFieldEmpty(password)) {
 	    	  addActionError("Please select a password for your login.");
 	      }
-	      if (password2 == null || password2.trim().equals("") || !password2.equals(password)) {
+	      if (GeaUtility.isFieldEmpty(password2) || !password2.equals(password)) {
 	    	  addActionError("Please enter same password in both places.");
 	      }
-	      if (name == null || name.trim().equals("")) {
+	      if (GeaUtility.isFieldEmpty(name)) {
 		      addActionError("Please enter your name");
-		  }
+		  } else if (name.length()<3) {
+	      		addActionError("Name does not look valid.");
+      	  }
 	      if (!GeaUtility.isFieldEmpty(email)) {
 	    	  if (!email.contains("@")) {
 	    		  addActionError("Please enter valid email or leave email empty");
@@ -60,7 +66,6 @@ public class SignupAction extends ActionSupport  implements SessionAware {
 	    		  addActionError("Please enter valid email or leave email empty");
 	    	  }
 	      }
-	      
 	 }
 
  	/* getters and setters of form fields */
