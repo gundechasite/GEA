@@ -9,7 +9,6 @@ parentName VARCHAR(20),
 parentEmail VARCHAR(35));
 
 
-
 DROP TABLE TextbooksAds;
 
 CREATE TABLE TextbooksAds 

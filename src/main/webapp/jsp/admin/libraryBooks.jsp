@@ -13,7 +13,7 @@
 	    <th>Total Pages</th>
 	    <th>Parents Details</th>
     </tr>
-    <s:if test="%{(getLibraryBooks()==null)||getLibraryBooks().isEmpty()}"><tr><td colspan=6 align=center>No Records Found</td></tr></s:if>
+    <s:if test="%{(getLibraryBooks()==null)||getLibraryBooks().isEmpty()}"><tr><td colspan=7 align=center>No Records Found</td></tr></s:if>
 	<s:iterator value="libraryBooks">
 	  <tr>
 	  	<td><s:property value="Book_id" /></td>
