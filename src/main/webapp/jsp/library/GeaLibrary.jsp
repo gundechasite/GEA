@@ -114,6 +114,7 @@ div.tab button.active {
 	    <td  align=center>
 	    	<s:url var="url" action="DeleteMyBook">
 		           <s:param name="Book_id"><s:property value='Book_id'/></s:param>
+		           <s:param name="bookTitle"><s:property value='bookTitle'/></s:param>
 	        </s:url>
 	        <s:a href="%{url}">Delete</s:a>
 	    </td>
@@ -148,6 +149,7 @@ div.tab button.active {
 	    <td  align=center>
 	    	<s:url var="url" action="DeleteMyBook">
 		           <s:param name="Book_id"><s:property value='Book_id'/></s:param>
+		           <s:param name="bookTitle"><s:property value='bookTitle'/></s:param>
 	        </s:url>
 	        <s:a href="%{url}">Delete</s:a>
 	    </td>

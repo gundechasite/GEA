@@ -44,11 +44,13 @@ public class DeleteAdAction  extends ActionSupport implements SessionAware {
 				DBUtility_TextBookUniform.deleteTextbookAd(
 					GeaUtility.getLoggedUserLoginId(sessionMap), childsClass, bookTypeDBCode);
 				addActionMessage("You Ad ("+buyOrSell+" class "+childsClass+" : "+bookType+") has been deleted");
+				return "TextBookSuccess";
 			} else {
 				/* Delete Uniform Ad */
 				DBUtility_TextBookUniform.deleteUniformAd(
 					GeaUtility.getLoggedUserLoginId(sessionMap), vedaDBCode, size, partOfUniformDBCode);
 				addActionMessage("You Ad ("+buyOrSell+" "+veda+" "+partOfUniform+" of size "+size+") has been deleted");
+				return "UniformSuccess";
 			}
 		
 		} catch (Exception e) {
@@ -57,7 +59,7 @@ public class DeleteAdAction  extends ActionSupport implements SessionAware {
 			return "error";
 		}
 		
-		return "success";	 
+			 
 	}
 	
 	/* Required since implements SessionAware */

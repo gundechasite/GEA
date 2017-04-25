@@ -180,7 +180,8 @@
 
 <!-- Delete Ad -->
 	<action name="DeleteAd" class="gea.actions.DeleteAdAction">            
-		<result name="success" type="tiles">MessageScreen_TD</result>
+		<result name="TextBookSuccess" type="tiles">MessageScreen_TextBook_TD</result>
+		<result name="UniformSuccess" type="tiles">MessageScreen_Uniform_TD</result>
         <result name="error" type="tiles">MessageScreen_TD</result>
 	</action>
 
