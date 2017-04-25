@@ -19,6 +19,7 @@ public class TestView extends ActionSupport implements SessionAware, Serializabl
 	public static final String RED = "background-color: #FF4500;"; //For wrong answer 
 			
 	/* Form Fields */
+	private String emailFromScreen;
 	private String Chapter_id;
 	private String Chapter; //Needed in report to tell which chapter was selected
 	private String actionCode; /*actionCode=StartTest/NextQn/ShowAns/EndTest*/
@@ -63,6 +64,7 @@ public class TestView extends ActionSupport implements SessionAware, Serializabl
 			/* Chapter to be displayed on Report */
 			Chapter = DBUtilityTests.getChapter(Chapter_id);
 			sessionMap.put("GEA_TEST_Chapter", Chapter); 
+			sessionMap.put("GEA_TEST_Email", emailFromScreen);
 			
 			/* No Questions Found */
 			if (questionList.size() == 0) {
@@ -102,14 +104,20 @@ public class TestView extends ActionSupport implements SessionAware, Serializabl
 		
 		selectedChapter = (String)sessionMap.get("GEA_TEST_Chapter");
 		selectedClassSubject = (String)sessionMap.get("GEA_TEST_ClassSubject"); 
-		String loggedUserEmailId = GeaUtility.getLoggedUserEmailId(sessionMap);
-		if (!GeaUtility.isFieldEmpty(loggedUserEmailId)) {
+		String userEmail = null;
+		if (GeaUtility.hasUserNotLoggedIn(sessionMap)) {
+			userEmail = (String) sessionMap.get("GEA_TEST_Email");
+		} else {
+			userEmail = GeaUtility.getLoggedUserEmailId(sessionMap);
+		}
+		
+		if (!GeaUtility.isFieldEmpty(userEmail)) {
 			String message = EmailUtility.getTestReportHTMLMessage(answeredQuestionList, selectedChapter, selectedClassSubject);
 			String subject = "Test Report : "+selectedClassSubject+" - "+selectedChapter;
-			EmailUtility.sendEmail(loggedUserEmailId, subject, message);
-			addActionMessage("We have also emailed this Test Report to "+loggedUserEmailId);
+			EmailUtility.sendEmail(userEmail, subject, message);
+			addActionMessage("We have also emailed this Test Report to "+userEmail);
 		} else {
-			addActionMessage("This Test Report could not be emailed to you as your email was not found. (maybe you have not logged in/you did not enter Email at time of signup/you were inactive for long time)");
+			addActionMessage("This Test Report could not be emailed to you as your email was not found.");
 		}
 		return "testReport";
 	}
@@ -240,7 +248,12 @@ public class TestView extends ActionSupport implements SessionAware, Serializabl
 	public void setCorrectlyAnsweredQuestions(int correctlyAnsweredQuestions) {
 		this.correctlyAnsweredQuestions = correctlyAnsweredQuestions;
 	}
-
+	public String getEmailFromScreen() {
+		return emailFromScreen;
+	}
+	public void setEmailFromScreen(String emailFromScreen) {
+		this.emailFromScreen = emailFromScreen;
+	}
 
 	/* Required for implements SessionAware */
 	private Map<String, Object> sessionMap;  

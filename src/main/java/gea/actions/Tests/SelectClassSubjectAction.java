@@ -24,10 +24,12 @@ public class SelectClassSubjectAction  extends ActionSupport implements SessionA
 	private String ClassSubject_id;
 	private String ClassSubject;
 	private ArrayList<GeaCodeValueBean> chapterList = new ArrayList<GeaCodeValueBean>();
+	private boolean hasUserLogged;
 	
 	public String execute(){ 
 		
 		try {
+			hasUserLogged = !GeaUtility.hasUserNotLoggedIn(sessionMap);
 			chapterList = DBUtilityTests.getChapterList(ClassSubject_id);
 			ClassSubject = DBUtilityTests.getClassSubject(ClassSubject_id);
 			sessionMap.put("GEA_TEST_ClassSubject", ClassSubject); /* For Report */
@@ -57,8 +59,14 @@ public class SelectClassSubjectAction  extends ActionSupport implements SessionA
 	public void setChapterList(ArrayList<GeaCodeValueBean> chapterList) {
 		this.chapterList = chapterList;
 	}
-	
-	
+	public boolean getHasUserLogged() {
+		return hasUserLogged;
+	}
+	public void setHasUserLogged(boolean hasUserLogged) {
+		this.hasUserLogged = hasUserLogged;
+	}
+
+
 	/* Required since implements SessionAware */
 	protected Map<String, Object> sessionMap;
     public void setSession(Map<String, Object> sessionMap) {
