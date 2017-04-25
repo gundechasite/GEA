@@ -89,12 +89,15 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 							&&
 							currentSearchResultAd.getSize().equals(currentNewUniformAd.getSize())) {
 						/* Match Found */
+						/*
 						String toEmail = currentSearchResultAd.getAdOwnerEmail();
 						if (!GeaUtility.isFieldEmpty(toEmail)) {
 							String message = EmailUtility.getEmailMessage(screenCode, GeaUtility.getLoggedUser(sessionMap),currentNewUniformAd, currentSearchResultAd);
 							String subject = EmailUtility.getSubject(screenCode, currentNewUniformAd);
 							EmailUtility.sendEmail(toEmail, subject, message);
 						}
+						//commented to remove slowness
+						*/
 					}
 				}
 			}
@@ -108,12 +111,15 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 							&&
 							currentSearchResultAd.getBookTypeDBCode().equals(currentNewTextbookAd.getBookTypeDBCode())) {
 						/* Match Found */
+						/*
 						String toEmail = currentSearchResultAd.getAdOwnerEmail();
 						if (!GeaUtility.isFieldEmpty(toEmail)) {
 							String message = EmailUtility.getEmailMessage(screenCode, GeaUtility.getLoggedUser(sessionMap),currentNewTextbookAd, currentSearchResultAd);
 							String subject = EmailUtility.getSubject(screenCode, currentNewTextbookAd);
 							EmailUtility.sendEmail(toEmail, subject, message);
 						}
+						//commented to remove slowness
+						*/
 					}
 
 				}
