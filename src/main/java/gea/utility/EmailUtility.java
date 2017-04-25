@@ -93,6 +93,11 @@ public class EmailUtility {
 	}
 
 	private static  String getHTML_SU_Message(UniformAd newUniformAd) {
+		String veda = newUniformAd.getVeda();
+		if (veda == null) {
+			veda = "";
+		}
+		
 		String SU_message= 
 		" <div border=1 align=center style='background-color: #DAE9BC;padding: 5px;'><b><u>Uniform Items needed by you is being sold by a parent </u></b><br>(If you no longer need this item, Kindly delete your ad.)</div> "+
 		" <br> "+
@@ -105,7 +110,7 @@ public class EmailUtility {
 		"  	</tr> "+
 		"  	 "+
 		" 	<tr style='background-color: #DAE9BC;'> "+
-		" 	    <td style='padding: 10px;'  align=center>"+newUniformAd.getVeda()+"  "+newUniformAd.getPartOfUniform()+"</td> "+
+		" 	    <td style='padding: 10px;'  align=center>"+veda+"  "+newUniformAd.getPartOfUniform()+"</td> "+
 		" 	    <td style='padding: 10px;'  align=center>"+newUniformAd.getSize()+"</td> "+
 		" 	    <td style='padding: 10px;'  align=center>"+newUniformAd.getUniformCondition()+"</td> "+
 		" 	    <td style='padding: 10px;'  align=center>"+newUniformAd.getPrice()+"</td> "+
@@ -115,6 +120,11 @@ public class EmailUtility {
 	}
 	
 	private static  String getHTML_BU_Message(UniformAd newUniformAd) {
+		String veda = newUniformAd.getVeda();
+		if (veda == null) {
+			veda = "";
+		}
+		
 		String BU_message= 
 				" <div border=1 align=center style='background-color: #DAE9BC;padding: 5px;'><b><u>Uniform Items which you want to sell is needed by a parent  </u></b><br>(If you no longer need to sell this item, Kindly delete your ad.)</div> "+
 				" 		<br> "+
@@ -124,8 +134,8 @@ public class EmailUtility {
 				" <th style='padding: 10px;'  align=center>Size</th> "+
 				" </tr> "+
 				" 	<tr style='background-color: #DAE9BC;'> "+
-				" <td style='padding: 10px;'  align=center>Yajurveda  PE Pant</td> "+
-				" <td style='padding: 10px;'  align=center>22</td> "+
+				" <td style='padding: 10px;'  align=center>"+veda+"  "+newUniformAd.getPartOfUniform()+"</td> "+
+				" <td style='padding: 10px;'  align=center>"+newUniformAd.getSize()+"</td> "+
 				" </tr> "+
 				" </table>";
 		return  BU_message;
