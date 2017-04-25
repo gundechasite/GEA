@@ -41,7 +41,7 @@
 <table width=90% id=geaContentTable>
   <tr><td colspan=2><label class="geaFormSubHeading">Matching Ads - Parents who want to buy Uniform Items that you want to sell</label></td></tr>
   </table>
-<table class=alternateColor width=70% align=center>
+<table class=alternateColor width=80% align=center>
   <tr>
     <th>Item</th>
     <th>Size</th>

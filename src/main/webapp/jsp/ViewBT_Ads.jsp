@@ -33,7 +33,7 @@
 
 <table width=90% id=geaContentTable><tr><td colspan=2><label class="geaFormSubHeading">Matching Ads - Parents selling Books you need</label></td></tr></table>
   
-<table class=alternateColor width=90% align=center>
+<table class=alternateColor width=98% align=center>
     <tr>
 	    <th>Class</th>
 	    <th>Book</th>

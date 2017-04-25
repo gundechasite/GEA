@@ -57,7 +57,7 @@ div.tab button.active {
 
 <!-- Preschool Tab -->
 <div id="Preschool" class="tabcontent">
-	<table class=alternateColor width=98% align=center>
+	<table class=alternateColor width=100% align=center>
     <tr>
 	    <th>Title</th>
 	    <th>ISBN</th>
@@ -92,7 +92,7 @@ div.tab button.active {
 
 <!-- 1-4 Tab -->
 <div id="1-4" class="tabcontent">
-  	<table class=alternateColor width=98% align=center>
+  	<table class=alternateColor width=100% align=center>
     <tr>
 	    <th>Title</th>
 	    <th>ISBN</th>
@@ -126,8 +126,8 @@ div.tab button.active {
 </div>
 
 <!-- 5-9 Tab -->
-<div id="5-9" class="tabcontent">
-  	<table class=alternateColor width=98% align=center>
+<div id="5-9" class="tabcontent" width=100%>
+  	<table class=alternateColor width=100% align=center>
     <tr>
 	    <th>Title</th>
 	    <th>ISBN</th>

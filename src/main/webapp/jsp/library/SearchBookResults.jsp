@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
-<table width=98% id=geaContentTable>
+<table width=100% id=geaContentTable>
   <tr>
 	  <td colspan=2>
 	  <label class="geaFormSubHeading">Search Book Results  
@@ -33,7 +33,7 @@
 
 
 <div>
-	<table class=alternateColor width=90% align=center>
+	<table class=alternateColor width=100% align=center>
     <tr>
 	    <th>Title</th>
 	    <th>ISBN</th>
