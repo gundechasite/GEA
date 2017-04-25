@@ -50,7 +50,7 @@ public class ShowDatabaseDataAction  extends ActionSupport implements SessionAwa
 			 addActionError("Expected tableCode not received");
 			 return "error"; /* if tableCode is not received as expected */
 		 } catch (Exception e) {
-			System.out.println(GeaUtility.getActualErrorMessage(e));
+			//System.out.println(GeaUtility.getActualErrorMessage(e));
 			addActionError(GeaUtility.getGeaActionErrorMessage(e));
 			return "error";
 		}

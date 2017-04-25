@@ -29,7 +29,7 @@ public class AdminLoginAction extends ActionSupport implements SessionAware {
 				 return "error";
 			}
 		 } catch (Exception e) {
-			System.out.println(GeaUtility.getActualErrorMessage(e));
+			//System.out.println(GeaUtility.getActualErrorMessage(e));
 			addActionError(GeaUtility.getGeaActionErrorMessage(e));
 			return "error";
 		}
