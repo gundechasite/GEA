@@ -54,10 +54,14 @@ bookCategory VARCHAR(3),
 
 
 
+DROP TABLE geaTest;
+DROP TABLE TestClassSubjectChapter;
 DROP TABLE TestClassSubject;
 
+
+
 CREATE TABLE TestClassSubject (
-ClassSubject_id SMALLINT NOT NULL AUTO_INCREMENT,
+ClassSubject_id SMALLINT,
 class VARCHAR(2),
 subject VARCHAR(16),
  PRIMARY KEY (ClassSubject_id)
@@ -65,18 +69,14 @@ subject VARCHAR(16),
 
 
 
-DROP TABLE TestClassSubjectChapter;
-
 CREATE TABLE TestClassSubjectChapter (
-Chapter_id SMALLINT NOT NULL AUTO_INCREMENT,
+Chapter_id SMALLINT,
 ClassSubject_id SMALLINT NOT NULL REFERENCES TestClassSubject(ClassSubject_id),
 chapter VARCHAR(15),
  PRIMARY KEY (Chapter_id)
 );
 
 
-
-DROP TABLE geaTest;
 	
 CREATE TABLE geaTest 
 ( 
@@ -89,9 +89,9 @@ optionD VARCHAR(20),
 correctOption VARCHAR(1),
 correctOptionDesc VARCHAR(100));
 
-insert into TestClassSubject (class, subject) values ('1','Maths');
+insert into TestClassSubject (ClassSubject_id, class, subject) values ('1', '1','Maths');
 
-insert into  TestClassSubjectChapter (ClassSubject_id, chapter) values ('1', 'Money');
+insert into  TestClassSubjectChapter (Chapter_id, ClassSubject_id, chapter) values ('1', '1', 'Money');
 
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
 values ('1', 'I have 3 five rupee notes in my purse. So how much total money do I have?', '20','10','15','30','C','3 five rupees notes = 5+5+5 = Rs. 15');
@@ -102,9 +102,7 @@ values ('1', 'Smith has Rs. 18. He spends Rs. 6. How much money is left with him
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
 values ('1', 'A pen costs Rs. 10 and a pencil costs Rs. 5. How much money is needed to buy 1 pen and 2 pencils.', '10','20','15','25','B','cost of 1 pen=Rs.10, cost of 2 pencil=5+5, total cost of 1 pen and 2 pencils=10+10=Rs. 20');
 
-insert into  TestClassSubjectChapter (ClassSubject_id, chapter) values (
-'1' ,
-'Ones and Tens');
+insert into  TestClassSubjectChapter (Chapter_id, ClassSubject_id, chapter) values ('2', '1', 'Ones and Tens');
 
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
 values ('2', '37 has how many ones', '3','7','30','37','B','37 has 3 tens and 7 ones');
@@ -117,4 +115,42 @@ values ('2', '2 tens + 10 ones', '20','30','12','200','B','2 tens + 10 ones=20+1
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
 values ('2', 'What is the digit at tens place in the number 145', '1','4','5','145','B','In 145, 1 is at hundreds place, 4 is at tens place and 5 is at ones place');
 
+
+insert into  TestClassSubjectChapter (Chapter_id, ClassSubject_id, chapter) values ('3', '1' ,'Addition');
+
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('3', '1 box has 2 balls. There are 6 boxes. How many total balls are there.', '8','12','4','12','D','1 box has 2 balls. So 2 boxes will have 4 balls, 3 boxes have 6 balls, 4 boxes have 8 balls, 5 boxes have 10 balls, 6 boxes have 12 balls. So 6 boxes have  2+2+2+2+2+2=12 balls. (2*6=12) ');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('3', '1 table has 4 legs. The room has 3 tables. How many total table legs are in the room?', '4','8','12','16','C','1 table has 4 legs. 2 tables will have 4+4=8 legs. 3 tables will have 4+4+4=12 legs');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('3', 'Which number is 3 more than 9', '10','13','12','19','C','1 more than 9=10, 2 more than 9=11, 3 more than 9=12');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('3', 'Sita is 7 years old now. What will be her age after 5 years?', '10','12','14','16','B','Sita age now=7, After 1 year her age will be 7+1=8, So after 5 years her age=7+5=12');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('3', 'We have 1 dozen bananas and 1 dozen oranges in the house. How many total fruits are in the house?', '2','12','24','20','C','1 dozen bananas=12 bananas and 1 dozen oranges=12 oranges, so total fruits=12 bananas+12 oranges=24 fruits');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('3', 'The sum of two numbers is 10. Bigger number is 7. What is the smaller number', '1','2','3','4','C','Sum of two number is 10. One number is 7. 7+?=10, 7+3=10 So answer is 3');
+
+insert into  TestClassSubjectChapter (Chapter_id, ClassSubject_id, chapter) values ('4', '1' ,'Subtraction');
+
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('4', 'On a tree there were 20 birds. 5 flew away, then 4 birds came to tree again. Now How many birds are there on the tree?', '17','18','19','20','C','20 birds were there on tree initially. Then 5 fly away So 20-5=15 remain on the tree. Now 4 more birds come on tree, So 15+4=19 birds are on the tree now');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('4', 'A number when subtracted from 12 gives answer 9. Which number was subtracted?', '1','2','3','4','C','12-?=9, 12-3=9, You can also verify 9+3=12');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('4', '10-4+3', '7','8','9','10','C','10-4=6  and 6+3=9');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('4', 'There were 25 balloons. 20 burst. How many ballons are remaining?', '4','5','6','7','B','25-20=5 So 5 balloons are remaining.');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('4', '3+6-2+3=?', '10','9','8','7','A','3+6=9   9-2=7   7+3=10');
+
+
+insert into  TestClassSubjectChapter (Chapter_id, ClassSubject_id, chapter) values ('5', '1' ,'Time and Calendar');
+
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('5', 'December has how many days?', '28','29','30','31','D','December has 31 days.');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('5', 'Smith goes for morning walk at 6 am and comes back after 30 minutes. So at what time does he come back?', '3:00','6:00','6:30','7:00','C','6:00am + 30 minutes = 6:30 am, So he comes back at 6:30 am.');
+insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
+values ('5', 'At 7:00, where is minute hand pointing?', '7','12','10','6','B','At 7:00, minute hand will be at 12');
 
