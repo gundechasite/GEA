@@ -199,7 +199,7 @@
 	    <result  name="success" type="tiles">MessageScreenLibrary_TD</result>  
 		<result  name="error" type="tiles">AddBook_TD</result> 
 	</action>
-	<action name="SearchBook" class="gea.actions.DoNothingView">            
+	<action name="SearchBook" class="gea.actions.GeaForceLoginView">            
 		<result name="success" type="tiles">SearchBook_TD</result>
  	</action> 
 	<action name="processSearchBook" class="gea.actions.library.SearchBookAction">            
