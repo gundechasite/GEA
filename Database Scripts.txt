@@ -134,7 +134,7 @@ values ('3', 'The sum of two numbers is 10. Bigger number is 7. What is the smal
 insert into  TestClassSubjectChapter (Chapter_id, ClassSubject_id, chapter) values ('4', '1' ,'Subtraction');
 
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
-values ('4', 'There were 20 birds on the tree. 5 flew away, then 4 birds came back. Now How many birds are there?', '17','18','19','20','C','20 birds were there on tree initially. Then 5 fly away So 20-5=15 remain on the tree. Now 4 more birds come on tree, So 15+4=19 birds are on the tree now');
+values ('4', 'There were 20 birds on the tree. 5 flew away, then 4 birds came back. Now How many birds are there?', '17','18','19','20','C','Of 20 birds, 5 fly away 20-5=15 remain on tree.  4 birds come, So 15+4=19 birds are on the tree now');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
 values ('4', 'A number when subtracted from 12 gives answer 9. Which number was subtracted?', '1','2','3','4','C','12-?=9, 12-3=9, You can also verify 9+3=12');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
