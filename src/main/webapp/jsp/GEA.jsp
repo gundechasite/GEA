@@ -33,8 +33,6 @@
 			<% if (session.getAttribute("LoggedUser")!=null) { %>
 			    Hi <%= ((gea.model.User)session.getAttribute("LoggedUser")).getName()%>! | <a href="/GEA/Logout">Logout </a>
 			<% } else { %>
-				<a href="/GEA/HomePage">Home</a>
-				| 
 				<a href="/GEA/Login">Login</a> 
 				|  
 				<a href="/GEA/Signup">Signup</a>

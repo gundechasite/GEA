@@ -109,7 +109,7 @@ values ('2', '37 has how many ones', '3','7','30','37','B','37 has 3 tens and 7 
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
 values ('2', '69 has how many tens', '6','9','60','69','A','69 has 6 tens and 9 ones');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
-values ('2', '5 tens + 8 ones', '5','8','50','58','D','5 tens + 8 ones=50+8=58');
+values ('2', '5 tens + 8 ones = ?', '5','8','50','58','D','5 tens + 8 ones=50+8=58');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
 values ('2', '2 tens + 10 ones', '20','30','12','200','B','2 tens + 10 ones=20+10=30');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 

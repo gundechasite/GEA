@@ -13,7 +13,8 @@ public class GEAHomePageView extends ActionSupport implements SessionAware {
 
 	 public String execute(){ 
 		 if (GeaUtility.hasUserNotLoggedIn(sessionMap)) {
-			 return "Signup";
+			 //return "Signup";
+			 return "Login";
 		 } else {
 			 return "Blank";
 		 }  
