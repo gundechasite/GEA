@@ -119,7 +119,7 @@ values ('2', 'What is the digit at tens place in the number 145', '1','4','5','1
 insert into  TestClassSubjectChapter (Chapter_id, ClassSubject_id, chapter) values ('3', '1' ,'Addition');
 
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
-values ('3', '1 box has 2 balls. There are 6 boxes. How many total balls are there.', '8','12','4','12','D','1 box=2 balls. 2 box = 4 balls, 3 box = 6 balls, 4 box = 8 balls, 5 box = 10 balls, 6 box = 10 balls');
+values ('3', '1 box has 2 balls. There are 6 boxes. How many total balls are there.', '8','10','4','12','D','1 box=2 balls. 2 box = 4 balls, 3 box = 6 balls, 4 box = 8 balls, 5 box = 10 balls, 6 box = 10 balls');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
 values ('3', '1 table has 4 legs. The room has 3 tables. How many total table legs are in the room?', '4','8','12','16','C','1 table has 4 legs. 2 tables will have 4+4=8 legs. 3 tables will have 4+4+4=12 legs');
 insert into geaTest (Chapter_id, question, optionA, optionB, optionC, optionD, correctOption, correctOptionDesc) 
