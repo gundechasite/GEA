@@ -11,7 +11,7 @@
 	  </td>
   </tr>
      <tr>
-   <td colspan=2><div style="border-top:1px solid gray;clear:both;">
+   <td colspan=2><div style="border-top:1px solid gray;clear:both;"></div>
    	   <s:if test="hasActionErrors()">
 			<div style="color:red;" class="geaErrorMessage">
 				<s:actionerror/>
