@@ -1,11 +1,10 @@
 package gea.utility;
 
-import gea.model.UniformAd;
-import gea.model.User;
-
 import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
+
+import gea.model.User;
 
 public class GeaUtility {
 	

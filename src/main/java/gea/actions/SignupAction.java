@@ -1,14 +1,13 @@
 package gea.actions;
 
-import java.sql.SQLException;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.opensymphony.xwork2.ActionSupport;
+
 import gea.utility.DBUtility;
 import gea.utility.GeaUtility;
-
-import com.opensymphony.xwork2.ActionSupport;
 
 public class SignupAction extends ActionSupport  implements SessionAware {
 	/* Form Fields */ 

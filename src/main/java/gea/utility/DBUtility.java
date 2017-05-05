@@ -155,16 +155,5 @@ public class DBUtility {
 
 	
 	
-	private static String getSiteUsefullnessScreenValue(String siteUsefullness) {
-		if ("NO".equals(siteUsefullness)) {
-			return "Not Much helpful";
-		} else if ("MAY".equals(siteUsefullness)) {
-			return "Might be helpful";
-		} else if ("HLP".equals(siteUsefullness)) {
-			return "Will be very helpful";
-		} else if ("CHG".equals(siteUsefullness)) {
-			return "Will be helpful if some changes are done";
-		}
-		return "";
-	}
+	
 }

@@ -1,16 +1,5 @@
 package gea.actions.Tests;
 
-import gea.bean.GeaCodeValueBean;
-import gea.model.TextbookAd;
-import gea.model.UniformAd;
-import gea.utility.DBUtilityTests;
-import gea.utility.DBUtility_TextBookUniform;
-import gea.utility.EmailUtility;
-import gea.utility.GeaTextbookCodeValueUtility;
-import gea.utility.GeaUniformCodeValueUtility;
-import gea.utility.GeaUtility;
-
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -18,6 +7,10 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.Preparable;
+
+import gea.bean.GeaCodeValueBean;
+import gea.utility.DBUtilityTests;
+import gea.utility.GeaUtility;
 
 public class SelectClassSubjectView  extends ActionSupport implements Preparable, SessionAware {
 

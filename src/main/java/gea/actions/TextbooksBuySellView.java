@@ -1,16 +1,15 @@
 package gea.actions;
 
-import gea.bean.GeaCodeValueBean;
-import gea.utility.GeaTextbookCodeValueUtility;
-import gea.utility.GeaUniformCodeValueUtility;
-import gea.utility.GeaUtility;
-
 import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
+
+import gea.bean.GeaCodeValueBean;
+import gea.utility.GeaTextbookCodeValueUtility;
+import gea.utility.GeaUtility;
 
 /* This class will populate drop down lists on Buy/Sell textbooks screens */
 public class TextbooksBuySellView   extends ActionSupport implements SessionAware {

@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import gea.bean.BookBean;
-import gea.model.UniformAd;
-import gea.model.User;
 
 public class DBUtilityLibrary {
 	

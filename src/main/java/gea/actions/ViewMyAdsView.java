@@ -1,19 +1,9 @@
 package gea.actions;
 
-import gea.model.TextbookAd;
-import gea.model.UniformAd;
-import gea.utility.DBUtility;
-import gea.utility.DBUtility_TextBookUniform;
-import gea.utility.GeaTextbookCodeValueUtility;
-import gea.utility.GeaUniformCodeValueUtility;
-import gea.utility.GeaUtility;
-
-import java.util.ArrayList;
 import java.util.Map;
 
-import org.apache.struts2.interceptor.SessionAware;
-
-import com.opensymphony.xwork2.ActionSupport;
+import gea.utility.DBUtility_TextBookUniform;
+import gea.utility.GeaUtility;
 
 public class ViewMyAdsView  extends SearchResultsAction {
 	
