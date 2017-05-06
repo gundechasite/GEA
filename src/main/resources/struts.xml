@@ -201,6 +201,7 @@
 	</action>
 	<action name="SearchBook" class="gea.actions.GeaForceLoginView">            
 		<result name="success" type="tiles">SearchBook_TD</result>
+		<result name="login" type="tiles">Login_TD</result>
  	</action> 
 	<action name="processSearchBook" class="gea.actions.library.SearchBookAction">            
 		<result name="success" type="tiles">SearchBookResults_TD</result>  
