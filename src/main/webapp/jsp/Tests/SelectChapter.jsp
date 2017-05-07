@@ -25,8 +25,8 @@
 		<td style="padding-top:20px;padding-bottom:20px;padding-right:20px;" align=right> Select Chapter</td>
 			<td style="padding-top:20px;padding-bottom:20px;" width="50%"><s:select style="padding-top:5px;padding-bottom:5px;" cssClass="geaSelect" list="chapterList" listKey="code" listValue="value" name="Chapter_id" theme="simple"  /></td>
 		</tr>
-		<s:set name="VARhasUserLogged" value="hasUserLogged"/>
-		<s:if test="%{#VARhasUserLogged==false}">
+		<s:set name="VARloggedUserEmailExists" value="loggedUserEmailExists"/>
+		<s:if test="%{#VARloggedUserEmailExists==false}">
 		<tr>
 			<td style="padding-top:20px;padding-bottom:20px;padding-right:20px;" align=right> Enter Email to receive Test Report</td>
 			<td><s:textfield  cssClass="geaInput" name="emailFromScreen" scope="request" theme="simple" maxlength="25"/></td> 

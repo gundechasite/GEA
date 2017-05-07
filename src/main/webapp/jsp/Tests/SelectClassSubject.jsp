@@ -20,7 +20,7 @@
     <tr> 
 	   <td colspan=2>
 	   <label class="geaFormSmallText"> 
-	    <u>Note</u>: I have demonstrated only few sample questions here. I would like to set question bank of other subjects/Classes maybe later.
+	    <u>Note</u>: I have demonstrated only few sample questions here for class 1 Maths. I would like to set question bank of other subjects/Classes maybe later.
 	   </label>
 	   </td>
     </tr>
