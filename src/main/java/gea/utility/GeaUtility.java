@@ -83,7 +83,8 @@ public class GeaUtility {
 	}
 	
 	public static String getGeaActionErrorMessage(Exception e) {
-		return "The following error occurred: "+getActualErrorMessage(e)+". Please email me at "+System.getenv("GEA_EMAIL");
+		//return "The following error occurred: "+getActualErrorMessage(e)+". Please email me at "+System.getenv("GEA_EMAIL");
+		return "The following error occurred: "+getActualErrorMessage(e)+". Please email me at gundecha.parents.portal@gmail.com.";
 	}
 	
 }
