@@ -19,7 +19,8 @@ public class DBUtility {
 		  //System.out.println(System.getenv("MYSQL_PASSWORD"));
 		  //System.out.println(System.getenv("MYSQL_DB_URL"));
 		  //System.out.println(System.getenv("GEA_EMAIL"));
-		  connection = DriverManager.getConnection(System.getenv("MYSQL_DB_URL"), System.getenv("MYSQL_USER"), System.getenv("MYSQL_PASSWORD"));
+		  //connection = DriverManager.getConnection(System.getenv("MYSQL_DB_URL"), System.getenv("MYSQL_USER"), System.getenv("MYSQL_PASSWORD"));
+		  connection = DriverManager.getConnection("jdbc:mysql://mysql:3306/sampledb", "user7XQ", "W7MOw2VsyLJ6wMSO");
 		  return connection;
 	}
 		

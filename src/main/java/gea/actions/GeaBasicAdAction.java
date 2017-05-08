@@ -89,7 +89,8 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 							&&
 							currentSearchResultAd.getSize().equals(currentNewUniformAd.getSize())) {
 						/* Match Found */
-						String emailToBeSentFlag = System.getenv("AD_EMAIL_TO_BE_SENT");
+						//String emailToBeSentFlag = System.getenv("AD_EMAIL_TO_BE_SENT");
+						String emailToBeSentFlag = "0";
 						if ((emailToBeSentFlag!=null) && (Integer.parseInt(emailToBeSentFlag) == 1)) {
 							String toEmail = currentSearchResultAd.getAdOwnerEmail();
 							if (!GeaUtility.isFieldEmpty(toEmail)) {
@@ -111,7 +112,8 @@ public class GeaBasicAdAction  extends SearchResultsAction implements Preparable
 							&&
 							currentSearchResultAd.getBookTypeDBCode().equals(currentNewTextbookAd.getBookTypeDBCode())) {
 						/* Match Found */
-						String emailToBeSentFlag = System.getenv("AD_EMAIL_TO_BE_SENT");
+						//String emailToBeSentFlag = System.getenv("AD_EMAIL_TO_BE_SENT");
+						String emailToBeSentFlag = "0";
 						if ((emailToBeSentFlag!=null) && (Integer.parseInt(emailToBeSentFlag) == 1)) {
 							String toEmail = currentSearchResultAd.getAdOwnerEmail();
 							if (!GeaUtility.isFieldEmpty(toEmail)) {

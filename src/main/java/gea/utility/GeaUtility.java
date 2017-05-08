@@ -8,7 +8,7 @@ import gea.model.User;
 
 public class GeaUtility {
 	
-	public static final String GEA_EMAIL = "gundecha.parents.portal@gmail.com";
+
 	
 	/* Used for form Field Validation */
 	public static boolean isFieldEmpty (String field) {
