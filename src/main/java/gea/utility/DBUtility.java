@@ -15,13 +15,13 @@ public class DBUtility {
 	public static Connection getDatabaseConnection() throws SQLException, ClassNotFoundException  {
 		  Connection connection = null;
 		  Class.forName(JDBC_DRIVER);
-		  //System.out.println(System.getenv("MYSQL_USER"));
-		  //System.out.println(System.getenv("MYSQL_PASSWORD"));
-		  //System.out.println(System.getenv("MYSQL_DB_URL"));
+		  System.out.println("MYSQL_USER "+System.getenv("MYSQL_USER"));
+		  System.out.println("MYSQL_PASSWORD "+System.getenv("MYSQL_PASSWORD"));
+		  System.out.println("MYSQL_DB_URL "+System.getenv("MYSQL_DB_URL"));
 		  //System.out.println(System.getenv("GEA_EMAIL"));
-		  //connection = DriverManager.getConnection(System.getenv("MYSQL_DB_URL"), System.getenv("MYSQL_USER"), System.getenv("MYSQL_PASSWORD"));
+		  connection = DriverManager.getConnection(System.getenv("MYSQL_DB_URL"), System.getenv("MYSQL_USER"), System.getenv("MYSQL_PASSWORD"));
 		  //connection = DriverManager.getConnection("jdbc:mysql://172.30.11.52:3306/sampledb", "userNNU", "c5HkW4K5t0WYVFO4");
-		  connection = DriverManager.getConnection("jdbc:mysql://mysql:3306/sampledb", "userPI4", "M2xkdFDHxBnN4W6b");
+		  //connection = DriverManager.getConnection("jdbc:mysql://mysql:3306/sampledb", "userPI4", "M2xkdFDHxBnN4W6b");
 		  
 		  return connection;
 	}
